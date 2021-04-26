@@ -107,7 +107,7 @@ body {
 	box-sizing: border-box;
 }
 header{
-	width: 92%;
+	width: 89%;
 	position: fixed;
 	display: flex;
 	flex-wrap: wrap;
@@ -174,7 +174,7 @@ header{
 
 }
 .see{
-	font-size: 60px;
+	font-size: 50px;
 	color: rgb(0,0,0,0%);
 	display: block;
 }
