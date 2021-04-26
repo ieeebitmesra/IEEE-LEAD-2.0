@@ -1,0 +1,186 @@
+html {
+  background-image: url("Abs.jpeg");
+   scroll-behavior: smooth;
+    -webkit-tap-highlight-color:transparent;
+}
+
+h1 {
+	font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 5px green;
+}
+h2 {
+	color:  	#95E0E8;
+	font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 5px green;
+}
+h3 {
+	color:  	#95E0E8;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 5px green;
+}
+li{
+	font-size: 17px;
+	COLOR: WHITE;
+}
+.deco1 {
+	overflow: auto
+	font-family: 'Comic Neue', cursive;
+background-image: url("greenmt.jpeg");
+  width: 1050px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .5em;
+  padding: 10px 20px 20px 20px;
+  border: 5px solid black;
+}
+.deco3 {
+	
+	font-family: 'Comic Neue', cursive;
+background-image: url("back.jpg");
+  width: 1050px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .5em;
+  padding: 0px 20px 20px 20px;
+  border: 5px solid black;
+}
+.deco2 {
+background-image: url("Minimal.jpeg");
+  width: 1050px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .5em;
+  padding: 0px 20px 20px 20px;
+  border: 5px solid black;
+}
+.deco4 {
+background-image: url("Horr.png");
+  width: 1050px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .5em;
+  padding: 0px 20px 20px 20px;
+  border: 5px solid black;
+}
+.special {
+  color: orange;
+  font-weight: bold;
+}
+a:link {
+  color:  white;
+    text-decoration: none;
+	cursor: pointer;
+
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  
+}
+
+body {
+  width: 90%;
+
+  margin: 0 auto;
+	font-family: 'Comic Neue', cursive;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+  background-color:  #29AB87;
+  background-image: url("Colour.png");
+
+	padding: 0px;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+}
+
+*{
+	
+	box-sizing: border-box;
+}
+header{
+	width: 92%;
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	  border-radius: .5em;
+
+	background-color: rgb(93,73,84,50%) ;
+}
+.nav-links{
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	width: 71%;
+	font-size: 14px;
+}
+.nav-links li{
+	list-style: none;
+	transition:background-color 0.2s;
+}
+.nav-links a{
+	text-decoration: none;
+	color: rgb(226,226,226);
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.burger div{
+	width: 25px;
+	height: 2px;
+	background-color: rgb(226,226,226);
+	margin: 5px;
+}
+.burger{
+	display:none;
+}
+.inks{
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	width: 71%;
+	font-size: 14px;
+		color: rgb(226,226,226);
+
+}
+.inks li{
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	width: 71%;
+	font-size: 14px;
+		color: rgb(226,226,226);
+
+}
+.inks a{
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	width: 71%;
+	font-size: 14px;
+		color: rgb(226,226,226);
+
+}
+.see{
+	font-size: 60px;
+	color: rgb(0,0,0,0%);
+	display: block;
+}
+.text{
+		display: flex;
+  color: #FFFF38;
+  font-size: 20px;
+
+}
