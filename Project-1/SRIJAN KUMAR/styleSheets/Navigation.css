@@ -1,0 +1,35 @@
+
+.navbar{
+    position: fixed;
+    margin-top: 0%;
+    width: 100%;
+height: auto;
+    background-color: black;
+      /* border-radius: 30px; */
+      
+  }
+  .navbar ul{
+      
+      text-align: center;
+      width: 100%;
+      margin-left: 125px;
+      margin-right:100px;
+      margin-top: 0;
+      overflow: auto;
+  }
+  .navbar li{
+      float:left;
+      font-size: x-large;
+      list-style: none; 
+      margin: 13px 20px;
+      margin-left: 100px;
+  }
+  .navbar li a{
+      padding: 3px 3px;
+      text-decoration: none;
+      color: white;
+  }
+  .navbar li a:hover{
+      color: red
+  }
+  
