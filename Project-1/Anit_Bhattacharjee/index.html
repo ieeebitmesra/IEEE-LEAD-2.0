@@ -12,9 +12,10 @@
     	<title>My Portfolio Anit</title>
   </head>
   <body>
-	<header>
-		<a href="index.html">    <img src="icons\boy.png" alt="Home" width="100" height="100"></a>
-		
+	<header >
+	<div class="nav-links-img">
+		<a href="index.html">    <img src="icons\boy.png" alt="Home" ></a>
+	</div>
 	<nav class="nav-links">  				<!------ For Navigation Bar ----->
 		<ul class="nav-links" style="list-style: none; ">
 		
@@ -35,10 +36,10 @@
 	<div class="deco1" style="color: black; ">			<!------ First block, Introduction ----->
 	
 		<p id="top" class="see">.</p>
-		<h2  style="color:  	#95E0E8">Introduction </h2>		
+		<h2  style="color:  #95E0E8" class="anime" >Introduction </h2>		
     	<div style="display: flex 	;">
 		<div style="padding: 10px 20px 20px 10px;">
-		<p style="color:  #FDFF00" >NAME: <strong style="color: white;">ANIT BHATTACHARJEE</strong></p>			<!------ little bit about me ----->
+		<p style="color:  #FDFF00"  >NAME: <strong style="color: white;">ANIT BHATTACHARJEE</strong></p>			<!------ little bit about me ----->
 		<p style="color: #FDFF00;">INTERESTS: <strong><UL>
 													<LI>TABLE TENNIS</LI>
 														<LI>SINGING</LI>
@@ -48,14 +49,14 @@
 		<p style="color: #FDFF00;">COLLEGE: <strong style="color: white;">BIRLA INTITUTE OF TECHNOLOGY, Mesra</strong></p>
 		<p style="color: #FDFF00;">BRANCH: <strong style="color: white;">ECE</strong></p>
 		</div>
-		<div style="padding: 10px 20px 20px 200px;">							<!------ My pic ----->
+		<div class="nav-links-img2" style="padding: 10px 20px 20px 200px;">							<!------ My pic ----->
 		<img src="images\me.jpg" alt="Anit Bhattacharjee" width="250" height="330" title="Anit Bhattacharjee" float="right">
 		</div>
 		</div>
 	</div>
 	<div class="deco2">
 		<p id="about" class="see">.</p>
-		<h2  style="color: #95E0E8">About Me</h2>			<!------ Second block, About me page ----->
+		<h2  style="color: #95E0E8" class="anime2">About Me</h2>			<!------ Second block, About me page ----->
 		<div>												<!------ More about me here ----->
 			<p class="text">Hello! my name is Anit,I am a student at BIRLA INTITUTE of TECHNOLOGY, Mesra.I'm pursuing BTECH in ELCTRONICS AND COMMUNICATIONS ENGINEERING. Currently I am in my FIRST year of my College. </p>
 			<p class="text">I love learning new skills. I love to read novels or watch Anime in my free time. I try to do my best in both academics and sports.</p>
@@ -65,30 +66,34 @@
 	</div>
 	<main class="deco4">
 		<p id="skill" class="see">.</p>
-		<h2 >Skills</h2>									<!------ Third Bloack, Skills page ----->
+		<h2 class="anime3">Skills</h2>									<!------ Third Bloack, Skills page ----->
 		<h3>Languages</h3>
+		<div class="nav-links-img4">
 			<img src="icons\c.jpg" alt="c++" width="100" height="100" title="c++">					<!------ Some of my skills ----->
 			<img src="icons\html5.png" alt="HTML" width="90" height="100" title="HTML">
 			<img src="icons\python.png" alt="Python" width="100" height="100" title="Python">
+		</div>
 		<h3>Softwares</h3>
+		<div class="nav-links-img4">
 			<img src="icons\krita.png" alt="Krita" width="100" height="100" title="Krita">
 			<img src="icons\co.png" alt="Code Blocks" width="100" height="100" title="Code Blocks">
 			<img src="icons\turboc.jpeg" alt="Turbo c++" width="100" height="100" title="Turbo c++">
-		<p style="color: #0096FF">Click <a href="#click">here</a> to reach me.</p>
+		</div>
+		<p class ="text2" >Click <strong><a href="#click"> &nbsp;&nbsp;here&nbsp;&nbsp; </a></strong> to reach me.</p>
 	</main>
 	<div class="deco3" >									<!------ Fourth Bloack, Projects page ----->
 		<p id="click" class="see">.</p>
-		<h2 >Projects			<img src="icons\work.png" alt="work" width="50" height="50" title="me working"></h2>
+		<h2 class="anime1" >Projects			<img src="icons\work.png" alt="work" width="50" height="50" title="me working"></h2>
 
 		
 		<div class="ink" style="justify-content: space-around;">
 				<p class="text">Some of the projects i have worked on.</p><br>
 			<ul style="list-style: none;">
-				<li class="ink">	<p>PROJECT 1: <a href="https://github.com/AnitBhattacharjee/Portfolio" target="_blank" title="To see my project">MY PORTFOLIO</a></p>
-						<img src="images\project1.PNG" alt="c++" width="400" height="200" title="c++"   border: 5px solid black;>
+				<li class="nav-links-img3" class="ink">	<p>PROJECT 1: <a href="https://github.com/AnitBhattacharjee/Portfolio" target="_blank" title="To see my project">MY PORTFOLIO</a></p>
+						<img src="images\project1.PNG" alt="c++"  title="c++"   border: 5px solid black;>
 				</li><br>
-				<li class="ink">	<p>PROJECT 2: <a href="https://github.com/AnitBhattacharjee/Calculator" target="_blank" title="To see my project">SCIENTIFIC CALCULATOR</a></p>
-						<img src="images\project2.PNG" alt="c++" width="400" height="200" title="c++"   border: 5px solid black;>
+				<li class="nav-links-img3" class="ink">	<p>PROJECT 2: <a href="https://github.com/AnitBhattacharjee/Calculator" target="_blank" title="To see my project">SCIENTIFIC CALCULATOR</a></p>
+						<img src="images\project2.PNG" alt="c++"  title="c++"   border: 5px solid black;>
 				</li>
 			</ul>
 
@@ -96,21 +101,24 @@
 		</div>
 	</div>
 	<footer>							<!------ Fifth Block, Contacts ----->
-		<h3  id="click2" style="color: 	#A7F432; font-size:25px">Contact</h3>
+		<h3   id="click2" style="color: 	#A7F432; font-size:25px">Contact</h3>
+			<div class="nav-links-img5">
 			<a href="mailto:anitbhattacharjee684@gmail.com" target="_blank" title="To Mail me"><img src="icons\Gmail.png" alt="Mail" width="50" height="50"></a>
 			<a href="https://www.linkedin.com/in/anit-b-a265a3201" target="_blank" title="To check my Linkdin"><img src="icons\ln.png" alt="linkdin" width="50" height="50"></a>
 			<a href="https://www.instagram.com/anitb444?r=nametag" target="_blank" title="To follow me on Instagram"><img src="icons\instag.png" alt="Insta" width="50" height="50"></a>
 			<a href="https://www.facebook.com/anit.bhattacharjee2000" target="_blank" title="To follow me on Facebook"><img src="icons\Face.png" alt="FB" width="50" height="50"></a>
 			<a href="https://youtube.com/channel/UCGyThJ4s5u4BcxJ1SYboyDg" target="_blank" title="Subscribe my YouTube channel"><img src="icons\yt3.png" alt="YT" width="50" height="50"></a>
 			<a href="https://github.com/AnitBhattacharjee" target="_blank" title="Check out my GIT-HUB profile"><img src="icons\git.png" alt="git" width="50" height="50"></a>
+			</div>
 	<address >
   		<p style="color: white;">Anit Bhattacharjee, Hazaribag, Jharkhand</p>
 		<ul style="color: white;">
 			<li>Tel: 9709258707</li>
 			<li>Email: anit.b2000@gmail.com</li>
   		</ul>
+	<div class="toptag">
 		<a href="#top" title="Go Back UP"><img src="icons\up2.png" alt="top" width="50" height="50"></a> 			<!------ Back to top icon ----->
-
+	</div>
 	</address>
 	<marquee><p style="font-size: 15px; color: #0096FF;">Last Updated <time datetime="2016-01-20">26 April 2021</time></p></marquee>
 	</footer>							<!------ End of page ----->
