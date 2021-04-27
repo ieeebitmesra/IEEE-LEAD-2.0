@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    margin: 0;
+    background-color: mintcream ;
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: black;
+  padding: 10px;
+  border-bottom: 1px solid #bdbdbd;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0px;
+}
+
+nav .navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav .navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav .navbar ul li {
+  margin: 0px 10px;
+}
+
+nav .navbar ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-family: "Kaushan Script" , sans-serif;
+  font-size: 20px;
+  color: whitesmoke;
+  border-radius: 50px;
+}
+
+nav .navbar ul li a:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.4s;
+  color: black;
+}
+
+nav .menu {
+  padding: 10px 20px;
+  display: none;
+}
+
+nav .menu .menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  color: #5a5a5a;
+}
+
+nav .menu .menu-button:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+@media screen and (max-width: 740px) {
+  nav {
+    justify-content: space-between;
+    padding: 0px;
+  }
+  nav .navbar {
+    left: -100vw;
+    position: absolute;
+    width: 60%;
+    background-color: rgb(138, 137, 137);
+    min-height: 100vh;
+    border-right: 1px solid #bdbdbd;
+    transition: left 0.4s;
+  }
+  nav .navbar ul {
+    display: block;
+    padding: 100px 20px;
+  }
+  nav .navbar ul li {
+    margin: 35px 0px;
+  }
+  nav .navbar ul li a {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+  nav .menu {
+    display: block;
+  }
+}
+
+#cover {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+.main{
+    margin-top: 30px;
+    padding: 0;
+    height: 1500px;
+}
+
+.header{
+    text-align: center;
+    background-image: url("../IMAGES/header.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    font-family: "New Rocker" , sans-serif;
+    padding: 200px;
+    padding-top: 180px;
+    padding-bottom: 200px;
+    background-attachment: fixed;
+    font-size: 23px;
+    font-weight: bold;
+    color: blanchedalmond;
+}
+
+@media screen and (max-width: 860px) {
+  .header{
+    padding: 20px;
+    padding-top: 180px;
+    padding-bottom: 200px;
+    font-size: 20px;
+}
+}
+
+
+.font1{
+  min-height: 100vh;
+  padding: 100px 10px 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.font1 .about_img {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.font1 .about_img img {
+  width: 450px;
+}
+
+.font1 .text {
+  flex: 1.25;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.font1 .text .text-content {
+  padding: 10px 100px;
+}
+
+.font1 .text .text-content p {
+  font-family: "Original Surfer", sans-serif;
+  color: #616161;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+
+.font1 h2 , .font2 h2 , .font3 h2 , .font4 h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Fredericka the Great" , sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    background-color: beige;
+    padding: 10px;
+}
+
+.font2{
+  background-size: cover;
+  background-color: #ececec;
+  padding: 100px 50px 50px 50px;
+  font-size: 20px;
+  text-align: center;
+   color: rgb(92, 88, 72);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills .skill-content span {
+    line-height: 80px;
+    margin: 10px;
+    padding: 10px 30px;
+    background: rgb(207, 207, 207);
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    font-family: "Open Sans Condensed", sans-serif;
+  }
+
+
+  .font3{
+    padding: 100px 50px 50px 50px;
+    font-size: 20px;
+    text-align: center;
+    /* color: rgb(85, 83, 67);*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+  }
+
+
+  .font3 .box1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .font3 .box1 .proj1 {
+    max-width: 330px;
+    padding: 20px;
+    border: 1px solid #bdbdbd;
+    border-radius: 20px;
+    margin: 20px 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: box-shadow 0.2s;
+  }
+
+  .proj1 a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .proj1 a .image {
+    text-align: center;
+  }
+
+  .image img {
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .proj1 a .desc h3 {
+    font-family: "Lobster", sans-serif;
+    color: #d84400;
+    text-align: center;
+    padding: 20px 0px 5px 0px;
+    font-size: 25px;
+  }
+  .proj1 a .desc p {
+    padding: 0px 10px;
+    font-family: "Original Surfer", sans-serif;
+    color: #616161;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .box1 .proj1:hover {
+    -webkit-box-shadow: 3px 3px 47px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 3px 3px 47px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 3px 3px 47px -10px rgba(0, 0, 0, 0.57);
+    transition: box-shadow 0.4s;
+  }
+  
+  .font4{
+    /*border: solid dimgray;*/
+    background-size: cover;
+    background-color: #ececec;
+    padding: 100px 50px 50px 50px;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(92, 88, 72);
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.font4 p{
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 100;
+}
+
+  .contact-icon {
+    padding-bottom: 10px;
+  }
+  .contact-icon a i {
+    padding: 15px;
+    font-size: 42px;
+    color: chocolate;
+  }
+
+  .contact-icon a i:hover {
+    color: #575555;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+  }
+
+  footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 2px;
+  }
