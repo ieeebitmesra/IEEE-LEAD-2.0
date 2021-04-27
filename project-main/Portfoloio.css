@@ -1,0 +1,349 @@
+body{
+    padding:0px;
+    margin:0px;  
+}
+#one{
+    width:100%;
+    margin:0px;
+}
+
+ 
+nav a{
+    text-decoration: none;
+    overflow:hidden;
+    color:rgba(243, 240, 240, 0.945);
+    font-size:35px;
+    font-family: 'Zen Dots', 'Arial Narrow', Arial, sans-serif;
+    padding:30px;
+    text-align:center;  
+}
+nav{
+    background-color: rgba(10, 0, 0, 0.596); 
+     margin:0px; 
+     padding:25px;
+     text-align:center;
+}
+nav a:hover{
+    color:cornflowerblue;
+    text-align:center;
+    
+}
+#two{
+    width:45%;
+    float: left;
+    padding:1.8%;
+}
+.intro{
+    float:right;
+    width:50%;
+    
+}
+.intro h2{
+    font-size:50px;
+    font-family:'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color:rgb(126, 6, 6);
+}
+.intro h3{
+    font-size:70px;
+    font-family:'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(99, 41, 23);
+    text-align: center;
+}
+.intro h4{
+    font-size:50px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:red;
+}
+.front{
+    width:100%;
+    min-height: 80%;
+}
+
+
+#home{
+    background-color:rgb(241, 248, 250);
+    width:50%;
+    float:left;
+    padding:15px;
+}
+.A{
+    color:rgb(57, 69, 109);
+    font-size:35px;
+    font-family:'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 25px;
+}
+.B{
+    color:rgb(102, 65, 139);
+    font-size:35px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left:25px;
+}
+#homes img{
+    width:40%;
+    float:right;
+}
+ section3 [navigation]{
+    font-size: 70px;
+   color:rgb(47, 80, 28);
+   font-family:'Zen Dots', 'Arial Narrow', Arial, sans-serif;
+   text-align:left;
+}
+#project{
+    font-size:70px;
+    Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    text-align:center;
+    color:rgb(50, 72, 168);
+    background-color: rgb(245, 241, 241);
+    padding:10px;
+    border-style:solid;
+    border-color:rgba(70, 69, 67, 0.199);
+    border-radius:5px;
+}
+.home{
+    display:inline-block;
+}
+
+section2 {
+    display:inline-block;
+}
+.about{
+    color:rgb(110, 38, 38);
+    font-size:70px;
+    text-align:center;
+    font-family:'Roboto Slab' ,Verdana, Geneva, Tahoma, sans-serif;
+    background-color:lightgray;
+    padding:15px;
+    border-style:solid;
+    border-color: black;
+    border-radius:5px;
+}
+#Skills{
+    color:rgb(26, 90, 26);
+    background-color:rgba(197, 197, 194, 0.582);
+    font-size:70px;
+    text-align:center;
+    padding:15px;
+    border-style:solid;
+    border-color:black;
+    border-radius:10px;
+    margin:0px;
+}
+.Skills img{
+    width:30%;
+    
+}
+.Skills h3{
+    text-align:center;
+    color:rgba(139, 58, 58, 0.562);
+    font-size:50px;
+    font-family:'Roboto Slab' ,Verdana, Geneva, Tahoma, sans-serif;
+}
+#language{
+    display: inline-block;
+    text-align:center;
+}
+.Java{
+width:50%;
+text-align:center;
+float:left;
+}
+.Java img{
+    float:center;
+}
+.C{
+    width:50%;
+    text-align:center;
+    float:right;
+    }
+    .C img{
+        float:center;
+    }
+    #frontend{
+        display:inline-block;
+        text-align: center;
+    }
+    .HTML{
+        width:43%;
+        text-align:center;
+        float:left;
+        }
+        .HTML img{
+            float:center;   
+        }
+ .CSS{
+            width:57%;
+            text-align:center;
+            float:right;
+     }
+ .CSS img{
+                float:center;
+            }
+   .Git{
+       display:flex;
+       justify-content: center;
+   } 
+         .Skills p{
+             font-family:'Zen Dots', 'Arial Narrow', Arial, sans-serif;
+             color:rgba(67, 36, 124, 0.452);
+             font-size: 35px;
+         } 
+         .Contact h2{
+              font-size:70px;
+              font-family:'Roboto Slab' ,Verdana, Geneva, Tahoma, sans-serif;
+              background-color:rgba(17, 1, 1, 0.534);
+              color:rgb(238, 228, 228);
+              padding:15px;
+              text-align:center;
+              border-style: solid;
+              border-radius: 5px;
+              border:10px;
+              border-color:white;
+         }
+      .contact{
+                display:flex;
+                flex-direction:row;
+                justify-content:center;
+      } 
+      .contact ul li{
+          font-size:30px;
+
+      } 
+
+      .contact ul{
+          flex-direction: row;
+      }
+      .common{
+          display:flex;
+          flex-direction: row;
+          justify-content: center;
+      }
+        #contact{
+            width:30%;
+            font-size:50px;
+            text-align:center;
+            font-family:'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
+            color:rgb(51, 51, 153);
+            text-shadow: black;
+            justify-content: center;
+            border-style:solid;
+            background-color:lightgray;
+            border-color:black;
+            border:5px;
+            border-radius:7px;
+            padding:10px;
+        } 
+        #para{
+            font-size:30px;
+            color:rgb(104, 38, 38);
+            font-family:'Zen Dots', 'Arial Narrow', Arial, sans-serif; ;
+            text-align:center;
+        }
+        .Contact{
+            background-color: rgba(253, 252, 252, 0.986);
+        }
+        #clip img{
+            float:center;
+           width:300px;
+            border-style:solid;
+            border-color:rgba(155, 155, 75, 0.582);
+            border:10px;
+        }
+        #clip{
+            clip-path: circle(46.5% at 50% 50%);
+            width:30%;
+            float:center;
+        }
+        .contact ul li{
+            list-style: none;
+            margin:0px 30px;
+            font-size:30px;
+            text-align: center;
+        }
+        .contact ul li .fa{
+font-size:30px;
+line-height: 60px;
+color:#000;
+transition:-.6%;
+color:honeydew;
+padding-top: 5px;
+text-align:center;
+        }
+        .contact ul li a{
+            position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+            
+            transition: .6s;  
+            box-shadow: 0 5px 4px rgba(0,0,0,0.596);
+         }
+         .contact ul li a:hover{
+             transform:translate(0,-15px);
+         }
+        
+ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer{
+    float:center;
+}
+.Project0{
+font-size:30px;
+font-family:'Roboto Mono', 'Arial Narrow', Arial, sans-serif;
+color:rgb(129, 46, 46);
+}
+#Project1,#Project2{
+    max-width:300px;
+}
+.Project{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding:15px;
+}
+.Project1 p,.Project2 p{
+    text-align:center;
+    
+   
+}
+.Project1,.Project2{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-style: solid;
+    border-radius:15px;
+    border:15px;
+    border-color:gray
+    
+    
+}
+.Project a{
+    text-decoration: none;
+    font-size:40px;
+    color:rgb(190, 188, 188);
+    border-style:solid;
+    border-color:rgb(145, 141, 141);
+    
+    border-radius:10px;
+    text-align:center;
+}
+.footer{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    margin:25px;
+}
+
+
+
+
+
+
+
+        
+
