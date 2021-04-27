@@ -1,0 +1,575 @@
+
+body {
+  /* padding-top: 3rem; */
+  /* padding-bottom: 3rem; */
+  color: dimgrey;
+  font-family: Allerta;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+  }
+}
+/*-------icon menu------------*/
+
+.icon-bar {
+  width: 4.3vm;
+  /* Set a specific width */
+  position: fixed;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0.521);
+  /* Dark-grey background */
+  font-family: Allerta;
+}
+
+.icon-bar a {
+  display: block;
+  /* Make the links appear below each other instead of side-by-side */
+  text-align: center;
+  /* Center-align text */
+  padding: 0.8vw;
+  /* Add some padding */
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+  color: white;
+  /* White text color */
+  font-size: 2.8vw;
+  /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: white;
+  /* Add a hover color */
+  color: black;
+}
+
+/*-------icon menu------------*/
+
+
+ 
+/* Navigation Bar */
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+#nav_nav{
+  font-size: "2.2vw";
+  padding-top: 0.61vw;
+}
+.flip-box {
+  background-color: transparent;
+  width: 17vw;
+  height: 3vw;
+  border: 0.1vw solid #f1f1f1;
+  perspective: 50vw;
+  /* Remove this if you don't want the 3D effect */
+}
+
+
+/* This container is needed to position the front and back side */
+
+.flip-box-inner {
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* Position the front and back side */
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+
+/* Style the front side */
+
+.flip-box-front {
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+
+/* Style the back side */
+
+.flip-box-back {
+  background-color: whitesmoke;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+#mainNav {
+  font-family: Aldrich;
+  font-size: 1.2vw;
+  font-weight:bolder;
+  font-variant: small-caps;
+}
+
+.navbar-b {
+  transition: all .5s ease-in-out;
+  background-color: rgba(29, 20, 20, 0.425);
+  padding-top: 1vm;
+  padding-bottom: 1vm;
+}
+
+.navbar-b:hover {
+  opacity: 1;
+}
+
+.navbar-b.navbar-reduce {
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+  color: #1B1B1B;
+}
+
+.navbar-b.navbar-trans .nav-item,
+.navbar-b.navbar-reduce .nav-item {
+  position: relative;
+  padding-right: 0.6vw;
+  padding-left: 0;
+}
+
+.navbar-b.navbar-trans .nav-link,
+.navbar-b.navbar-reduce .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar-b.navbar-trans .nav-link:before,
+.navbar-b.navbar-reduce .nav-link:before {
+  content: '';
+  position: absolute;
+  margin-left: 0px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  height: 0.1vw;
+  transition: all 500ms ease;
+}
+
+.navbar-b.navbar-trans .nav-link:hover,
+.navbar-b.navbar-reduce .nav-link:hover {
+  color: #1B1B1B;
+}
+
+.navbar-b.navbar-trans .nav-link:hover:before,
+.navbar-b.navbar-reduce .nav-link:hover:before {
+  width: 2.78vw;
+}
+
+.navbar-b.navbar-trans .show>.nav-link:before,
+.navbar-b.navbar-trans .active>.nav-link:before,
+.navbar-b.navbar-trans .nav-link.show:before,
+.navbar-b.navbar-trans .nav-link.active:before,
+.navbar-b.navbar-reduce .show>.nav-link:before,
+.navbar-b.navbar-reduce .active>.nav-link:before,
+.navbar-b.navbar-reduce .nav-link.show:before,
+.navbar-b.navbar-reduce .nav-link.active:before {
+  width: 2.78vw;
+}
+
+.navbar-b.navbar-trans .nav-link:before {
+  background-color: #fff;
+  /* color: #1B1B1B; */
+}
+
+.navbar-b.navbar-trans .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-b.navbar-trans .show>.nav-link,
+.navbar-b.navbar-trans .active>.nav-link,
+.navbar-b.navbar-trans .nav-link.show,
+.navbar-b.navbar-trans .nav-link.active {
+  color: #fff;
+}
+
+.navbar-b.navbar-reduce {
+  transition: all .5s ease-in-out;
+  background-color: #fff;
+  padding-top: 0.8vw;
+  padding-bottom: 0.8vw;
+}
+
+.navbar-b.navbar-reduce .nav-link {
+  color: rgb(235, 110, 8);
+}
+
+.navbar-b.navbar-reduce .nav-link:before {
+  background-color: rgb(235, 110, 8);
+}
+
+.navbar-b.navbar-reduce .nav-link:hover {
+  color: rgb(235, 110, 8);
+}
+
+.navbar-b.navbar-reduce .show>.nav-link,
+.navbar-b.navbar-reduce .active>.nav-link,
+.navbar-b.navbar-reduce .nav-link.show,
+.navbar-b.navbar-reduce .nav-link.active {
+  color: rgb(235, 110, 8);
+}
+
+.navbar-b.navbar-reduce .navbar-brand {
+  color: rgb(235, 110, 8);
+}
+
+.navbar-b.navbar-reduce .navbar-toggler span {
+  background-color: #1B1B1B;
+}
+
+.navbar-b .navbar-brand {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  position: relative;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: 0;
+}
+
+.navbar-toggler span {
+  display: block;
+  background-color: #fff;
+  height: 0.4vw;
+  width: 1.27vw;
+  margin-top: 0.3vw;
+  margin-bottom: 0.3vw;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  left: 0;
+  opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  transition: -webkit-transform .35s ease-in-out;
+  transition: transform .35s ease-in-out;
+  transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  position: absolute;
+  left: 0.7vw;
+  top: 0.6vw;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  opacity: 0.9;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  height: 0.8vw;
+  visibility: hidden;
+  background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  position: absolute;
+  left: 0.8vw;
+  top: 0.6vw;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  opacity: 0.9;
+}
+
+.navbar-skill {
+  opacity: 0.4;
+}
+
+/* Navigation Bar */
+
+
+
+
+/* home  */
+.intro {
+  width: 30vw;
+  margin: 0 auto;
+  font-family: Allerta;
+  font-size: 3vw;
+  font-weight: bolder;
+  color: ghostwhite;
+  margin-top: 4vw;
+  border-right: 2px solid rgba(204, 204, 204, 0.589);
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.intro1 {
+  width: 40.6vw;
+  margin: 0 auto;
+  font-family: Allerta;
+  font-size: 2.2vw;
+  color: aliceblue;
+  margin-top: 14vw;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.animation-typewriter {
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30.5vw;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(204, 204, 204, 0.589);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+/* home  */
+
+
+
+
+/* about me  */
+.about_me1 {
+  background-color: grey;
+  background-attachment: fixed;
+  padding-bottom: 5vw;
+}
+.img-container {
+  text-align: center;
+}
+
+#ll {
+  padding-top:3vw;
+  padding-bottom: 3vw;
+  color: azure;
+  font-weight: bolder;
+  font-size: 3.5vw;
+  text-align: center;
+}
+
+#introduction_about_me {
+  font-size: 2vw;
+  font-family: Aldrich;
+  font-style: normal;
+  padding-top: 2vw;
+  padding-bottom: 4vw;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  color: black;
+  /* border-left: 6px solid rgb(19, 60, 110);*/
+  background-color: white;
+}
+/* about me  */
+
+
+
+/* project */
+.proje_txt {
+  color: white;
+  font-family: Allerta;
+  font-weight: bold;
+  font-size: 2vw;
+ 
+}
+
+.carousel {
+  margin-bottom: 20vw;
+}
+
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+  bottom:5vw;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+
+.carousel-item {
+  height: 32vw;
+}
+
+.carousel-item>img {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  /* height: 32rem; */
+}
+
+.proj_heading {
+  color: beige;
+  font-size: 4.3vw;
+  text-align: center;
+  font-weight: bolder;
+}
+.button1{
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+/* project */
+
+
+/* skills  */
+#my-skills-nav{
+  padding-bottom: 4vw;
+}
+#ll1 {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  color: black;
+  font-weight: bolder;
+  font-size: 3.5vw;
+  text-align: center;
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: 400;
+}
+
+/* rtl:begin:ignore */
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+/* rtl:end:ignore */
+
+/* Featurettes
+  ------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+/* skills  */
+
+/* RESPONSIVE CSS-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+/* RESPONSIVE CSS-------------------------------------------------- */
+
+
+/* contacts  */
+.icon-row {
+  width: 100%;
+  /* Full-width */
+  background-color: #555;
+  /* Dark-grey background */
+  overflow: auto;
+  /* Overflow due to float */
+}
+
+.icon-row a {
+  float: left;
+  /* Float links side by side */
+  text-align: center;
+  /* Center-align text */
+  width: 20%;
+  /* Equal width (5 icons with 20% width each = 100%) */
+  transition: all 0.3s ease;
+  /* Add transition for hover effects */
+  color: white;
+  /* White text color */
+  font-size: 2vw;
+  /* Increased font size */
+}
+
+.icon-row a:hover {
+  background-color: #000;
+  /* Add a hover color */
+}
+
+#zx-mm {
+  padding-left: 5vw;
+  padding-right: 5vw;
+
+  color: black;
+  font-size: 2vw;
+  background-color: rgba(47, 79, 79, 0.452);
+}
+
+#ll2 {
+  padding-bottom: vw;
+  padding-top: 5vw;
+  color: black;
+  font-weight: bolder;
+  font-size: 3.5vw;
+  text-align: center;
+}
+/* contacts  */
+
+
+/* footer  */
+footer {
+  text-align: center;
+  font-size: 2vw;
+  color: white;
+}
+/* footer  */
+
+
