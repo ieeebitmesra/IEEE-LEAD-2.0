@@ -2,7 +2,28 @@
     box-sizing: border-box;
 }
 
+nav{
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(120, 155, 161);
+  text-align: center;
+     
+}
+nav a{
+padding: 100px;
+color: azure;
+font-family: 'Acme', sans-serif;
+font-weight: bolder;
 
+
+}
+nav a:hover{
+ 
+
+color:rgb(20, 19, 19) ;
+
+transition: 0.35s;  
+}
 
 
 
@@ -86,34 +107,11 @@ html{
 }
 
 .Sticky {
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index:1;
-    padding: 20px;
-    font-size: 20px;
-    background-color: rgb(120, 155, 161);
-    text-align: center;
-    
-}
-.Sticky li{
-  display: inline;
-  
-  
-}
-
-.Sticky li a{
-  color: azure;
-  padding: 5%;
-  font-family: 'Acme', sans-serif;
-font-weight: bolder;
--webkit-transition: All 0.5s ease-in-out;
-}
-.Sticky li a:hover{
-  color:rgb(20, 19, 19) ;
-  
-  transition: 0.35s; 
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
 }
 
 .me{
