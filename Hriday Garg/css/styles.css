@@ -1,0 +1,307 @@
+body{
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    line-height: 2;
+    background-color: #151515;
+  }
+  
+#title{
+    background-image: url(../images/back.jpg);
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.container-fluid{
+    padding: 3% 15% 7%;
+}
+  
+.name{
+    font-family: 'Sacramento', cursive;
+    font-size: 90px;
+    font-weight: 600;
+    color: #66BFBF;
+    padding-top: 4rem ;
+}
+
+/* navigation bar start*/
+
+.nav-item{
+    padding: 0 18px;
+}
+  
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat light";
+    text-align: right;
+    display: inline-block;
+}
+  
+.nav-link:hover{
+    border: solid;
+    border-width: 2px;
+    border-radius: 10%;
+    border-color: #fff;
+}
+
+/* navigation bar end */
+
+.home-des{
+    text-align: left;
+    padding-top: 10% ;
+}
+
+.programmer{
+    color: #fff;
+}
+
+#about{
+    padding:  100px 0;
+}
+
+.profile_pic{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 2rem ;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.description{
+    width: 70%;
+    margin: auto;
+    color: #fff;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #66BFBF;
+    font-weight: 500;
+}
+
+hr{
+    border: dotted #d8d3cd 6px;
+    width:5%;
+    border-bottom: none;
+}
+
+p,h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#skill,#project,#contact{
+    padding-top: 100px ;
+}
+
+.skill-row{
+    width: 50%;
+    margin: 5% auto;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.skill_cp{
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-right:  30px;
+    margin-bottom: 30px;
+    border: 3px solid #fff;
+}
+  
+.skill_ps{
+    width: 200px;
+    border-radius: 50%;
+    float: right;
+    margin-left:  30px;
+    margin-bottom: 30px;
+    border: 3px solid #fff;
+}
+
+.skill_wd{
+    width: 200px;
+    border-radius: 50%;
+    float: left;
+    margin-right:  30px;
+    margin-bottom: 30px;
+    border: 3px solid #fff;
+}
+
+.skill-des{
+    color: #fff;
+}
+
+h3,a{
+    color: #11999E;
+}
+
+.inside-head{
+    font-size: 3.4rem ;
+}
+
+.judge{
+    margin-right: 1rem ;
+    font-weight: 500;
+    color: #66BFBF;
+}
+
+.end{
+    padding-bottom: 30px;
+}
+
+.carousel-inner{
+    padding: 5% 15%;
+}
+
+.project-image{
+    width: 500px;
+    border: 6px #fff;
+    border-style: double;
+}
+
+.project-text{
+    padding: 20px 0 0;
+}
+
+.project-icon{
+    padding-left: 30px;
+}
+
+.contact-link{
+    margin-left: 10px;
+}
+
+.connect{
+    padding-bottom: 2%;
+}
+
+.connect-icon{
+    padding: 0 20px 0 0;
+    font-size: 1.5rem;
+}
+
+.con-info{
+    width: 80%;
+    margin: auto;
+}
+
+#ending{
+    margin-top: 20px;
+    padding: 10px 0 1px 0 ;
+    background-color: #000;
+    color: #fff;
+}
+
+/* making responsive */
+
+@media screen and (max-width: 480px) {
+    h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .skill_cp,.skill_ps,.skill_wd{
+        float: none;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .skill-row{
+        text-align: center;
+    }
+    .skill-row{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .project-image{
+        width:400px;
+    }
+    #skill,#project,#contact{
+        padding-top: 50px ;
+    }
+    #project{
+        padding-bottom: 25px;
+    }
+    .skill-row{
+        margin-bottom: 0;
+    }
+    .cp,.ps{
+        padding-bottom: 25px;
+    }
+    .end{
+        padding-bottom: 50px;
+    }
+    #about{
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .project-image{
+        width:300px;
+    }
+    hr{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .project-image{
+        width:250px;
+    }
+}
+
+@media screen and (min-height: 500px) {
+    .name{
+        margin: 50px auto 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .description{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .inside-head{
+        padding-bottom: 25px;
+    }
+}
+
+/* adding animation */
+
+.ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+  
+.ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+  
+.ml1 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+}
+  
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+  
