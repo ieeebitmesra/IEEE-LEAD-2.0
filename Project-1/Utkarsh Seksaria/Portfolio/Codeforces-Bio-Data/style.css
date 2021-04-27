@@ -1,0 +1,113 @@
+/* css variables */
+
+:root{
+    --dark-bg: #00509d;
+    --light-bg: #1e91d0;
+    --dark-font: white;
+    --light-font: black;
+    --border-radius: 10px
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color: var(--light-bg);
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+}
+#heading{
+    text-align: center;
+    /* justify-content: center;
+    align-content: center; */
+    background-color: var(--dark-bg);
+    color : var(--dark-font);
+    /* display: flex; */
+    font-size: 3rem;
+    margin-top: 0px;
+    width: 80vw;
+    border-radius: var(--border-radius);
+    margin: 0 auto;
+}
+#first{
+    display: flex;
+    /* background-color: blue; */
+    margin-top: 0.5rem;
+}
+#input-box{
+    margin-top: 2vh;
+    display: flex;
+    height: 5vh;
+    justify-content: space-around;
+}
+#input{
+    font-size: 1.5rem;
+    width: 30vw;
+    text-align: center;
+    border-radius: 1rem;
+    border-color: white;
+}
+#button{
+    width: 300px;
+    font-size: 2rem;
+    color: var(--light-font);
+    background-color: lightgrey;
+    border-radius: var(--border-radius);
+    border-color: black;
+}
+
+#button:hover{
+    background: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.input{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: blue; */
+    width: 100vw;
+}
+.first-half{
+    display: flex;
+    height :78vh;
+    width: 50vw;
+    background-color: var(--dark-bg);
+    /* color: blue */
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.font1, .font2{
+    height: 5vh;
+    width: 47vw;
+    /* font-weight: 500; */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: cyan; */
+    margin-top: 0.25rem;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--dark-font);
+}
+.second-half{
+    display: flex;
+    height :78vh;   
+    width: 47vw;
+    /* margin-left: 1vw; */
+    background-color: var(--dark-bg);
+    /* color: red; */
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+#body-problems{
+    justify-content: space-between;
+}
