@@ -1,0 +1,440 @@
+
+
+
+body{
+    scroll-behavior: smooth;
+    margin: 0px;
+    font-size: 200%;
+    background-repeat: no-repeat;
+    /* background-attachment:fixed;
+    height: 600vh; */
+}
+
+
+
+div.logo{
+    padding-left: 9px;
+    padding-right: 9px;
+    display: inline-block;
+    background-color: rgb(247, 106, 41);
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    z-index: 100;
+}
+nav.navbar{
+    /* background-color: rgb(12, 0, 39); */
+    
+    text-align: right;
+    /* border: 3px solid chartreuse; */
+    display:inline-flex;
+    z-index: 999;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    
+    
+    top: 0px;
+    right: 0px;
+}
+
+nav.navbar ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
+}
+nav.navbar li{
+    margin-left: 17px;
+    margin-right: 17px;
+    list-style: none;
+    
+
+    /* display: inline-block; */
+}
+a{
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(179, 179, 179);
+}
+
+a:hover{
+    color: rgb(82, 81, 81);
+}
+
+
+
+/* section.sub
+{
+    display: block;
+    height: 50px;
+    z-index: 999;
+    border: 3px solid greenyellow;
+    position: fixed;
+    
+} */
+
+div.content{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+    /* border: 3px solid orangered; */
+    /* display: block; */
+    
+    /* background-color: rgb(71, 70, 71); */
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    position:absolute;
+    top: 300px;
+    left: 303px;
+    width: 700px;
+}
+.myimg{
+    /* height: 200px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto; */
+
+    height: 200px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 120px;
+    margin: auto;
+}
+
+div.content h2{
+    font-size: 300%;
+    color: rgb(248, 11, 11) ;
+}
+
+#home{
+    background-image: url("https://c1.wallpaperflare.com/preview/942/721/170/natural-night-sky-stars.jpg") ;
+    background-size: cover;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;
+}
+
+#about{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/70/88/19/nature-landscape-mountain-rock-sky-night-stars-milky-way-rock-formation-rock-formation-wallpaper-preview.jpg") ;
+    background-size: cover;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;
+}
+#about h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    margin-top: 0px;
+    color: rgb(212, 40, 40);
+}
+
+#about h2{
+    position: relative;
+    top: 80px;
+
+}
+
+#about .contentbox {
+    /* display: inline-block; */
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    top: 130px;
+    color: #ffc107;
+    font-family: monospace;
+    background-color: black;
+    
+}
+
+#skills{
+    background-image: url("https://c.wallhere.com/photos/76/ab/mountains_desert_night-1964.jpg!d");
+    background-size: cover;
+    height: 100vh;
+    /* overflow: hidden; */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;
+}
+
+#skills p{
+    margin : 0px;
+}
+
+#skills h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    margin-top: 0px;
+    color: rgb(212, 40, 40);
+}
+
+#skills h3{
+    color: cornflowerblue;
+}
+
+#skills h4{
+    color: rgb(255, 104, 17);
+}
+
+.divskill{
+    display: flex;
+    justify-content:space-around;
+}
+
+.lang{
+    display: inline-block;
+}
+
+.frontend{
+    display: inline-block;
+}
+
+.devtools{
+    display: inline-block;
+}
+
+.cbar{
+    border: 3px solid blue;
+    height: 8px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.bar1{
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: blue;
+    animation: bar1 2s;
+}
+
+@keyframes bar1 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+/* ------------------ */
+.cppbar{
+    border: 3px solid blue;
+    height: 8px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.bar2{
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: blue;
+    animation: bar2 2s;
+}
+
+@keyframes bar2 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+/* ------------------ */
+.javabar{
+    border: 3px solid blue;
+    height: 8px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.bar3{
+    background-color: white;
+    width: 5%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: blue;
+    animation: bar3 2s;
+}
+
+@keyframes bar3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 5%;
+    }
+}
+
+/* ------------------ */
+.htmlbar{
+    border: 3px solid blue;
+    height: 8px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.bar4{
+    background-color: white;
+    width: 20%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: blue;
+    animation: bar4 2s;
+}
+
+@keyframes bar4 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+/* ------------------ */
+.cssbar{
+    border: 3px solid blue;
+    height: 8px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.bar5{
+    background-color: white;
+    width: 9%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: blue;
+    animation: bar5 2s;
+}
+
+@keyframes bar5 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 9%;
+    }
+}
+
+/* ------------------ */
+.gitbar{
+    border: 3px solid blue;
+    height: 8px;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.bar6{
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+    box-shadow: blue;
+    animation: bar6 2s;
+}
+
+@keyframes bar6 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+
+#projects{
+    background-image: url("https://image.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg") ;
+    background-size: cover;
+    height: 60vh;
+    /* overflow: hidden; */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;
+}
+
+#projects p{
+    margin : 0px;
+}
+
+#projects h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    margin-top: 0px;
+    color: rgb(212, 40, 40);
+}
+
+.myproj{
+    background-color: rgb(51, 51, 51);
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    top: 70px;
+
+
+}
+
+.myproj p{
+    color: blanchedalmond;
+    position: relative;
+    top: 50px;
+    text-align: center;
+}
+
+#contact{
+    background-image: url("https://image.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg") ;
+    background-size: cover;
+    height: 30vh;
+    /* overflow: hidden; */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;
+}
+
+#contact p{
+    margin:0px;
+}
+
+#contact h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    margin-top: 0px;
+    color: rgb(212, 40, 40);
+    text-align: center;
+}
