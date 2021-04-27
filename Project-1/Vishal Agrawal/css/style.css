@@ -1,0 +1,255 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    background: #2B0504;
+    width: 100%;
+}
+
+.nav-item:hover {
+    background: black;
+    color: white;
+}
+
+.full-screen {
+    height: 100vh;
+}
+
+.odd {
+    color: white;
+    background: #2B0504;
+    padding: 1vmax;
+}
+
+.even {
+    color: black;
+    background: saddlebrown;
+    padding: 1vmax;
+}
+
+h1 {
+    margin: 0px;
+    margin-bottom: 1vh;
+    font-size: 2.5rem;
+    font-family: 'Merriweather', serif;
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 2.5rem;
+    font-family: Copperplate;
+}
+
+.capital {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.project-discription {
+    margin-top: 0px;
+    font-size: 2rem;
+}
+
+.projects-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects-item {
+    text-align: center;
+}
+
+.github-project-link {
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.github-project-link>a {
+    margin: 2vh;
+    color: white;
+    text-decoration: underline;
+}
+
+#account-link-div {
+    text-align: center;
+}
+
+.header {
+    margin: 0px;
+    margin-bottom: 3vh;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+}
+
+.remove-bottom-margin {
+    margin-bottom: 0vh;
+}
+
+.project-image {
+    height: 20vh;
+    width: 30vw;
+    margin: 1vh;
+}
+
+.skills-image {
+    height: 30vmin;
+    width: 30vmin;
+    margin: 5vmin;
+}
+
+.graph-group {
+    display: flex;
+    flex-direction: row;
+    padding: 5vh;
+}
+
+.account-link>h1>a {
+    margin: 2vh;
+    text-decoration: underline;
+}
+
+.black {
+    color: black;
+}
+
+.account-link>h1 {
+    margin-left: 4vw;
+}
+
+.center {
+    text-align: center;
+}
+
+.graph-item {
+    text-align: center;
+    width: 50%;
+}
+
+.graph-image {
+    height: 40vh;
+    width: 45vw;
+    margin: 1vh;
+}
+
+.project-image-calc {
+    height: 45vh;
+    width: 20vw;
+    margin: 1vh;
+    margin-bottom: 0vh;
+}
+
+.center-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container-2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-item {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 25vw;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: Copperplate;
+}
+
+.footer-div {
+    background: saddlebrown;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.links-item {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 33vw;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    font-family: Copperplate;
+}
+
+.float-button {
+    position: fixed;
+    right: 3vw;
+    bottom: 1vh;
+    height: 5vh;
+    width: 5vw;
+    background-color: #394053;
+    border-radius: 5vmax;
+    border-color: black;
+}
+
+.float-button>a {
+    color: white;
+}
+
+.newbie {
+    /* not familiar with this region  */
+    color: gray;
+}
+
+.pupil {
+    /* Ahhh good old days, taught me perseverance  */
+    color: green;
+}
+
+.specialist {
+    /* current home  */
+    color: #03a89e;
+}
+
+.expert {
+    /* next goal  */
+    color: blue;
+}
+
+.candidate-master {
+    /* Destination  */
+    color: #a0a;
+}
+
+.master {
+    /* I know I know :eyes: got a little optimistic */
+    color: #ff8c00;
+}
+
+.cf-section {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
