@@ -116,11 +116,11 @@ header{
 	min-height: 8vh;
 	border-radius: .5em;
 	background-color: rgb(93,73,84,50%) ;
-	transition:background-color 0.1s;
+	transition:background-color 0.1s,width 0.1s;
 }
 header:hover{
 	background-color: rgb(93,73,84,100%) ;
-
+	width: 89%;
 }
 .nav-links{
 	padding: 0px;
@@ -198,7 +198,20 @@ header:hover{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 1);
 	transform: rotate(360deg)
 }
+.nav-links-img44 img{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+	border-radius: 1em;
+	width: 200px;
+	height: 200px;
+	transition-timing-function: ease-out;
+	transition: box-shadow 0.1s;
+}
+.nav-links-img44 img:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+	
+}
 .nav-links-img5 img{
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5);
 	border-radius: 1em;
 	width: 50px;
 	height: 50px;
@@ -206,6 +219,7 @@ header:hover{
 	transition: height 0.3s,width 0.3s;
 }
 .nav-links-img5 img:hover{
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 1), 0 6px 20px 0 rgba(255, 255, 255, 1);
 	width: 60px;
 	height: 60px;
 }
