@@ -54,7 +54,7 @@ section:nth-child(even) {
 }
 
 section {
-    min-height: 50vh;
+    min-height: 30vh;
 }
 a :hover{
     color: rgb(12, 103, 184);
