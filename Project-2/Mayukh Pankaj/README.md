@@ -7,7 +7,7 @@
 In this pandemic, searching for job/intern is a tough task, scrolling through different platforms, what if you can have Everything at Once !
 Search over 5 platforms, A google for work, Woogle.
 
-web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
+Web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
 
 **MILESTONES ACHIEVED**✔️- 
   
@@ -96,13 +96,13 @@ instead of downloading the the gui, just logon & use.
 * Heroku crashing due to process timeout.
 
 
-**Video Demo** 
+**Video Demo ▶️** 
 
 
 https://user-images.githubusercontent.com/40158577/118137620-083cf600-b423-11eb-95a7-5cb21a617216.mp4
 
 
-** Screenshots ** 
+**Screenshots 📷** 
 
 ![woogle homepage](https://i.imgur.com/jxThCQ1.png "woogle home") 
 ![woogle results](https://i.imgur.com/xkI3g6W.png "woogle results") 
