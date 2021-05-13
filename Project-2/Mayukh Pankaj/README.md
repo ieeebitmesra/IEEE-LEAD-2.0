@@ -49,7 +49,7 @@ web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
    *Selenium headless for client-side rendered website ( naukri.com)
    
 
-**Python used with BS4 , Flask , requests , WTF form modules.**- 
+**Python used with BS4 , Flask , requests , WTForms modules.**- 
      
      1. First user gives job designation / skill & location as input to rendered form. 
      2. User input is passed to 5 functions for each platform like linkedin(input,loc): 
@@ -114,6 +114,6 @@ https://user-images.githubusercontent.com/40158577/118137620-083cf600-b423-11eb-
 
 Youtube video link: https://www.youtube.com/watch?v=92Rc_fnwvFg
 
-
+Thank you IEEE BITM <3
 
 
