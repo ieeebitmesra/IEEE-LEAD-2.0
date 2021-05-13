@@ -14,5 +14,6 @@ Milestones completed:
 3) Scrapped all info available from three websites viz naukri.com, linkedin.com, monsterindia.in
 
 
-Link to demonstration video:
-https://drive.google.com/file/d/1Lf8sBKYw6U6wThYBOWXDss8E4g2i1e6d/view?usp=sharing
+Demonstration video:
+
+
