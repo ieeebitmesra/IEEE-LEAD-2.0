@@ -34,8 +34,8 @@ def on_click():
     lxml_soup = BeautifulSoup(pageSource, 'lxml')
     #soup = BeautifulSoup(driver.page_source, "html5lib")
     job = lxml_soup.find('ul', class_ = 'jobs-search__results-list')
-    print(lxml_soup.prettify())
-    # driver.quit()
+    # print(lxml_soup.prettify())
+    driver.quit()
     f = True
     if lxml_soup.find('ul', class_ = 'jobs-search__results-list'):
         link = lxml_soup.find('a',class_='base-card__full-link').get('href')

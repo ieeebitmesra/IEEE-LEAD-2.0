@@ -27,7 +27,7 @@ def on_click():
     driver.get(url)
     time.sleep(10)
     soup = BeautifulSoup(driver.page_source, "html5lib")
-    print(soup.prettify())
+    # print(soup.prettify())
     driver.quit()
     f = True
     if soup.find('div', class_='job-title'):
