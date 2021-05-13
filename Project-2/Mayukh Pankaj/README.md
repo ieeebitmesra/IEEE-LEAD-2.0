@@ -1,3 +1,4 @@
+
 # Woogle - Job & Intern scraping web application 📱
 
 [www.woogles.herokuapp.com](https://woogles.herokuapp.com/) 
@@ -39,11 +40,14 @@ web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
 
  ## Tech Stack 💻 ##
  
+ ![Capture](https://user-images.githubusercontent.com/40158577/118145653-71286c00-b42b-11eb-8258-f78a8c1f4050.PNG)
+ 
  * Python 
  * Flask + jinja  
  * Beautiful soup 4 
  * Bootstrap 5 
    *Selenium headless for client-side rendered website ( naukri.com)
+   
 
 Python used with BS4 , Flask , requests , WTF form modules.
 First user gives job designation / skill & location as input to rendered form. 
