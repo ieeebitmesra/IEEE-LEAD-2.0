@@ -38,7 +38,7 @@ https://user-images.githubusercontent.com/76961250/118155575-fca6fa80-b435-11eb-
 
     
 2. **WEBSITES SCRAPING:** It show the data of the first result of the site. If we search for an invalid keyword it shows no jobs availabe. 
-(the data was taking quite long to upload so I took two videos)
+(the data was taking quite long to upload so I trimmed the vedios to save time)
 
 
 
