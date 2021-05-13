@@ -4,6 +4,8 @@
 
 #Project_1
 
+Portfolio Link: [My_Portfolio](https://rishika-05.github.io/My_Portfolio/)
+
 I already knew basics of Frontend development before the start of LEAD. I'd started learning Frontend Web Development from March. 
 Looking forward to learn new techniques through the project.
 
