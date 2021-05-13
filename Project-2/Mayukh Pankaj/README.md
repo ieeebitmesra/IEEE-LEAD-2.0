@@ -1,6 +1,10 @@
 # Woogle - Job & Intern scraping web application 📱
 
-[www.woogles.herokuapp.com](https://woogles.herokuapp.com/)
+[www.woogles.herokuapp.com](https://woogles.herokuapp.com/) 
+  * crashing due to heroku request timeout. 
+
+In this pandemic, searching for job/intern is a tough task, scrolling through different platforms, what if you can have Everything at Once !
+Search over 5 platforms, A google for work, Woogle.
 
 web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
 
@@ -84,6 +88,8 @@ some new discoveries like,
 
 **IMPROVEMENT 🔍**
 * Heroku crashing due to process timeout.
+
+https://drive.google.com/file/d/1J3uMKhz67ear20Zw5X_2oFenRkwS_yUs/view?usp=sharing 
 
 ![woogle homepage](https://i.imgur.com/jxThCQ1.png "woogle home") 
 ![woogle results](https://i.imgur.com/xkI3g6W.png "woogle results") 
