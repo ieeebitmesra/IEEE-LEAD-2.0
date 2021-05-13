@@ -29,10 +29,10 @@ Web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
           * Times Job
           
     6. OPTIONAL MILESTONES ✔️ 
+          * location specific search 
           * Flask-Jinja with bootstrap 
           * Hosted on heroku
           * company images 
-          * location specific search 
           * results displayed in cards.
           * responsive-material design
           
