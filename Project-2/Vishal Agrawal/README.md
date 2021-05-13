@@ -9,3 +9,5 @@ google_search.py - Gives you relavent links for your search
 job_scraper.py - Find job posting from indeed and simply hired (contains GUI)
 
 rest all python files are terminal version of the same (i.e. they donot contain GUI)
+
+GUI demo : https://www.youtube.com/watch?v=uS4ShTlVeak
