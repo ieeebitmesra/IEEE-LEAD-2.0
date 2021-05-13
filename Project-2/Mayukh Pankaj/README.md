@@ -1,4 +1,4 @@
-# Woogle - Job & Intern scraping web application 🌎
+# Woogle - Job & Intern scraping web application 📱
 
 [www.woogles.herokuapp.com](https://woogles.herokuapp.com/)
 
@@ -24,7 +24,7 @@ web scraping web-app developed for LEAD 2021 organised by IEEE BIT Mesra.
           * Times Job
           
     6. OPTIONAL MILESTONES ✔️ 
-          * Flask-jinja with bootstrap 
+          * Flask-Jinja with bootstrap 
           * Hosted on heroku
           * company images 
           * location specific search 
@@ -70,7 +70,7 @@ recursively display data with help of Jinja with bootstrap cards.
 Searching for job/intern is a critical situation and needs on the go solution, this is the reason I went for web application, 
 instead of downloading the the gui, just logon & use. 
 
-**TAKEAWAYS 🚀**
+**TAKEAWAYS 🎓 🎓 **
 
 improved python skills
     before using a list of dictionaries , was using a tuple of lists which was bad.
@@ -84,4 +84,13 @@ some new discoveries like,
 
 **IMPROVEMENT 🔍**
 * Heroku crashing due to process timeout.
+
+![woogle homepage](https://i.imgur.com/jxThCQ1.png "woogle home") 
+![woogle results](https://i.imgur.com/xkI3g6W.png "woogle results") 
+![woogle mobile](https://i.imgur.com/fHS3oip.png "woogle mobile")
+
+
+
+
+
 
