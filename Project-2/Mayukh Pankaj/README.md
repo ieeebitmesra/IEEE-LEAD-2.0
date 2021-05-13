@@ -1,10 +1,7 @@
-
-https://user-images.githubusercontent.com/40158577/118137620-083cf600-b423-11eb-95a7-5cb21a617216.mp4
-
 # Woogle - Job & Intern scraping web application 📱
 
 [www.woogles.herokuapp.com](https://woogles.herokuapp.com/) 
-  * crashing due to heroku request timeout. 
+  *(crashing due to heroku request timeout.) 
 
 In this pandemic, searching for job/intern is a tough task, scrolling through different platforms, what if you can have Everything at Once !
 Search over 5 platforms, A google for work, Woogle.
@@ -79,27 +76,35 @@ instead of downloading the the gui, just logon & use.
 
 **TAKEAWAYS 🎓 🎓 **
 
-improved python skills
-    before using a list of dictionaries , was using a tuple of lists which was bad.
-learned webscraping 
-    BS4 & selenium.
-
-some new discoveries like,
-    html class id's change with change in useragent, so passing headers is necessary for consistent html code.
+*improved python skills
+    *before using a list of dictionaries , was using a tuple of lists which was bad.
+*learned webscraping 
+   * BS4 & selenium.
+*some new discoveries like,
+    * html class id's change with change in useragent, so passing headers is necessary for consistent html code.
 
 
 
 **IMPROVEMENT 🔍**
+
 * Heroku crashing due to process timeout.
 
-![video](https://storezeo.000webhostapp.com/server/woogle%20v1.mp4)
+
+
+** Video Demo ** 
+
+
+https://user-images.githubusercontent.com/40158577/118137620-083cf600-b423-11eb-95a7-5cb21a617216.mp4
+
+
+** Screenshots ** 
 
 ![woogle homepage](https://i.imgur.com/jxThCQ1.png "woogle home") 
 ![woogle results](https://i.imgur.com/xkI3g6W.png "woogle results") 
 ![woogle mobile](https://i.imgur.com/fHS3oip.png "woogle mobile")
 
 
-https://www.youtube.com/watch?v=92Rc_fnwvFg
+Youtube video link: https://www.youtube.com/watch?v=92Rc_fnwvFg
 
 
 
