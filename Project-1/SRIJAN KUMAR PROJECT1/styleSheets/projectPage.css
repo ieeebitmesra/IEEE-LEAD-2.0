@@ -1,0 +1,34 @@
+.project{
+    background-color: #e6e8d5;
+    /* border: 2px solid red; */
+    width: 100vw;
+    height: 100vh;
+    margin-top: 7vh;
+}
+
+#projHead{
+    margin: 45px;
+    text-align: center;
+}
+
+.projInside{
+    /* border: 2px solid green; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
+    
+}
+.projInside p{
+    margin-top: 1vh;
+    height: 2vh;
+    align-items: flex-start;
+font-size: large;
+color: blue;
+/* border: 2px solid blue; */
+/* flex-basis: 1vh; */
+font-weight: bold;
+}
+
