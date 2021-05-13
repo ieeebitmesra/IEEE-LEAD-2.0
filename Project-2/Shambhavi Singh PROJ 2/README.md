@@ -1,9 +1,6 @@
 # WEB-SCRAPING-LEAD
 NAME: SHAMBHAVI SINGH
-   
-https://user-images.githubusercontent.com/78691639/118137076-6a492b80-b422-11eb-838a-b9b6c6d8c17f.mp4
-
-GROUP NO : 9
+  GROUP NO : 9
 
 **MILESTONES ACHIEVED**
  - Google search results first url
