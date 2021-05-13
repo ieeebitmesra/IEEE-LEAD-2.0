@@ -14,3 +14,6 @@
 
 ### Web Scarping using selenium, requests and BeautifulSoup
 ### GUI using Tkinter
+
+https://user-images.githubusercontent.com/82498114/118169588-bdcd7080-b446-11eb-949a-4516c209f974.mp4
+
