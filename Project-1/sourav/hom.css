@@ -1,0 +1,149 @@
+/* All the functions here are solely for homepage */
+
+/* 
+Function to add background image to homepage  */
+body
+{
+    background-image: url(images/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg);
+    background-size: cover;
+  background-attachment: fixed;
+}
+/* function to change heading */
+h1{
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Yellowtail', cursive;
+  line-height: 4px;
+}
+
+/* function to change background of txt in homepage */
+ .en
+ {
+   text-align: center;
+   font-size: 35px;
+   border-style: dashed;
+   width: 50%;
+   margin-left: 180px;
+   
+   color: thistle;
+ }
+
+ 
+ 
+ 
+/* function to add effects to heading */
+ h1:hover
+ {
+  
+   font-size: 52px;
+ }
+
+/*  
+function to add animation for page */
+ @keyframes animate {
+  
+  0% {
+      content: "Creator";
+      font-size: 30px;
+     color: white;
+  }
+
+  25%{
+    content: "Coder";
+    font-size: 30px;
+    color: white;
+  }
+
+  50% {
+      content: "Web Developer";
+      font-size: 30px;
+      color: white;
+  }
+
+  75% {
+      content: "Tech Enthusiast";
+      font-size: 30px;
+      color: white;
+  }
+ 100% {
+   content: "Learner";
+   font-size: 30px;
+   color: white;
+ }
+
+
+}
+
+
+
+/*  
+function to add animation for page */
+span::before {
+  content: "Creator";
+  animation: animate infinite 6s;
+  padding-left: 10px;
+}
+
+/* function for animation in homepage  */
+.po
+{
+  font-size: 30px;
+  text-align: center;
+  margin-left: 20px;
+  color: white;
+}
+/*  
+function for side navbar */
+.op{
+  border-style: solid;
+  
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+ 
+
+
+}
+/*  
+function for side navbar */
+.no
+{
+  text-align: right;
+  font-size: 25px;
+  list-style-type: none;
+  line-height: ;
+}
+
+/*  
+function for side navbar */
+
+.op a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+
+/*  
+function for side navbar */
+.op a:hover {
+  color: #f1f1f1;
+}
+
+
+/* function for image attached */
+#type
+{
+  width: 44%;
+  margin-left: 180px;
+  margin-top: 8px;
+  border-style: groove;
+}
