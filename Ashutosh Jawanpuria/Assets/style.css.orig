@@ -1,0 +1,69 @@
+html {
+    background-color: rgb(161, 45, 64);
+    font-size: 20rem;
+    /* text-align: center; */
+    /* margin: 0rem; */
+}
+
+body {
+    margin: 0;
+}
+
+
+/* h1 {
+    margin: 0;
+} */
+
+*/
+/* rgb(133, 51, 65) */
+
+ul {
+    background: rgb(26, 86, 94);
+    padding: 20rem;
+    border: 1rem solid black;
+    margin: 0;
+}
+
+li {
+    margin-left: 10rem;
+}
+
+
+/* blockquote {
+    margin-left: 0;
+} */
+
+mark {
+    color: blue;
+}
+
+p {
+    margin-left: 0rem;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 15rem;
+    margin-left: 8%;
+    margin-right: 8%;
+    opacity: 0.5;
+}
+
+#navbar a:hover {
+    background-color: rgb(8, 63, 8);
+    color: rgb(63, 6, 6);
+}
