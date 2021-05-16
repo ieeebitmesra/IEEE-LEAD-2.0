@@ -1,0 +1,253 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.header_area .main-menu .navbar .navbar-brand{
+    padding: 0 10px 0 100px
+}
+.header_area .main-menu .navbar{
+    padding: 5px 219px 5px 0
+}
+.header_area .main-menu .nav-item .nav-link{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: 5px 35px;
+    color: white;
+}
+.header_area .main-menu .navbar-nav a:hover{
+    background-color:rgba(214, 216, 208, 0.5) ;
+    border-radius: 50px;
+    color: rgba(0, 0, 0, 0.822)
+}
+.header_area{
+    background-color: rgb(128,128,128,1);
+}
+.site-main .site-banner .site-title h3{
+    padding-top: 30%;
+    font-family: 'Orelega One', cursive;
+    color: rgb(44, 5, 83);
+   
+   
+}
+.site-main .site-banner .site-title h4{
+    padding-top: 60px;
+}
+.site-main .site-banner .site-title h1{
+    font-size: 59px;
+    font-family: 'Orelega One', cursive;
+    color: rgb(44, 5, 83);
+   
+}
+.site-main .site-banner .banner-image > img{
+    margin-top: 170px;
+    border: 2px solid black;
+    border-radius: 182px;
+    height: 324px;
+    margin-left: 324px;
+    width: 326px;
+}
+/* .site-main .site-banner .site-title h6{
+    
+    color: rgb(44, 5, 83);
+   
+} */
+.site-main .site-banner .site-title h4{
+    color: rgb(44, 5, 83);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   
+}
+h6{
+    display: flex;
+    margin: -86px 0 0 0;
+    font-size: 18px;
+    color: rgb(70, 8, 131);
+}
+.skill-text{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+hr{
+    border-top: 2px solid rgb(46, 45, 45);
+}
+.contactme{
+    max-width: 1200px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,0.1);
+}
+.contactme .title{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contact-form .form-field{
+    position: relative;
+    margin: 32px 0;
+
+}
+.contact-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color:#5543ca ;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label{
+    transform: translateY(-24px);
+}
+.contact-form .input-text:focus{
+    outline: none;
+
+}
+.contact-form .label{
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+
+}
+.contact-form .submit-btn{
+    display: inline-block;
+    background-image: linear-gradient(125deg, #a72879, #064497);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+
+}
+.footer{
+    background: #212121;
+    padding: 80px 0;
+}
+.footer .social_icon{
+    margin: 0 auto;
+    width: 100%;
+}
+.footer .social_icon a{
+    display: inline-block;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #252525;
+    transition: 0.5s all;
+    color: rgb(221, 207, 9);
+
+}
+.footer .social_icon a:hover{
+    background: rgb(90, 87, 87);
+}
+.footer .copy{
+    width: 100%;
+    padding-top: 30px;
+
+}
+.footer .copy p{
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+}
+.section_title{
+    position: relative;
+    margin-bottom: 70px;
+    width: 100%;
+    padding-top: 60px; 
+}
+.section_title h3{
+    position: relative;
+    font-size: 50px;
+    line-height: 1.14;
+    letter-spacing: 1.4px;
+    padding-bottom: 13px;
+    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.projects{
+    border: 1px solid #fafafa;
+    transition: all 0.3s;
+}
+.projects .project-item .part-img{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+
+}
+.projects .project-item .part-img img{
+    transition: all 0.3s;
+}
+.projects .project-item:hover .part-img img{
+    transform: scale(1.1);
+    opacity: 1;
+
+}
+.projects .project-item .part-img .post-info-category{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+.projects .project-item .part-img .post-info-category a{
+    background:#1957f3;
+    padding: 7px 19px;
+    color: #fff;
+    text-decoration: none;
+}
+.projects .project-item .content{
+    padding: 20px;
+}
+.projects .project-item .content .title{
+    margin-bottom: 20px;
+}
+.projects .project-item .content .title h4{
+    font-size: 16px;
+
+
+}
+.tech1{
+    display: flex;
+    padding: 36px 0 30px 200px;
+    text-align: center;
+
+}
+.tech2{
+    display: flex;
+    padding: 36px 0 30px 200px;
+    text-align: center;
+}
+.tech1 li{
+    list-style: none;
+    padding: 0 50px 0 50px;
+  
+}
+.tech2 li{
+    list-style: none;
+    padding: 0 50px 0 50px;
+}
