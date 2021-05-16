@@ -1,0 +1,612 @@
+/* ------------------------------------CSS Variables and theme Classes ---------------------------------------- */
+:root {
+    --dark1: #0077b6;
+    --dark2: #370617;
+    --dark3: #008000;
+    --dark4: #a40434;
+
+    --light1: #90e0ef;
+    --light2: #ffba08;
+    --light3: #ffff3f;
+    --light4: #fe5d9f;
+
+    --footer1: #48cae4;
+    --footer2: #faa307;
+    --footer3: #7acc7a;
+    --footer4: #f686bd;
+
+    --main-text-color: #000;
+    --secondary-text-color: #fff;
+
+    --font-style-1: "Amatic SC", cursive;
+    --font-style-2: "Yanone Kaffeesatz", sans-serif;
+    --font-style-3: "Flamenco", cursive;
+
+    --newbie: grey;
+    --pupil: green;
+    --specialist: darkcyan;
+    --expert: blue;
+    --candidate-master: purple;
+    --master: orange;
+    --international-master: orange;
+    --grandmaster: red;
+    --international-grandmaster: red;
+    --legendary-grandmaster: rgb(150, 0, 0);
+}
+
+/*  Color-Theme Classes */
+.aqua {
+    --main-color: var(--light1);
+    --secondary-color: var(--dark1);
+    --tertiary-color: var(--footer1);
+}
+.furious {
+    --main-color: var(--light2);
+    --secondary-color: var(--dark2);
+    --tertiary-color: var(--footer2);
+}
+.peaceful {
+    --main-color: var(--light3);
+    --secondary-color: var(--dark3);
+    --tertiary-color: var(--footer3);
+}
+.lovely {
+    --main-color: var(--light4);
+    --secondary-color: var(--dark4);
+    --tertiary-color: var(--footer4);
+}
+
+/*  Font-Style Classes */
+#sketchy {
+    font-weight: 700;
+    --handwriting: var(--font-style-1);
+}
+#classic {
+    --handwriting: var(--font-style-2);
+}
+#trendy {
+    --handwriting: var(--font-style-3);
+}
+
+/* ------------------------------------Entire Document Styling Starts Here--------------------------------------- */
+/* Reset margin and padding of the entire document */
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+}
+body {
+    background-color: var(--main-color);
+}
+/* ------------------------------------Navbar Styling Starts Here ------------------------------------------------*/
+/* #navbar{
+    height: 10vh;
+} */
+#nav-items {
+    color: var(--secondary-text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--secondary-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    list-style: none;
+}
+#nav-items img {
+    width: 100%;
+}
+label {
+    background: var(--secondary-color);
+    height: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 4vh;
+    padding-top: 3vh;
+}
+input,
+label {
+    display: none;
+}
+/* ------------------------------------Home-Page Styling Starts Here ------------------------------------------------*/
+#home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5vh 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+#home-first-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+#home-second-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-second-section img {
+    width: 55%;
+}
+/* ------------------------------------Personalize-Section Styling Starts Here ------------------------------------------------*/
+#personalize-heading {
+    line-height: 3rem;
+}
+.container-personalize {
+    box-sizing: border-box;
+    background: var(--secondary-color);
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "heading heading"
+        "tile-1 tile-2"
+        "resultant-theme resultant-theme";
+    padding: 6vh 1.1vw;
+
+    margin: 0 auto;
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+#personalize-heading {
+    grid-area: heading;
+    padding-top: 0;
+    padding-bottom: 6vh;
+}
+#card-1 {
+    background: #0077b6;
+}
+#card-2 {
+    background: #370617;
+}
+#card-3 {
+    background: #008000;
+}
+#card-4 {
+    background: #a40434;
+}
+#theme-cards {
+    grid-area: tile-1;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 2fr);
+    height: 50vh;
+}
+#change-font {
+    grid-area: tile-2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2vh;
+    height: 50vh;
+}
+#change-font p {
+    box-sizing: border-box;
+    height: 100%;
+    cursor: pointer;
+    background-color: var(--secondary-text-color);
+    color: var(--main-text-color);
+}
+#handwriting-card-1 {
+    padding-top: 3vh;
+    font-family: "Amatic SC", cursive;
+}
+#handwriting-card-2 {
+    padding-top: 3vh;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+}
+#handwriting-card-3 {
+    padding-top: 4vh;
+    font-family: "Flamenco", cursive;
+}
+#current-style {
+    padding-top: 2rem;
+    grid-area: resultant-theme;
+    text-transform: uppercase;
+}
+/* ------------------------------------ About-Me Section Styling Starts Here ------------------------------------------------*/
+.container-AboutMe {
+    padding: 8rem 0;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.container-AboutMe img {
+    width: 40vw;
+    margin: auto auto;
+}
+.AboutMe-content {
+    margin: auto 0;
+}
+.AboutMe-content .text-xs {
+    padding: 1rem 0;
+}
+/* ------------------------------------ Technologies Section Styling Starts Here ------------------------------------------------*/
+.container-technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--secondary-color);
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+#technologies-heading {
+    padding: 2vh 0;
+    line-height: 3rem;
+}
+.tech-card-container {
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vh;
+    padding-bottom: 2vh;
+}
+.tech-card {
+    width: 23vw;
+}
+/* ------------------------------------ Projects Section Styling Starts Here ------------------------------------------------*/
+.container-projects {
+    text-align: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+#projects-heading {
+    padding-top: 4vh;
+    padding-bottom: 8vh;
+}
+.project-grid {
+    padding-bottom: 5vh;
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.project-grid a {
+    margin: 0 auto;
+    width: 15rem;
+}
+.project-card {
+    background: var(--secondary-color);
+    color: var(--secondary-text-color);
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 7px 31px -14px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 7px 31px -14px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 7px 31px -14px rgba(0, 0, 0, 0.75);
+}
+.project-card a {
+    height: 18rem;
+    background: var(--secondary-color);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+.project-card p {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.project-card a img {
+    width: 100%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+.mfp-counter {
+    position: relative;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: var(--handwriting);
+    color: white;
+}
+/* ------------------------------------ CP Section Styling Starts Here ------------------------------------------------*/
+.container-cp {
+    min-height: 100vh;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+#cp-heading {
+    line-height: 3rem;
+}
+#cp-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+}
+#cp-first-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#cp-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    color: var(--main-text-color);
+    border-radius: 1rem;
+}
+#cp-wrapper > a {
+    background-color: var(--pupil);
+}
+#cp-wrapper p, #cp-wrapper a{
+    font-size: 2.5rem;
+}
+#cp-second-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#cp-image-wrapper {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#cp-second-section img {
+    width: 90%;
+}
+#cp-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#cp-input-field {
+    display: block;
+    width: 45%;
+    height: 50px;
+    text-align: center;
+}
+/* ------------------------------------ Footer Section Styling Starts Here ------------------------------------------------*/
+.footer-container {
+    text-align: center;
+    background: var(--tertiary-color);
+}
+.footer-container p {
+    padding: 1rem;
+}
+.footer-container p a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+.footer-container p.text-xs {
+    padding: 0.2rem;
+}
+.footer {
+    height: 14vh;
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer img {
+    height: 50px;
+}
+/* ------------------------------------ Utility Classes--------------------------------------------------------------------*/
+
+.text-xl {
+    font-weight: 600;
+    font-size: 5rem;
+    font-family: var(--handwriting);
+}
+.text-lg {
+    font-weight: 500;
+    font-size: 3rem;
+    font-family: var(--handwriting);
+}
+.text-md {
+    font-weight: 400;
+    font-size: 1.9rem;
+    font-family: var(--handwriting);
+}
+.text-sm {
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: var(--handwriting);
+}
+.text-xs {
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family: var(--handwriting);
+}
+.btn {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    margin: 0.3rem 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-secondary {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+    margin: 0.3rem 0;
+    cursor: pointer;
+}
+.btn-sm {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.4rem;
+}
+.btn-sm {
+    padding: 0.3rem 0.4rem;
+}
+.btn-lg {
+    padding: 0.5rem 1rem;
+}
+.card {
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.01);
+    filter: brightness(1.05);
+    -webkit-box-shadow: 0px 0px 52px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 52px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 52px 5px rgba(0, 0, 0, 0.75);
+}
+/* ------------------------------------------------Media Queries------------------------------------------------ */
+@media (max-width: 1050px) {
+    /* navbar styling */
+    #nav-items {
+        height: 60vh;
+        display: none;
+    }
+    label {
+        display: block;
+        cursor: pointer;
+    }
+    #nav-items {
+        flex-direction: column;
+    }
+    input:checked + #nav-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    /* home page styling */
+    #home-grid {
+        grid-template-columns: 1fr;
+    }
+    #home-first-section {
+        padding-top: 5vh;
+    }
+    #home-second-section {
+        padding-top: 0;
+    }
+    /* academics section styling */
+    /* .glider-next,
+    .glider-prev {
+        display: none;
+    }
+    .academic-card {
+        width: 85vw !important;
+    } */
+    /* technologies section styling */
+    .container-technologies {
+        display: block;
+    }
+    .tech-card-container {
+        width: 70vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1vh;
+    }
+    .tech-card {
+        width: 35vw;
+    }
+    #ninth-card {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    /* Projects Section styling */
+    #project-1-link {
+        grid-area: link-1;
+    }
+    #project-2-link {
+        grid-area: link-2;
+    }
+    #project-3-link {
+        grid-area: link-3;
+    }
+    #project-1-github {
+        grid-area: github-1;
+    }
+    #project-2-github {
+        grid-area: github-2;
+    }
+    #project-3-github {
+        grid-area: github-3;
+    }
+    #project-1 {
+        grid-area: project-1;
+    }
+    #project-2 {
+        grid-area: project-2;
+    }
+    #project-3 {
+        grid-area: project-3;
+    }
+    .project-grid {
+        width: 80vw;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "project-1"
+            "github-1"
+            "link-1"
+            "project-2"
+            "github-2"
+            "link-2"
+            "project-3"
+            "github-3"
+            "link-3";
+    }
+    /* about me section styling */
+    .container-AboutMe {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0;
+    }
+    .container-AboutMe img {
+        width: 80vw;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        margin: auto auto;
+    }
+    .container-AboutMe div {
+        padding-bottom: 3rem;
+    }
+    /* CP section styling */
+    #cp-content {
+        grid-template-columns: 1fr;
+        height: 70vh;
+    }
+}
+@media (max-width: 700px) {
+    /* home section styling */
+    #home-second-section img {
+        width: 80%;
+    }
+    /* technologies section styling */
+    #technologies-heading {
+        font-size: 2.5rem;
+    }
+    .tech-card-container {
+        width: 90vw;
+    }
+    .tech-card {
+        width: 45vw;
+    }
+    /* Personalize section styling */
+    #change-font p {
+        font-size: 2.5rem;
+    }
+    #current-style {
+        font-size: 1.9rem;
+    }
+}
