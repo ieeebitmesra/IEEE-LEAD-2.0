@@ -1,0 +1,52 @@
+.homePage{
+    /* border: 2px solid red; */
+     height: 730px;
+ background-image: url("pics/portflioBg.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ /* background-attachment: fixed; */
+ display: flex;
+  align-items:center;
+ /* justify-content: center;  */
+ }
+ 
+ .blankHome{
+     
+     width: 200px;
+     height: 200px;
+     /* border: 2px solid black; */
+ }
+ #item{
+     height: 300px;
+     width:680px;
+     border: 8px dotted #9100ff ;
+     border-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+ }
+ #myPic{
+     margin-left: 3px;
+     border-radius: 4px;
+     border: 2px solid brown;
+ }
+ 
+ #homeText{
+     margin-left: 15px;
+     height: 280px;
+     width: 490px;
+     /* border: 2px solid black; */
+     display: flex;
+     flex-direction: column;
+ }
+ #myName{
+     color:red;
+ }
+ 
+ #Intro{
+     /* border: 2px solid black; */
+ 
+     width: 411px;
+ height:200px ;
+ }
+ 
