@@ -1,0 +1,68 @@
+#aboutMe{
+    background-color: #e6e8d5;
+    border:none;
+    height: 725px;
+}
+
+
+#aboutHead{
+    margin-top: 50px;
+text-align: center;
+font-size: 35px;
+}
+
+.aboutFlex{
+    /* border: 2px solid red; */
+height: 500px;
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+
+}
+
+.aboutClass{
+    background-color: rgb(247 234 140);
+    /* border: 5px dashed blue; */
+    border-radius: 5px;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.aboutClass h3{ 
+    color: crimson;
+    
+}
+
+  /* #item2 :hover{
+     
+}   */
+
+  body{
+    margin:0;
+}  
+
+.hobbyList
+{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; 
+    /* margin-right: 20px; */
+    width: 200px;
+}
+
+.hobbyList li{
+    font-size: large;
+    list-style-type: square;
+   font-weight: 800;
+}
+
+.hoverTest :hover{
+background-color:rgb(170, 233, 228);
+transition:.5s;
+}
