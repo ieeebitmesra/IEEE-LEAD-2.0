@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700|Roboto:300,400,500,700,900&amp;display=swap");
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2em;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 600;
+} 
+@media (max-width: 565px) {
+  .section-heading {
+    font-size: 40px !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: #777777;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.625em;
+  position: relative;
+
+}
+
+/*  drop down text*/
+
+#drop-down {
+
+top: -400px;
+animation: drop 1s ease forwards;
+
+}
+
+@keyframes drop{
+
+  0%{ opacity:0}
+  100%{ transform: translateY(50px); opacity: 1;}
+
+}
+
+#fade-in{
+
+    animation: fade 1.5s ease-in forwards;
+}
+
+@keyframes fade{
+
+    0%{opacity: 0;}
+    100%{ opacity: 1;}
+
+}
+
+/* navbar     */
+
+.burger{
+    z-index: 2;
+    right:20px;
+
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 70%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #8a8484;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+
+
+ 
+
+
+/*slider switch css */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    
+   
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.container {
+  overflow: auto;
+}
+
+.vertical-center {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+
+.tech-icon{
+    height:20px;
+  }
+
+
+.interests .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: ease-in-out 0.3s;
+}
+
+.interests .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+
+.interests .icon-box h3 {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.5rem;
+  line-height: 1;
+  font-size: 20px;
+ 
+}
+
+.interests .icon-box:hover {
+  background: rgba(122, 122, 122, 0.12);
+}
+
+
+/* CSS used here will be applied after bootstrap.css */
+
+.card-columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+}
+
+/*
+Small devices (landscape phones, 34em and up ( 544px ))
+*/
+@media (min-width: 34em) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    
+}
+
+ion-icon {
+    font-size: 64px;
+  }
+
+  .footer {
+    bottom: 0%;
+    width: 100%;
+    height: 30px;
+    background-color: #5c5757;
+    color: #ecece2;
+    text-align: center;
+ }
+
+ .card {
+
+  background-color: #ccc  !important;
+  color: black !important;
+
+ }
+
+
+
+ /* dark theme */
+
+.dark-mode {
+    background-color: #161625 !important;
+    color: #e1e1ff !important;
+
+
+  }
+
+
