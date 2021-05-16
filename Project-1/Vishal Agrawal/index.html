@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Portfolio Website</title>
+</head>
+
+<body>
+    <nav id="nav-bar">
+        <a href="#about-section">
+            <div class="nav-item">About Me</div>
+        </a>
+        <a href="#project-section">
+            <div class="nav-item">Projects</div>
+        </a>
+        <a href="#competitive-programming-section">
+            <div class="nav-item">CP</div>
+        </a>
+        <a href="#skills-section">
+            <div class="nav-item">Skills</div>
+        </a>
+    </nav>
+
+    <div class="float-button center-container">
+        <a href="#">TOP</a>
+    </div>
+    <section id="about-section" class="full-screen even">
+        <div class="center-container">
+            <h2>Hey There, I am Vishal Agrawal.</h2>
+            <h2>I am a computer science enthusiast who loves to explore.</h2>
+            <h2>I am currently pursuing BTech in CSE from BIT Mesra.</h2>
+        </div>
+    </section>
+    <section id="project-section" class="full-screen odd">
+        <section class="github-account-link">
+            <!-- <a href="https://github.com/vishalagrawal22" target="_blank"> -->
+            <p class="header capital underline">Some of my creations</p>
+            <!-- </a> -->
+        </section>
+        <section class="projects-group">
+            <section class="projects-item">
+                <h1 class="capital">JEE Mains Marks Calculator</h1>
+                <p class="project-discription">Calculating your marks after exam can we really boring, we are here to help!</p>
+                <img src="media/jee.png" class="project-image">
+                <section class="github-project-link">
+                    <a href="https://jee-mains-marks-calculator.herokuapp.com/" target="_blank">
+                        <div>Try it yourself!</div>
+                    </a>
+                    <a href="https://github.com/vishalagrawal22/JeeMainsMarksCalculator" target="_blank">
+                        <div>Have a look at the code!</div>
+                    </a>
+                </section>
+            </section>
+            <section class="projects-item">
+                <h1 class="capital">Etch a Sketch</h1>
+                <p class="project-discription">A simple version of paint with a resizable canvas made in Vanilla JS (don't forget to checkout all 3 branches!).</p>
+                <img src="media/black-color.png" class="project-image">
+                <img src="media/random-color.png" class="project-image">
+                <section class="github-project-link">
+                    <!-- <a href="https://jee-mains-marks-calculator.herokuapp.com/" target="_blank">
+                        <div>Try it yourself!</div>
+                    </a> -->
+                    <a href="https://github.com/vishalagrawal22/Etch-a-Sketch" target="_blank">
+                        <div>Have a look at the code!</div>
+                    </a>
+                </section>
+            </section>
+            <section class="projects-item">
+                <h1 class="capital">Calculator</h1>
+                <p class="project-discription">A simple calculator made in Vanilla JS with keyboard support and BODMAS.</p>
+                <img src="media/calc.png" class="project-image-calc">
+                <section class="github-project-link" style="margin-bottom: 0%;">
+                    <!-- <a href="https://jee-mains-marks-calculator.herokuapp.com/" target="_blank">
+                        <div>Try it yourself!</div>
+                    </a> -->
+                    <a href="https://github.com/vishalagrawal22/calculator" target="_blank">
+                        <div>Have a look at the code!</div>
+                    </a>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section id="competitive-programming-section" class="full-screen even">
+        <section class="title">
+            <p class="header capital underline">Competitive Programming</p>
+        </section>
+        <section class="center cf-section">
+            <h1 class="account-link">
+                CodeChef :
+                <a class="black underline" href="https://www.codechef.com/users/vishalagrawal1" target="_blank">
+                    vishalagrawal1
+                </a>
+            </h1>
+
+            <h1 class="account-link">
+                CodeForces :
+                <a class="black underline codeforces" href="https://codeforces.com/profile/vishalagrawal" target="_blank">
+                    vishalagrawal
+                </a>
+
+            </h1>
+            <!-- <section class="graph-group">
+            <section class="graph-item">
+                <h1 class="capital">Rating Graph</h1>
+                <img src="media/plot-rating.png" class="graph-image">
+            </section>
+            <section class="graph-item">
+                <h1 class="capital">no. of question solved Graph</h1>
+                <img src="media/plot-solved.png" class="graph-image">
+            </section>
+        </section>
+        <h2 class="center">Graphs are last updated on 21 april</h2> -->
+            <h1>
+                Current Rating :
+                <p class="black codeforces current-rating" style="display: inline;">
+                    -
+                </p>
+            </h1>
+            <h1>
+                Max Rating :
+                <p class="black codeforces-max max-rating" style="display: inline;">
+                    -
+                </p>
+            </h1>
+            <h2>Note: all the data on this section is live (thanks to CF API!)</h2>
+        </section>
+    </section>
+    <section id="skills-section" class="full-screen odd">
+        <section class="title">
+            <p class="header capital underline remove-bottom-margin">Skills</p>
+        </section>
+        <section class="center-container-2">
+            <section>
+                <img src="media/html.png" class="skills-image">
+                <img src="media/css.jpg" class="skills-image">
+                <img src="media/javascript.png" class="skills-image">
+            </section>
+            <section>
+                <img src="media/C++.png" class="skills-image">
+                <img src="media/python.png" class="skills-image">
+            </section>
+        </section>
+    </section>
+    <section class="footer-div">
+        <section class="links">
+            <a href="https://www.linkedin.com/in/vishal-agrawal-9390861ba/" target="_blank">
+                <div class="links-item">Linkedin</div>
+            </a>
+            <a href="https://github.com/vishalagrawal22" target="_blank">
+                <div class="links-item">Github</div>
+            </a>
+            <a href="https://www.instagram.com/vishal_agrawal22/" target="_blank">
+                <div class="links-item">Instagram</div>
+            </a>
+        </section>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
