@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+}
+
+
+  .navbar{
+    position: fixed;
+    top : 0%;
+    z-index: 100;
+    padding : 12px;
+  }
+
+  #nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+
+  .home-page{
+      background-image: url("img/home.jpg");
+  }
+  
+
+  .intro{
+    padding-top: 33vh;
+      font-size: 32px;
+      text-align: center;
+    color : white; 
+  }
+
+
+  .about-head{
+    text-align: center;
+    color : #940eee;
+    font-size: 80px;
+    padding: 0px 0px 50px 0px;
+  }
+
+  .about-section{
+    padding : 0px 0px 0px 15px;
+    font-size: 20px;
+  }
+
+  .rating{
+    padding : 30px;
+
+    font-size: 20px;
+  }
+
+  .skills-head{
+    text-align: center;
+    color : #940eee;
+    font-size: 80px;
+    padding: 0px 0px 50px 0px;
+  }
+
+  .skills-section , .skill-sub{
+    padding : 0px 0px 0px 15px;
+    font-size: 20px;
+  }
+
+  .skills-section{
+    padding:0px 0px 30px 30px;
+  }
+
+  .tech1 , .tech2{
+    display : flex;
+  }
+
+  .tech1 , .tech2 li{
+    text-align: center;
+    list-style: none;
+  }
+
+  .tech1 li img{
+    /* text-align: center; */
+    width: 30%;
+  }
+
+  .tech2 li img{
+    /* text-align: center; */
+    width: 30%;
+  }
+
+
+  .projects-head{
+    text-align: center;
+    color : #940eee;
+    font-size: 80px;
+    padding: 0px 0px 50px 0px;
+  }
+
+  
+
+
+.home-page{
+    height: 100vh;
+}
+
+.skills-page{
+    height: 100vh;
+}
+
+.about-page{
+    height: 100vh;
+}
+
+.projects-page{
+    height: 100vh;
+}
+.projects-text{
+  font-size: 30px;
+  padding: 0px 0px 50px 0px;
+}
+
+#project-thumbnail{
+  width: 350px ;
+  height : auto;
+}
+
+.project-heading , .post-info-category{
+  text-align: center;
+}
+
+.projects .project-item:hover .part-img img{
+  transform : scale(1.05);
+  opacity : 0.8;
+}
+.project-heading{
+  padding: 20px;
+}
+
+.contact-details{
+  text-align: center;
+}
+
+.contact-head{
+  text-align: center;
+  color :#940eee;
+  font-size: 80px;
+  padding: 150px 0px 30px 0px;
+}
+
+.last-lines{
+  font-size: 20px;
+  padding : 20px 0px 30px 0px;
+}
+
+.email{
+  padding: 20px;
+}
+
+
+.copyright{
+  font-size: 15px;
+  padding: 30px 0px 10px 0px;
+}
+.social-accounts a{
+  padding : 0px 20px;
+}
