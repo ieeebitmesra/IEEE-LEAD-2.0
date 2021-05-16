@@ -32,3 +32,7 @@ WHAT I LEARNED
 
 Python language was completely new to me .Knowing such a powerful language was very amazing . I learnt how easily things like simple calculators and csv files containing large complex data are made using Python .I learned the uses of python libraries like bs4 , requests , webbrowser , PIL and Tkinter.
 
+This is the demo video link of my GUI for project 2 :
+
+https://user-images.githubusercontent.com/82470901/118398044-7c220d00-b674-11eb-94a0-35e56e4cff6b.mp4
+
