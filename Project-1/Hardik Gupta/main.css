@@ -1,0 +1,324 @@
+/* nav menu starts */
+#navi {
+    position: fixed;
+    width: 100%;
+}
+
+/* nav menu ends */
+
+
+/* Background animation starts */
+body {
+    background: linear-gradient(270deg, #64b3f4, #c2e59c);
+    background-size: 400% 400%;
+
+    animation: AnimationName 6s ease infinite;
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/* Background animation ends */
+
+
+/* About section */
+#myImage {
+    text-align: center;
+    border-radius: 20px;
+}
+
+#about {
+    height: 100vh;
+    margin-bottom:40px ;
+}
+
+/* about section ends */
+
+
+
+
+/* skills section starts*/
+.section-title h1 {
+    text-align: center;
+
+}
+
+#cclogo {
+    height: 98px;
+    width: 88px;
+    margin-top: 10px;
+}
+
+#clogo {
+    height: 118px;
+    width: 118px;
+    margin-top: 10px;
+}
+
+.fa-bootstrap {
+    color: purple;
+}
+
+.fa-html5 {
+    color: orangered;
+}
+
+.fa-css3-alt {
+    color: blue;
+}
+
+.fa-js {
+    color: yellow;
+}
+
+.row {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.row .col-md-6 {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.skillset .icon-box {
+    text-align: center;
+    background: rgba(204, 204, 204, 0.1);
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 20px;
+}
+
+.skillset .icon-box:hover {
+    background: #b407f8;
+    border-color: #66776e;
+}
+
+#skillset {
+    height: 100vh;
+}
+
+.icon-box {
+    margin-left: 1000px;
+    padding-left: 1000px;
+}
+
+.row1,
+.row2 {
+    text-align: center;
+}
+
+.container {
+    float: none;
+}
+
+.row1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.row1 .col-md-3 {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+
+}
+
+.col-md-3 {
+    margin: 30px;
+}
+
+.skillset {
+    height: 100vh;
+    margin-bottom: px;
+}
+
+.jumbotron {
+    padding-right: 130px;
+    padding-left: 20px;
+    display: block;
+}
+
+/* skills section ends */
+
+
+
+
+
+/* Projects Section starts */
+#projects {
+
+    height: 100vh;
+
+}
+
+.card {
+    height: 300px;
+    width: 200px;
+    display: inline-flex;
+    text-align: center;
+    margin: 50px;
+    z-index: -1;
+}
+
+.card-deck {
+    text-align: center;
+}
+
+#discord {
+    height: 353.47px;
+    width: 198px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #projects {
+        height: 200vh;
+    }
+
+    #skillset {
+        height: 110vh;
+    }
+}
+
+#iot {
+    height: 353.47px;
+    width: 198px;
+}
+
+/* Project section ends */
+
+
+
+
+
+/* contact starting */
+.contact {
+    height: 100vh;
+
+}
+
+#contact {
+    background-color: #0ad6dd;
+    margin: 50px;
+
+}
+
+#contact .row {
+    color: white;
+    text-align: right;
+    padding: 0px;
+}
+
+#contact h2 {
+    font-weight: lighter;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    padding-bottom: 5px;
+    padding-top: 0px;
+}
+
+#contact label {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.contact-content {
+    padding: 30px;
+}
+
+.contact-form {
+    padding: 30px;
+}
+
+.form-row {
+    padding: 5px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+    margin-top: 15px;
+}
+
+#contactMe {
+    text-align: center;
+    height: 100vh;
+
+}
+
+/* contact ends */
+
+
+
+
+
+/* Social links section  starts*/
+
+.fa-github {
+    color: black;
+}
+
+.fa-linkedin {
+    color: #0a66c2;
+}
+
+.fa-instagram {
+    color: ;
+}
+
+#socialmedia ul {
+    list-style: none;
+    display: inline-flex;
+    text-align: justify;
+}
+
+#socialmedia ul li {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+#socialmedia {
+    margin-top: 20vh;
+    display: inline-block;
+}
+
+.social-links {
+    margin-top: 20vh;
+    text-align: center;
+    padding-top: 40px;
+
+}
+
+#contact-logo {
+    height: 20px;
+    width: 20px;
+
+}
+
+.social-links a {
+    padding: 20px;
+}
+
+#contact-logo1 {
+    height: 50px;
+}
+
+/* Social links section ends */
