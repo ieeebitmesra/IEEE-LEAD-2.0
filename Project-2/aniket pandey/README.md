@@ -1,0 +1,1 @@
+This is my 2nd project assinged in LEAD 2.0 event organised by IEEE club. I have added a folder of my name in project 2 section. Inside it i have my python code file and a demonstration video of my gui.
