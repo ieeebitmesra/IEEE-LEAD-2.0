@@ -1,0 +1,362 @@
+/*CSS file for mobile and tablet screen size*/
+@media (max-width: 512px){
+
+    body{
+        color:rgb(181, 210, 235);
+        background-color:rgb(12, 8, 48);
+    }
+/* Top header file background image */
+.image{
+    background-image: url("../Photos/projects_background.jpg");
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+	clip-path:box;
+    padding-bottom: 2%;
+    overflow-x: hidden;
+    padding: 6.67%
+}
+
+
+/* Resizing top name"Hi,I am Rituraj "*/
+#name{
+    margin-top: 8%;
+    margin-left: 15%;
+    color: rgb(1, 8, 27);
+    font-size: 1.2rem;
+    display: flex;
+    width: 25%;
+    font-weight: bold;
+    text-align:justify;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+span{
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+
+span.fade{
+    margin-left: 2%;
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+/*Hobbies section background image*/
+.hobbies{
+    padding: 6.67%;
+   /* background-image: url("../Photos/hobbies1.jpeg");*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ /*   background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+    overflow-x: hidden;
+    /* margin-top: 6.67%; */
+}
+
+
+/* Navigation bar */
+#nv2{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 35px;
+    margin-top: -10px;
+    position: fixed;
+    z-index: 1;
+}
+
+
+/* Animating navigation and social media links */
+a:hover{
+    color: aliceblue;
+    background-color: rgb(54, 124, 185);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    transition-timing-function:ease-in-out;
+}
+
+
+/* Menubar drop down icon for smaller screens */
+#menubar{
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+    color: rgb(54, 124, 185);
+    cursor: pointer;
+}
+
+
+/* Adding background colour to unordered list */
+#sidenav{
+    background-color: rgba(0,0,0,0.8);
+    height: 100%;
+    transition: all  0.5s;
+    list-style: none;
+    text-align: center;
+    margin-top: -5%;
+    margin-left: -0.8%;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.langs{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-content: center;
+    font-size: 1rem;
+    background-color: rgb(10, 81, 148);
+    padding: 9px;
+    width: 40%;
+    color:white;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: 23%;
+    height: 100px;
+    font : bold;
+    border-color: rgb(3, 13, 104);
+}
+/* Adding properties to dropdown menu items */
+#sidenav a{
+    margin:2%;
+    padding:0;
+    text-decoration: none;
+    color:rgb(181, 210, 235);
+}
+
+/* Navigation bar links beautification for larger screens */
+.nv1{
+    display: none;
+}
+
+.svg1{
+    margin-left: 20%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    width: 50%;
+}
+.svg2{
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    width: 40%;
+}
+
+/* Adding background colour to footer section */
+.foot{
+    color: white;
+    background-color:rgb(10, 98, 199) ;
+    padding: 1.33%;
+    margin-top: 10%;
+    flex-wrap: nowrap;
+}
+
+
+/*Pseudo link for aligning social media links during screen resize */
+#pseudoLink{
+    margin-left: 0.67%;
+    padding: 0px;
+    text-decoration: none;
+}
+
+
+/* Setting size of heading for skills and hobbies */
+/*#Hobbies,#Skills{
+    font-size: 110%;
+    font-weight: bold;
+    text-align:justify;
+    margin-left: 1%;
+}
+*/
+
+/* Giving colour to horizontal line */
+.line{
+    background-color: lightslategrey;
+    color: lightslategrey;
+}
+
+
+/* Setting size of paragraphs for hobbies */
+.hobbies>.description{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-content: center;
+    color:white;
+    font-size: 0.75rem;
+    background-color: rgb(10, 81, 148);
+    padding: 9px;
+    width: 60%;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: 15%;
+    font : bold;
+    border-color: rgb(3, 13, 104);
+}
+
+
+/* Setting size of paragraphs for skills */
+.description{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-content: center;
+    font-size: 0.75rem;
+    padding: 9px;
+    color:white;
+    background-color: rgb(10, 81, 148);
+    width: 60%;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: 15%;
+    font : bold;
+    border-color: rgb(3, 13, 104);
+}
+
+
+/*Heading for About Me*/
+.About{
+    font-size: 110%;
+    font-weight: bold;
+    text-align:center;
+    color:rgb(181, 210, 235);   
+}
+
+
+/* Body for "About me" */
+.about{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-content: center;
+    background-color: rgb(10, 81, 148);
+    font-size: 75%;
+    color:white;
+    padding: 2%;
+    margin-bottom: 6.67%;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    width: 90%;
+    margin-left: 4%;
+    /* margin-top: 6.67%; */
+    font : bold;
+    border-color: rgb(3, 13, 104);
+}
+
+
+/* Wraps up the description of the skills section */
+.skills{
+    padding: 6.67%;
+    background-image: url("../Photos/skills.jpg");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size:  100% 100%;
+    background-repeat: repeat-y;
+    overflow-x: hidden;
+    margin-top: 6.67%;
+}
+
+
+/* Images of programming languages I know */
+.skillsImages{
+    padding: 0px;
+    text-decoration: none;
+    margin-left: 5%;
+    width: 20%;
+}
+
+
+/* Resizing Codeforces logo */
+.skillsImages_1{
+    width: 50%;
+}
+
+.projectsImages{
+    padding: 0px;
+    text-decoration: none;
+    align-content: center;
+    margin-left: 3%;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.project{
+    padding: 6.67%;
+    background-image: url("../Photos/img3.jpg");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+    margin-top: 6.67%;
+}
+#projects{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-content: center;
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: rgb(10, 81, 148);
+        padding: 9px;
+        color:white;
+        width: 40%;
+        border-radius: 10px;
+        border-width: 5px;
+        border-style: solid;
+        margin-left: 27%;
+        font : bold;
+        border-color: rgb(3, 13, 104);
+}
+
+/* Resizing the rating and submissions in Codeforces account*/
+#rating #submissions{
+    font-size: 1rem;
+}
+
+
+/*Heading for "Programming languages: "*/
+.Heading{
+    font-size: 100%;   
+}
+
+
+/* Profile photo */
+#profile{
+    width: 15%;
+    margin-top: -5%;
+    float: right;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+
+/* Resizing "Get in touch" text */
+.contact{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font : bold;
+    font-size: 75%;
+    margin-left: 3.33%;
+}
+
+
+/* Resizing social media account links */
+.contacts>img{
+    width: 5%;
+}
+
+
+/* Beautifying social media links */
+.contacts{
+    padding: 0px;
+    text-decoration: none;
+    margin-left: 2.67%;
+}
+
+
+/* Setting size for end credits of the page*/
+#footerText{
+    text-align: center;
+    font-size: 0.08rem;
+}
+}

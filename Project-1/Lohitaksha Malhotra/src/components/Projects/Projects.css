@@ -1,0 +1,130 @@
+.gallery {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.gallery-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-size: 100%;
+	height: calc(10vw + 18px);
+    width:  calc(10vw + 18px);
+    font-weight: bold;
+	transition: 0.5s ease-in-out;
+	color: rgba(0, 0, 0, 0);
+    background-position: center;
+	background-position: center;
+}
+.gallery-item a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-size: 100%;
+	height: calc(10vw + 20px);
+    width:  calc(10vw + 20px);
+    font-weight: bold;
+	transition: 0.5s ease-in-out;
+	color: rgba(0, 0, 0, 0);
+    background-position: center;
+	background-position: center;
+	text-decoration: none;
+}
+.gallery-item a:hover{
+	transition: 0.5s ease-in-out;
+	color: white;
+    filter: brightness(55%);
+}
+.gallery-item:hover {
+	transition: 0.5s ease-in-out;
+	color: white;
+    filter: brightness(55%);
+}
+#img1 {
+	background: url("../../res/img1.png");
+    background-size: 100%;
+}
+
+#img2 {
+	background: url("../../res/img2.jpg");
+    background-size: 100%;
+}
+#img3 {
+	background: url("../../res/img3.png");
+    background-size: 100%;
+}
+#img4 {
+	background: url("../../res/img4.jpg");
+    background-size: 100%;
+}
+#img5 {
+	background: url("../../res/img5.jpeg");
+    background-size: 100%;
+}
+#img6 {
+	background: url("../../res/img6.png");
+    background-size: 100%;
+}
+#img7 {
+	background: url("../../res/img7.jpeg");
+    background-size: 100%;
+}
+#img8 {
+	background: url("../../res/img8.png");
+    background-size: 100%;
+}
+#img1:hover {
+    background-size: 125%;
+background-position: center;
+}
+#img2:hover{
+	background-size: 125%;
+background-position: center;
+}
+#img3:hover{
+	background-size: 125%;
+background-position: center;
+}
+#img4:hover{
+	background-size: 125%;
+background-position: center;
+}
+#img5:hover{
+	background-size: 125%;
+background-position: center;
+}
+#img6:hover{
+	background-size: 125%;
+background-position: center;
+}
+#img7:hover{
+	background-size: 125%;
+background-position: center;
+}
+#img8:hover{
+	background-size: 125%;
+background-position: center;
+}
+.projects-container{
+    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.452);
+}
+.projects-header{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 2vh;
+    transition: 0.2s ease-in-out;
+}
+#project-text{
+	font-size: calc(1vw + 8px);
+	margin-left: 5%;
+	margin-right: 5%;
+}

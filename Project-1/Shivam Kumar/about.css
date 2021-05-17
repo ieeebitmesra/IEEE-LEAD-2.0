@@ -1,0 +1,56 @@
+.wb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+.error {
+    position: relative;
+    top: 18%;
+    font-size: 2.5rem;
+}
+
+.backbtn{
+    position: relative;
+    top: 24%;
+    border: 1px solid green;
+    max-width: 25rem;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 20rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+a{
+    color: #333;
+}
+
+.backbtn:hover {
+    background-image: linear-gradient(to right, rgb(2, 85, 2), rgb(76, 155, 2));
+    box-shadow: 0 0 0.4rem #aaa;
+    transition: all 0.3s ease;
+}
+
+.backbtn:hover a{
+    color: #ddd;
+}
+
+.search img{
+    display: block;
+    position: relative;
+    margin-inline: auto;
+    max-width: 70%;
+    top: 10rem;
+}
+
+@media screen and (min-width: 820px){
+    .search img{
+        max-width: 30%;
+    }
+}

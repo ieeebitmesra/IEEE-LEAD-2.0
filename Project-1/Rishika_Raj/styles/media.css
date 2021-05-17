@@ -1,0 +1,105 @@
+@media only screen and (max-width: 750px){
+	
+	header{
+		height: 90vh;
+	}
+
+	#sidenav
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0px;
+		font-size: 25px;
+		height: 90vh;
+		background:rgba(0,0,0,0.8);
+		padding: 100px 0px;
+		transition: 0.5s;
+		display: block;
+	}
+
+	#sidenav a
+	{
+		text-decoration: none;
+		color: white;
+		padding-bottom: 20px;
+		padding-left: 10px;  
+		margin:10px 30px;
+		display: block;
+	}
+
+	#sidenav a:hover{
+		background: #4169E1;
+		/*background-size: 45px;*/
+		transition: 0.3s;
+	}
+	#menubar{
+		position: fixed;
+		top: 10px;
+		right: 20px;
+		width: 50px;
+		display: block;
+		cursor: pointer;
+	}
+
+	.menu a{
+		display: none;
+	}
+
+	.logo{
+		padding-left: 20px;
+	}
+	.text{
+		padding-top: 180px;
+		margin-left:auto;
+		margin-right: auto;
+		text-align: center;
+
+	}
+
+	.about-l{
+		flex-basis: 100%;
+		align-items: center;
+	}
+
+	.about-l img{
+		width: 300px;
+		height: 300px;
+		padding: 40px;
+	}
+	.about-r{
+		flex-basis: 100%; 
+		text-align: center;
+		padding-left: 20px;
+	}
+
+	.skill-l, .skill-r{
+		flex-basis: 100%;
+		align-items: center;
+	}
+
+	progress{
+		width: 100%;
+	}
+
+	.progress p{
+		margin: auto;
+	}
+
+	.pro-box{
+		flex-basis: 100%;
+	}
+
+	.icons-1{
+		flex-basis: 50%;
+	}
+
+	.icons-2{
+		flex-basis: 50%;
+	}
+	.contact-r{
+		padding-top: 50px;
+		flex-basis: 100%;
+	}
+
+}

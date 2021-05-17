@@ -1,0 +1,65 @@
+body
+ {
+   background-color: DeepSkyBlue;
+   color: black;
+ }
+
+h1
+ {
+   text-align:center;
+ }
+
+h3
+ {
+   text-align:center;
+ }
+
+p
+ {
+   font-size:20px;
+ }
+
+table
+{
+	
+	width:100%;
+        
+}
+
+td
+{
+   height: 70px;
+}
+
+
+/*To hover table*/
+  tr:hover {background-color:grey;}
+
+
+/*For Navigation Bar*/
+ .topnav 
+    {
+       background-color:black;
+       overflow: hidden;
+    }
+
+ .topnav a 
+    {
+       float: left;
+       color:white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+       font-size: 17px;
+    }
+
+ .topnav a:hover 
+  {
+        background-color:grey;
+  }
+
+  .topnav a.active 
+  {
+        background-color:green;
+        color: white;
+  }

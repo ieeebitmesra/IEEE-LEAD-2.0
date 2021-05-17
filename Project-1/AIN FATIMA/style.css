@@ -1,0 +1,274 @@
+<style>
+
+body, div,h1,  h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+
+body {
+	background: #f2f0eb url('./bg2.jpg');
+	font: 16px; color: #636363; line-height: 24px;
+	font-family: comic sans MS;
+}
+
+#container {
+	width: 960px; margin: 0 auto;
+}
+
+#logo {
+	margin: 10px auto 0 auto; position: relative; width: 183px;border-radius: 50%;
+}
+img{
+	border-radius: 50%;
+	border: 5px solid rgb(216, 218, 230);
+}
+.mypic{
+	border: 1px;
+	border-radius: 20px;
+	padding: 20px;
+    border-spacing: 50px;
+	
+}
+ul#nav {
+	width: 940px; list-style: none; overflow: hidden; margin: -134px auto 25px auto;
+}
+	ul#nav li {
+		width: 126px; height: 33px; float: left; padding: 13px 0 0 0;
+		background: url(nav-bar.jpg);
+		font-weight: bold; text-align: center; text-transform: uppercase;
+	}
+		ul#nav li:nth-child(1) {
+			margin: 0 60px 0 0;
+		}
+		ul#nav li:nth-child(2) {
+			margin: 0 316px 0 0;
+		}
+		ul#nav li:nth-child(3) {
+			margin: 0 60px 0 0;
+		}
+		ul#nav li:nth-child(4) {
+			margin: 0;
+		}
+
+		ul#nav li a {
+			color: #010203; text-decoration: none;
+		}
+			ul#nav li a:hover {
+				color: #a12121;
+			}
+			#header {
+				height: 244px; padding: 65px 0 0 57px;
+				background: url(header-home.jpg);
+				border-style: groove;
+				border-color: rgb(128, 156, 209);
+			}
+			
+				#header h1 {
+					font: 38px ; color: #f2f0eb; letter-spacing: 2px; margin: 0 0 20px 0;
+					text-shadow: 0px 3px 3px #0e0404;
+					font-family: comic sans MS;
+				}
+				#header h2 {
+					width: 510px; font: 30px ; color: #f2f0eb; letter-spacing: 2px; margin: 0 0 20px 0;
+					text-shadow: 0px 3px 3px #030303;
+					font-family: comic sans MS;
+				}
+				#header p.btn a {
+					display: block; width: 225px; height: 50px; overflow: hidden;
+					background: url(header-home.jpg); text-indent: -9999px;
+				}
+				#content {
+					background: url(bg2.jpg) repeat-y;
+					padding: 57px 69px 50px 69px; overflow: hidden;
+					color: black;
+					border-style: groove;
+					border-color: rgb(142, 171, 226);
+				}
+					#content h2 {
+						font: 30px ; letter-spacing: 2px; margin: 0 0 20px 0;
+						font-family: comic sans MS;
+					}
+				
+					#content h3 {
+						font: 26px ; letter-spacing: 2px; margin: 0 0 20px 0;
+						font-family: comic sans MS;
+					}
+					#content h4 {
+						font: 26px ; letter-spacing: 2px; margin: 0 0 20px 0;
+						font-family: comic sans MS;
+					}
+					
+					#content p {
+						margin: 0 0 30px 0;
+					}
+					
+					#content a {
+						color: #a12121; text-decoration: none;
+					}
+						#content a:hover {
+							color: #671111;
+						}
+						
+						.column {
+							float: left;
+							width: 20%;
+							margin-bottom: 16px;
+							padding: 0 8px;
+						  }
+						  
+						  .card {
+							box-shadow: 0 4px 8px 0 rgba(5, 1, 1, 0.2);
+							margin: 8px;
+						  }
+						  .column2 {
+							float: left;
+							width: 26%;
+							margin-bottom: 16px;
+							padding: 0 8px;
+						  }
+						  
+						  .card2 {
+							box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+							margin: 8px;
+						  }
+						  .column3 {
+							float: left;
+							width: 26%;
+							margin-bottom: 16px;
+							padding: 0 8px;
+						  }
+						  
+						  .card3 {
+							box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+							margin: 8px;
+						  }
+						  .column4 {
+							float: left;
+							width: 55%;
+							margin-bottom: 16px;
+							padding: 0 8px;
+						  }
+						  
+						  .card4 {
+							box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+							margin: 8px;
+						  }
+						  .btn {
+							background-color: rgb(134, 179, 224); /* Blue background */
+							border: none; /* Remove borders */
+							color: white; /* White text */
+							padding: 12px 16px; /* Some padding */
+							font-size: 16px; /* Set a font size */
+							cursor: pointer; /* Mouse pointer on hover */
+						  }
+						  
+						  /* Darker background on mouse-over */
+						  .btn:hover {
+							background-color: rgb(14, 42, 126);
+						  }
+						  .hea img {
+							float: left;
+							width: 100px;
+							height: 100px;
+							background: #555;
+						  }
+						  
+						  .hea h2 {
+							position: relative;
+							top: 100px;
+							left: 5px;
+						  }
+						  .soci {
+							
+							border: none; /* Remove borders */
+	
+							padding: 12px 16px; /* Some padding */
+							font-size: 16px; /* Set a font size */
+							cursor: pointer; /* Mouse pointer on hover */
+						  }
+						  
+						  /* Darker background on mouse-over */
+						 
+						  .column5 {
+							float: left;
+							width: 38%;
+							margin-bottom: 16px;
+							padding: 0 8px;
+						  }
+						  
+						  .card5 {
+							box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+							margin: 8px;
+						  }
+						  img.column5{
+							  border-radius: 100%;
+							  padding-left: 30px;
+						  }
+						  img.card5{
+							  border-radius: 100%;
+						  }
+						  img.soci{
+							border:100px;
+							border-radius: 130px;
+							padding-left: 40px;
+							padding-right: 40px;
+						}
+						p.socic{
+							text-align: center;
+						}
+						img.skills
+						{
+							 border: 10px;
+							border-radius: 50%;
+							padding-left: 20px;
+							padding-right: 17px;
+						}
+						img.codf{
+							border: 10px;
+							border-radius: 10px;
+							padding-left: 25px;
+							padding-right: 20px;
+						}
+						img.pro{
+							border: 10px;
+							border-radius: 10px;
+						  
+						}
+						.glow {
+							
+							color: #fff;
+							
+							
+							animation: glow 1s ease-in-out infinite alternate;
+						  }
+						  
+						  @-webkit-keyframes glow {
+							from {
+							  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #acb6a5, 0 0 40px #cc0ebc, 0 0 50px #57f393, 0 0 60px #f1ff2f, 0 0 70px #d86cd8;
+							}
+							
+							to {
+							  text-shadow: 0 0 20px #fff, 0 0 30px #e9eeba, 0 0 40px #2cc4d8, 0 0 50px #59f387, 0 0 60px #d629ce, 0 0 70px #0acf8e, 0 0 80px #7c0d97;
+							}
+						  }
+						 
+						  .column4:hover {
+							background-color: rgb(144, 208, 233);
+						  }
+						  .card2:hover {
+							background-color: rgb(223, 152, 219);
+						  }
+						  .card5:hover {
+							background-color: rgb(241, 158, 214);
+						  }
+						  .card:hover {
+							background-color: rgb(102, 236, 102);
+						  }
+						 
+						  
+						  
+					
+				
+
+
+
+</style>

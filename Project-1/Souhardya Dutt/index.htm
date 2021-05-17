@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <style>
+        .intro {
+            background-image: url("Images/Home.jpeg");
+        }
+        .about {
+            background-image: url("Images/About.jpeg");
+        }
+        .edu {
+            background-image: url("Images/Education.jpeg");
+        }
+        .skills {
+            background-image: url("Images/Skills.jpeg");
+            background-repeat: no-repeat;
+        }
+    </style>
+    <title>Souhardya Dutt</title>
+</head>
+
+<body>
+    <div class="pre-loader">
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><div class="logo">
+                    <img src="./Images/Sd.png" height="35px" alt="">
+                </div></li>
+                <a href="#"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#edu"><li>Projects</li></a>
+                <a href="#skills"><li>Skills</li></a>
+                <a href="#contact"><li>Contact</li></a>
+                <div class="icon-bar">
+                    <a href="https://www.facebook.com/souhardya.dutt/" class="fa fa-facebook" target ="_blank"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="https://github.com/souhardya-970" class="fa fa-github" target ="_blank"></a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="intro">
+        <p class="hi">Hi, I am</p>
+        <p class="myname">Souhardya Dutt</p>
+        <span class="text-slider-items">
+            Developer, Programmer, Learner
+        </span>
+        <strong class="text-slider"></strong>
+        
+        </h3>
+        </div>
+        <!-- Import typed.min.js file from typed.js folder -->
+        <script src="./typed.js-master/lib/typed.min.js">
+        </script>
+        
+        <!-- Add jquery cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        
+        <!-- Add this script for successful 
+                implementation of typed.js  -->
+        <script>
+            if ($(".text-slider").length == 1) {
+
+                var typed_strings =
+                    $(".text-slider-items").text();
+
+                var typed = new Typed(".text-slider", {
+                    strings: typed_strings.split(", "),
+                    typeSpeed: 50,
+                    loop: true,
+                    backDelay: 900,
+                    backSpeed: 30,
+                });
+            }
+        </script>
+    <section class="about" id="about">
+        <h3>About</h3>
+        <p>
+            I am currently pursuing B. Tech in Electrical and Electronics Engineering from BIT, Mesra. I am interested in
+            techonlogy, and I love exploring and learining.
+        </p>
+        <p>I love tinkering with things. My passion lies in learining by the help of creating new and exciting things.</p>
+        <p>Apart from tech, I am a movie and literature enthusiast, an avid quizzer and an anime fan.</p>
+    </section>
+    <section class="edu" id="edu">
+        <h3>
+            Projects
+        </h3>
+        <div class = "project-container">
+            <ul>
+                <li>
+                    <div class="project">
+                        <img src="./Images/Screenshot 2021-04-24 193418.png" alt="" height="100px" width="100px">
+                        <div class="proj-desc">
+                            <h4>My First Website</h4>
+                            <p>A website that I created while learning HTML</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project">
+                        <img src="./Images/python.jfif" alt="" height="100px"  width="100px">
+                        <div class="proj-desc">
+                            <h4>Python spam bot</h4>
+                            <p>A python script that can send spam emails</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project">
+                        <img src="./Images/R7ad9c3ba374e805d6b647003a219136c.jfif" alt="" height="100px" width="100px">
+                        <div class="proj-desc">
+                            <h4>Truss Calculator</h4>
+                            <p>A C++ program that can calculate the value of internal forces in a given truss.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="skills-container">
+            <h3>Languages</h3>
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+            <h3>Frontend</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <h3>Tools</h3>
+            <ul>
+                <li>Git</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h3>Contact</h3>
+        <div class="container">
+            <form action="action_page.php">
+        
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+                <input type="submit" value="Submit">
+        
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2021 Made by Souhardya Dutt</p>
+    </footer>
+    <script src="./JS/main.js"></script>
+</body>
+</html>

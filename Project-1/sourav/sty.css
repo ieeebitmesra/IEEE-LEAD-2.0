@@ -1,0 +1,13 @@
+/* This whole function is meant for end page */
+
+
+body
+{
+    background-image: url(images/cont.jpg);
+    background-size: cover;
+  background-attachment: fixed;
+}
+
+img{
+  width: 3%;
+}

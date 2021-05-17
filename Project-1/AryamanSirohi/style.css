@@ -1,0 +1,195 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.3rem;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+#logo{
+    margin: 0.2em  0.2em;
+}
+
+#logo img{
+    height: 45px;
+    margin: 3px 6px;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 5px; 
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('./backf.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:1;
+    background-attachment: fixed
+}
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+#about-container{
+    min-height:26em;
+}
+#about{
+    margin: 34px;
+    display: block;
+}
+#about .box{ 
+    border: 2px solid;
+    padding: 24px;
+    margin: 2px 55px;
+    /* border-radius: 28px; */
+    background: white;
+    margin-bottom: 20px;
+    float:right; 
+}
+#about .box ul li{
+    list-style: none;
+}
+#about .box:hover{
+    background-color: black;
+    color: yellow;
+}
+#skills-section{ 
+    position: relative;
+}
+#skills-section2{ 
+    position: relative;
+}
+
+#skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#skills2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills-item{
+    padding: 34px;
+}
+#skills img{
+    height: 124px;
+}
+#skills2 img{
+    height: 124px;
+}
+.h-primary{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.8rem;
+    padding: 36px;
+    text-align: center;
+}
+span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.8rem;
+    /* padding: 32px; */
+    text-align: center;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.center{
+    text-align: center;
+}
+#projects{
+    text-align: center;
+}
+#ssi{
+    height: 20em;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.project-text{
+    text-align: center;
+}
+#contacts{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: wrap;
+    justify-content: space-evenly;
+}
+i{
+    display: inline-block;
+    font-size: 5em;
+    padding: 0.1em 0.5em;
+    box-sizing: border-box;
+}
+.trans{
+    transition: all 0.2s ease-in-out;
+    color:white;
+}
+.trans:hover{
+    transform: translate(0px, -30px);
+    color:black;
+}
+span:hover{
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}

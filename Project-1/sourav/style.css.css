@@ -1,0 +1,252 @@
+html {
+
+}
+/* function to add background image */
+ body{
+  background-image: url(images/key.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* function to make changes to my description box in about page */
+.new{
+  text-align: center;
+  color: rgb(175, 22, 22);
+   font-style: normal ;
+   font-size: 23px;
+   font-display: block;
+   border-style: dashed;
+  border-radius: 20px;
+  border-color: rgb(255, 145, 0);
+  text-align: center;
+  margin-right: 0px;
+  width: 70%; 
+  margin-left: auto;
+  font-family: 'Yellowtail', cursive;
+
+
+  
+}
+/* function to make changes to navbar border */
+.head
+{
+ text-transform: capitalize;
+ text-shadow: rgb(13, 41, 65);
+ text-align: center ;
+ margin-bottom: 2px;
+ /* margin-right: 400px; */
+ color: rgb(214, 37, 176);
+}
+
+
+
+  
+
+
+/* function to make changes to navbar */
+.start
+{
+  background:rgb(16, 188, 231);
+  border-style: double;
+  border-width: 2px;
+ 
+}  
+  
+/* function to make changes to navbar */
+
+.items
+{
+  background-color:rgb(16, 188, 231);
+  
+
+padding-top: 0px ;
+display: inline;
+width: 50%;
+
+}
+
+
+
+/* function to make changes to navbar */
+.lat
+{
+  display: inline;
+  color: aliceblue;
+  font-weight: bolder;
+  font-size: 22px;
+ 
+ 
+}
+
+/* function to make changes to navbar */
+.lat a:hover 
+{
+  background-color: rgb(255, 0, 128);
+  color: azure;
+  font-size: 2em;
+
+  
+  
+}
+/* function for links */
+a{
+  text-decoration: none;
+  text-transform: capitalize;
+ margin:  40px;
+ padding: 5px;
+   
+}
+/* function to make changes to image in about page */
+.img
+{
+  border-style: solid;
+  width: 20%;
+  padding-left: 0px;
+}
+/* function to change heading color */
+.strong
+{
+  color: rgb(1, 10, 17);
+}
+
+.hyg
+{
+  display: inline-block;
+}
+/* function to make changes to background in boxes of skills page  */
+.adi{
+  border-style: groove;
+  border-color: darkmagenta;
+  color: rgb(9, 241, 20);
+  width: 20%;
+  height: 350px;
+  margin: auto;
+  text-align: center;
+  font-style: oblique;
+  font-size: 30px;
+  background-color: cornsilk;
+
+  } 
+
+
+
+ /* function to make changes to heading in boxes */
+  .adi h2
+  {
+    color: rgb(223, 10, 109);
+    text-shadow: 0px 5px rgb(43, 198, 226);
+ 
+  }
+/* function align boxes in row */
+.ada
+{
+ display: flex;
+ flex-direction: row;
+ }
+
+ /* function to align image and text in row in about page */
+.large
+{
+  display: flex;
+  flex-direction: row;
+}
+/* function to align social handles to center  */
+footer{
+text-align: center;
+}
+
+/* function to change font size of Skills heading */
+#lam
+{
+  font-size: 50px;
+}
+
+/* function to make changes to text in projects page */
+.hit
+{
+  border-style: ridge;
+  border-radius: 20px;
+  font-size: 30px;
+  margin:auto;
+  width: 50%;
+  height:fit-content;
+  font-display: center;
+  border-color: rgb(21, 150, 89);
+  text-align: center;
+  background-color: cornsilk;
+  font-family: 'Yellowtail', cursive;
+}
+/* function to make changes to headings of project page */
+.hit h2
+{
+  text-align: center;
+  font-family: 'Alegreya', serif;
+  text-shadow: 0px 5px blueviolet;
+ 
+}
+/* function to make change to heading of project page */
+#lp
+{
+  font-size: 50px;;
+}
+
+
+/* function for more queries part in contacts page */
+.last h2
+    {
+        color:rgb(10, 10, 10);
+        font-size: 40px;
+    }
+    /* function for more queries part in contacts page */
+    .last
+    {
+        border-style: solid;
+        border-color: darkmagenta;
+        margin-top: 5px;
+        font-size: 20px;
+         }
+
+         /* function for more queries part in contacts page */
+    .last ul
+    {
+      color: blue;
+    }
+
+     /* function for more queries part in contacts page */
+    .last a
+    {
+        color: rgb(231, 217, 21);
+    }
+    
+     /* function for more queries part in contacts page */
+    .last a:hover{
+      color: brown;
+    }
+
+    /* function for coding platforms part in contacts page */
+    .lh li
+    {
+      color: crimson;
+      font-size: 20px;
+    }
+
+    /* function for coding platforms part in contacts page */
+    .lh h2
+    {
+      font-size: 40px ;
+    }
+    
+    /* function for coding platforms part in contacts page */
+  .lh
+    {
+      border-style: solid;
+      border-color: darkmagenta;
+      margin-top: 40px;
+    }
+   /* function to change width of arrow in footer of contacts page */
+   #all img
+   {
+     width: 5%;
+   }
+
+  

@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+}
+.fixed-header{
+    position: fixed;
+    margin-top: 0px;
+    width: 120%;
+    position: fixed;        
+    background: #333;
+    text-align: left;
+    color: #fff;
+    
+    
+}
+.container{
+    margin-left: 300px;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+   
+    display: inline-block;
+    
+    padding: 7px 25px;
+    line-height: 3;
+  font-size: 20px;
+}nav a:hover{
+    opacity: 0.4;
+}
+.footer{
+    
+  
+    height: 40px;
+     
+     color: #ffffff;
+     width: 100%;
+     background-color: #849e1d;
+     text-align: center;
+     left: 0;
+     bottom: 0;
+}
+.Contact{
+    position: relative;
+    padding: 50px 100px;
+    padding-left: 50px;
+    text-align: right;
+    size: 20px;
+    font-size: 20px;
+    margin-bottom: 100px;
+
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+.vis{
+    color: blue;
+   
+    padding: 10px;
+    font-size: 50px;
+}   
+.yout{
+    color:red;
+   
+    padding: 10px;
+    font-size: 50px;
+}
+.linkd{
+    color: blue;
+    padding: 10px;
+    font-size: 50px;
+}
+.insta{
+color:black;
+    padding: 10px;
+    font-size: 50px;
+}.mail{
+    color:blue;
+    padding: 10px;
+    font-size: 50px;
+
+  border-style: solid white;
+    
+}
+.vidd{
+    width: 200px;
+    height: 250px;
+    float: left;
+    border: 4px solid black;
+}
+.fdf{
+    text-align: left;
+   padding-right: 10px;
+   padding-left: 400px;
+    font-size: 25px;
+    
+}
+
+.gt{
+   margin-top: 0;
+ padding-left: 50px;
+   background-color: gray;
+   color: white;
+}.imga{
+    width: 300px;
+   float: left;
+   height: 300px;
+   }
+   .bd{
+       width: 100%;
+       margin-top: 0;
+   }
+.bfgf{
+    position: absolute;
+   top: 70px;
+   text-align: center;
+   color:darkred;
+   padding-left: 250px;
+}
+.bd{
+    height: 800px;
+}
+.bad{
+font-size: 40px;
+}
+#dog{
+    font-size: 50px;
+    color: darkslategray;
+}
+#MAUKE{
+    padding-left: 400px;
+    font-size: 40px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>This is naman1601</title>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div>
+            <a href="#about" class="btn">about me</a>
+        </div>
+        <div>
+            <a href="#skills" class="btn">Skills</a>
+        </div>
+        <div>
+            <a href="#projects" class="btn">Projects</a>
+        </div>
+        <div>
+            <a href="#cf" class="btn">Codeforces Stats</a>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="backToTop" title="Back to top">Top</button>
+
+    <div id="about">
+        <div id="about-container">
+            <div class="heading">
+                <h1>About me</h1>
+            </div>
+            <div class="content">
+                <p>Hey there! I am Naman Chhaparia.</p>
+                <br>
+                <p>I'm a 19 year-old CSE first-year at BIT, Mesra.</p>
+                <br>
+                <p>I love computer programming, and I also like to play the keyboard, and play badminton. I am an avid reader.</p>
+                <br>
+                <p>I'm an aspiring competitive programmer. I fell in love with programming when I was, perhaps, 13 years old, and have been in love with it ever since! I used to make small projects that seemed interesting to me (eg: some stuff I saw on YouTube), but I have recently gained tremendous interest in competitive programming, so much so that you will find me investing most of my free time on competitive programming platforms such as Codeforces and AtCoder!</p>
+                <br>
+                <p>If there is a naman1601 on a competitive programming platform, it is most probably me!</p>
+
+                <div class="profile-links">
+                    <a href="https://github.com/naman1601" target="_blank"><img src="assets/github-icon.svg" title="My github profile"></a>
+                    <a href="https://codeforces.com/profile/naman1601" target="_blank"><img src="assets/cf-icon.svg" title="My codeforces profile"></a>
+                    <a href="https://www.linkedin.com/in/naman-chhaparia-8458161b2/" target="_blank"><img src="assets/linkedin-icon.svg" title="My linkedin profile"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills">
+        <div id="skills-container">
+            <div class="heading">
+                <h1>Skills</h1>
+            </div>
+            <div id="skill-tiles">
+                <div id="cpp" class="tile">
+                    <img src="assets/cpp.png">
+                </div>
+                <div id=content"py" class="tile">
+                    <img src="assets/py.png">
+                </div>
+                <div id="git" class="tile">
+                    <img src="assets/git.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects">
+        <div id="projects-container">
+            <div class="heading">
+                <h1>My Projects</h1>
+            </div>
+            <div class="content">
+
+                (Please click on the project name to visit that project's github repo)
+
+                <br><br>
+                <li>
+                    <span class="project-link"><a href="https://github.com/naman1601/janus" target="_blank" title="Go to Janus">Janus</a>:</span> <br> <br> <span class="project-summary">A small assistant (sort of?) written in python for windows. It uses Google's speech-to-text and responds to selected voice commands and performs some tasks accordingly.</span>
+                    <br>
+                    <br>
+                    <hr class="separator">
+                </li>
+            </div>
+            <div class="content">
+                <li>
+                    <span class="project-link"><a href="https://github.com/naman1601/NaturalSelection" target="_blank" title="Go to Natural Selection">Natural Selection</a>:</span> <br> <br> <span class="project-summary">This is an attempt to simulate a very basic version of natural selection. We have a grid world whwere we spawn blobs and food randomly with some constraints, and then run the simulation and observe the results!</span>
+                    <br>
+                    <br>
+                    <hr class="separator">
+                </li>
+            </div>
+            <div class="content">
+                <li>
+                    <span class="project-link"><a href="https://github.com/naman1601/CoreDump" target="_blank" title="Go to Core Dump">CoreDump</a>:</span> <br> <br> <span class="project-summary">A stupid discord bot which can help you play only one game.</span>
+                    <br>
+                    <br>
+                    <hr class="separator">
+                </li>
+            </div>
+            <div class="content">
+                <li>
+                    <span class="project-link"><a href="#projects" title="This does not take you anywhere lmao">CP contests</a>:</span> <br> <br> <span class="project-summary">Conducted Competitive Programming contests, 1 individually and 2 with IEEE.
+                        <br><br>
+                        <li class="project-link">
+                            <a href="https://hackerrank.com/contests/ug2020-ieee-educational-1" target="_blank" title="Educational contest #1">Educational #1</a>
+                        </li>
+                        <li class="project-link">
+                            <a href="https://hackerrank.com/contests/ieee-educational-round-2" target="_blank" title="Educational contest #2">Educational #2</a>
+                        </li>
+                    </span>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    <div id="cf">
+        <div id="cf-container">
+            <div class="heading">
+                <h1>Codeforces Stats (live)</h1>
+            </div>
+            <div id="cf-stats">
+                <p class="cf-attribute" id="cf-handle">
+                </p>
+                <p class="cf-attribute" id="cf-current-rating">
+                    Ruko jara, sabar karo
+                </p>
+                <p class="cf-attribute" id="cf-max-rating">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/jquery.js"></script>
+    <script src="assets/main.js"></script>
+
+</body>
+</html>

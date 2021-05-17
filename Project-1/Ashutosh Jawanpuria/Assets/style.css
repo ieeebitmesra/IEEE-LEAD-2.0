@@ -1,0 +1,288 @@
+html {
+    background-color: #222831;
+    font-size: 62.5%;
+    /* text-align: center; */
+    /* margin: 0px; */
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: #393e46;
+    text-align: center;
+}
+
+h3 {
+    color: #393e46;
+}
+
+p {
+    color: #393e46;
+}
+
+
+/* h1 {
+    margin: 0;
+} */
+
+*/
+/* rgb(133, 51, 65) */
+
+ul {
+    background: rgb(26, 86, 94);
+    padding: 20px;
+    border: 1px solid black;
+    margin: 0;
+}
+
+li {
+    margin-left: 10px;
+}
+
+
+/* blockquote {
+    margin-left: 0;
+} */
+
+mark {
+    color: blue;
+}
+
+p {
+    margin-left: 0px;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 2.5rem;
+    z-index: 2;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 1.5rem;
+    margin-left: 8%;
+    margin-right: 8%;
+    opacity: 0.5;
+    border-radius: 2.5rem;
+}
+
+#navbar a:hover {
+    background-color: #00adb5;
+    color: #393e46;
+    opacity: 1;
+}
+
+#About_me {
+    margin-top: 8.0px;
+    border-radius: 2.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: .5rem;
+    color: #f2f2f2;
+    padding-bottom: 10.0rem;
+}
+
+#container {
+    font-family: 'Satisfy', cursive;
+    font-size: 6rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+#About_me h1 {
+    /* display: inline-block; */
+    font-family: 'Satisfy', cursive;
+    font-size: 6rem;
+    /* position: absolute;
+    right: 50%; */
+}
+
+#About_me h3 {
+    display: inline-block;
+    font-family: 'Satisfy', cursive;
+    font-size: 5rem;
+    /* position: relative;
+    top: 100px;
+} */
+}
+
+#div1img {
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    right: 10rem;
+    overflow: hidden;
+    /*  display: inline-block; */
+}
+
+#About_me1 {
+    border-radius: 2.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: .5rem;
+    margin-top: 1rem;
+    padding-bottom: 10rem;
+}
+
+#About_me1 h1 {
+    /* display: inline-block; */
+    font-family: 'Satisfy', cursive;
+    font-size: 6rem;
+    text-align: center;
+}
+
+#About_me1 p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    display: inline-block;
+    z-index: 1;
+}
+
+#div2img {
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    right: 10rem;
+}
+
+#projects {
+    border-radius: 2.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: .5rem;
+    margin-top: 1.0rem;
+}
+
+#projimg {
+    height: 20rem;
+    width: 30rem;
+    border-radius: 2.5rem;
+    /* display: inline-block; */
+}
+
+#description {
+    display: inline-block;
+    position: relative;
+    bottom: 7rem;
+    left: 20rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin-bottom: 10rem;
+}
+
+#projects h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 6rem;
+    text-align: center;
+}
+
+#caption {
+    display: inline-block;
+    position: relative;
+    top: 5rem;
+    right: 73%;
+}
+
+#Skills {
+    border-radius: 2.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: .5rem;
+    margin-top: 1.0rem;
+    padding-bottom: 10.0rem;
+}
+
+#Skills h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 6rem;
+    text-align: center;
+}
+
+#Skills p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    display: inline-block;
+    position: relative;
+    right: 25%;
+    margin-right: 3%
+}
+
+.skill-images {
+    height: 20.0rem;
+    width: 15.0rem;
+    margin-right: 7%;
+    margin-left: 7%;
+    margin-top: 17.0rem;
+}
+
+
+/* #html {
+    position: relative;
+    top: 200px;
+}
+
+#java {
+    position: relative;
+    top: 200px;
+} */
+
+#ski {
+    display: inline-block;
+    /* overflow: hidden; */
+    height: 40.0rem;
+    width: 40.0rem;
+    position: relative;
+    left: 60%;
+}
+
+.conimg {
+    height: 10.0rem;
+    height: 10.0rem;
+    margin-left: 28%;
+    /* display: inline-block; */
+}
+
+#css {
+    position: relative;
+    top: 5%;
+}
+
+#contact_me h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 6rem;
+    text-align: center;
+    color: #eaeaea;
+}
+
+#contact_me p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #eaeaea;
+}
+
+@media(max-width: 998px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media(mac-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+}

@@ -1,0 +1,43 @@
+font-family: 'Coda Caption', sans-serif;
+
+   color: azure;
+   
+   <script>
+        // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+    </script>
+
+   fake home background color rgb(20, 19, 19
+
+   border-left: 1px solid #abaaed;
+
+   nav a{
+padding: 100px;
+color: azure;
+font-family: 'Acme', sans-serif;
+font-weight: bolder;
+
+
+}
+nav a:hover{
+   
+  
+  color:rgb(20, 19, 19) ;
+  
+  transition: 0.35s;  
+}

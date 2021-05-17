@@ -1,0 +1,15 @@
+.topic {
+	margin-top: 5%;
+	padding-top: 2.5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-bottom: 2.5%;
+	font-size: calc(0.6vw + 12px);
+	/* width: 90%; */
+}
+.topic h1{
+	font-size: calc(1vw + 20px);
+}
+.intrests {
+	padding-bottom: 5%;
+}

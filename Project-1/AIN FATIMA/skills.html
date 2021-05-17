@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>My Skills</title>
+<link rel="shortcut icon" type="image/jpg" href="./skillsicon.jpg"/>
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+
+<body>
+	<div id="container">
+		<p id="logo"><a href="#"><img src="./finalAflogo.jpg" height="167px" width="180px"  alt="Aini's logo"/></a></p>
+
+<ul id="nav">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="skills.html">Skills</a></li>
+	<li><a href="projects.html">Projects</a></li>
+	
+</ul>
+
+<div id="header">
+	<h1><b>Welcome To My Portfolio</b></h1>
+	</div>
+    <div id="content">
+        <h1>My Technical Skills</h1>
+        <div class="column2">
+            <div class="card2">
+              <i class="fa fa-instagram"></i><img src="./java-icon.jpg" alt="Mike" height="187px" width="159px" class="skills">
+              <div class="container">
+              </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./c-logo.png" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+             </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./c+.png" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+              </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./html-logo.jpg" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+              </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./css.webp" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+                </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br><br><br><br><br><br><br><br>
+          <br>
+          <br><br><br><br><br><br><br> 
+          <br>
+          <h1>My Non-Technical Skills</h1>
+          <div class="column2">
+            <div class="card2">
+              <img src="./quiz.jpg" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+                <p class="socic"> Quizzing </p>
+                </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./debating.png" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+                <p class="socic"> Debating </p>
+                </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./blogging.png" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+                <p class="socic"> Blogging </p>
+                </div>
+            </div>
+          </div>
+          <div class="column2">
+            <div class="card2">
+              <img src="./cooking.png" alt="Mike" height="187px" width="159px" class="skills"> 
+              <div class="container">
+                <p class="socic"> Cooking </p>
+                </div>
+            </div>
+          </div>
+          <br><br><br><br><br><br>
+          <br>
+          <br><br><br><br><br><br><br><br>
+          <br>
+          <br><br><br><br><br><br><br> 
+           <h1><b>Competitive Programming Profile</b></h1>
+          <div class="column5">
+            <div class="card5">
+              <img src="./codeforces-logo.png" alt="Mike" height="80px" width="252px" class="codf"></a>
+              <div class="container">
+                <b><p id='rating'></p></b>
+              <b><p id='submissions'></p></b>
+               </div>
+            </div>
+          </div>
+          <div class="column5">
+            <div class="card5">
+              <img src="./hackerrank-logo.png" alt="Mike" height="80" width="222px" class="codf">
+              <div class="container">
+                <p><img src="./badges.bmp" height="143px" width="222px" class="codf"></p>
+               </div>
+            </div>
+          </div>
+
+
+
+
+          </div>
+    <script>
+
+      const url1 = 'https://codeforces.com/api/user.info?handles=ainfatima2';
+      const url2 = 'https://codeforces.com/api/user.status?handle=ainfatima2&from=1&count=1000'
+      async function getRating(){
+          const response = await fetch(url1);
+          const data = await response.json();
+          if(data.status === "OK" ){
+              document.getElementById('rating').innerHTML = "Current rating : " + data.result[0].rating + "<br /> Current rank : " + data.result[0].rank;
+          }
+      }
+      async function getSubmission(){
+          const response = await fetch(url2);
+          const data = await response.json();
+          if(data.status === "OK" ){
+              var c = 0;
+              for( i = 0 ; i < data.result.length ; i++ ){
+                  if( data.result[i].verdict === "OK" )
+                  {
+                      c = c+1;
+                  }
+              }
+                  document.getElementById('submissions').innerHTML =  "Number of questions solved : "+c+"<br />Total number of submissions : "+data.result.length;
+          }
+      }
+      getRating();
+      getSubmission();
+      </script>

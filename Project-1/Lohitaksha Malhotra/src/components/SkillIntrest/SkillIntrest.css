@@ -1,0 +1,29 @@
+
+.intrests-container {
+	background-color: #0072a3;
+    transition: 0.5s ease-in-out;
+	/* color: black; */
+	margin-left: 13%;
+	margin-right: 13%;
+	border: 0.6rem black solid;
+	text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+		-1px -1px 0 #000;
+}
+.intrests-container:hover {
+	background-color: #0383b9;
+    transition: 0.5s ease-in-out;
+}
+.skills-container {
+	background-color: #b40202;
+    transition: 0.5s ease-in-out;
+	margin-left: 13%;
+	margin-right: 13%;
+	border: 0.6rem black solid;
+	text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+		-1px -1px 0 #000;
+}
+.skills-container:hover{
+    background-color: #ee0505;
+    transition: 0.5s ease-in-out;
+}
+
