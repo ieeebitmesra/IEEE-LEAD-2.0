@@ -146,10 +146,10 @@ root = Tk()
 root.geometry("200x200") #widthxheight
 root.minsize(100,100) #width,height
 root.title("scrapping project")
-
+root.configure(bg='green')
 btn1 = Button(root, text="get first search result from google", command=open_google)
-btn1.pack()
+btn1.pack(pady=5)
 btn2 = Button(root, text="get scrapping results for indeed.com", command=open_indeed)
-btn2.pack()
+btn2.pack(pady=5)
 #===============================
 root.mainloop()
