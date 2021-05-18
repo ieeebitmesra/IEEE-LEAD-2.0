@@ -106,7 +106,7 @@ https://user-images.githubusercontent.com/40158577/118137620-083cf600-b423-11eb-
 
 ![woogle homepage](https://i.imgur.com/jxThCQ1.png "woogle home") 
 ![woogle results](https://i.imgur.com/xkI3g6W.png "woogle results") 
-![woogle intern](https://imgur.com/gallery/zvyNZ1i "woogle results")
+![woogle intern](https://i.imgur.com/9xeRGr9.png "woogle results")
 ![woogle tj](https://i.imgur.com/8xzXWBD.png "woogle results")
 ![woogle mobile](https://i.imgur.com/fHS3oip.png "woogle mobile")
 
