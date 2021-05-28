@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Covid 19 API</title>
+    <link rel="icon" href="./images/logo.webp" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<style>
+.title{
+    background-color: rgb(224, 224, 224);
+    padding:20px;
+}
+
+.imgfot1{
+        
+        height: 200px;
+        background-color: black;
+        
+    }
+    .head{
+      color:whitesmoke;
+    }
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+img { max-width: 100%; height: auto; }
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+html { font-size:100%; }
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} } 
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Global Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="current.html"> Local Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MILE3.html">Country Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mile 2.html">State Data</a>
+          </li>
+        </ul>
+      </nav>
+    
+    <div class="container-fluid mt-5">
+
+
+        <div class="main-heading">
+            <h1 class="title mb-5 text-center"><span class="font-weight-bold">India </span>Covid 19 Dashboard(States)</h1>
+             </div>
+             
+                <input type="text" id="country" placeholder="Enter State code"required>
+                <input onclick="init()" type="submit" value="Search">
+              
+             <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>State</th>
+                            <th>Confirmed</th>
+                            <th>Recovered</th>
+                            <th>Deaths</th>
+                            <th>Active</th>
+                            <th>Updated</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="data"></tr>
+                        
+                        
+
+        
+
+                    </tbody>
+                </table>
+                <button onclick="refresh()" class="btn btn-danger btn-block">
+                    RELOAD DATA
+                </button>
+             </div>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">State</th>
+            <th scope="col">Code</th>
+            <th scope="col">State</th>
+            <th scope="col">Code</th>
+            <th scope="col">State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>ANDAMAN & NICOBAR ISLAND</td>
+            <td>13</td>
+            <td>HIMMACHAL PRADESH </td>
+            <td>25</td>
+            <td>NAGALAND</td>
+            
+            
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>ANDHRA PRADESH</td>
+            <td>14</td>
+            <td>JAMMU & KASHMIR</td>
+            <td>26</td>
+            <td>ODISHA</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>ARUNACHEL PRADESH</td>
+            <td>15</td>
+            <td>JHARKHAND</td>
+            <td>27</td>
+            <td>PUDUCHERRY</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>ASSAM</td>
+            <td>16</td>
+            <td>KARNATKA</td>
+            <td>28</td>
+            <td>PUNJAB</td>
+
+            
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>BIHAR</td>
+            <td>17</td>
+            <td>KERALA</td>
+            <td>29</td>
+            <td>RAJASTHAN</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>CHANDIGARH</td>
+            <td>18</td>
+            <td>LADAKH</td>
+            <td>30</td>
+            <td>SIKKIM</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>CHHATISGARH</td>
+            <td>19</td>
+            <td>LAKSHWADEEP</td>
+            <td>32</td>
+            <td>TAMIL NADU</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>DADRA & NAGAR HAVELI and DAMAN & DIU</td>
+            <td>20</td>
+            <td>MADHYA PRADESH</td>
+            <td>33</td>
+            <td>TELANGANA</td>   
+          </tr>
+          <tr>
+          <th scope="row">9</th>
+            <td>DELHI</td>
+            <td>21</td>
+            <td>MAHARASHTRA</td>
+            <td>34</td>
+            <td>TRIPURA</td> 
+            </tr>
+            <tr>
+            <th scope="row">10</th>
+            <td>GOA</td>
+            <td>22</td>
+            <td>MANIPUR</td>
+            <td>35</td>
+            <td>UTTAR PRADESH</td> 
+            </tr>
+            <tr>
+                <th scope="row">11</th>
+                <td>GUJARAT</td>
+                <td>23</td>
+                <td>MEGHALAYA</td>
+                <td>36</td>
+                <td>UTTRAKHAND</td> 
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td>HARAYAN</td>
+                    <td>24</td>
+                    <td>MIZORAM</td>
+                    <td>37</td>
+                    <td>WEST BENGAL</td>
+                    </tr>
+                   
+              
+        </tbody>
+      </table>
+          
+</body>
+
+<script>
+    window.onload=function(){
+    
+}
+
+init()
+ function init(){
+      var state=document.getElementById('country').value
+        var url= "https://api.covid19india.org/data.json"
+        var data= ''
+        $.get(url,function(data){
+            // console.log(data)
+            // console.log(data.statewise);
+            $i=state;
+            
+                
+            data= `
+            <td>${data.statewise[$i].state}</td>
+            <td>${data.statewise[$i].confirmed}</td>
+            <td>${data.statewise[$i].recovered}</td>
+            <td>${data.statewise[$i].deaths}</td>
+            <td>${data.statewise[$i].active}</td>
+            <td>${data.statewise[$i].lastupdatedtime}</td>
+            
+            `
+           $("#data").html(data) 
+      
+ })
+     
+ }
+ 
+//function yo make a fresh api call everytime
+ function refresh(data){
+            clearData()
+            init() 
+        }
+        function clearData(){
+           $(data).empty()
+          
+        }
+        
+</script>
+
+<br>
+<br>
+<footer>
+  <div class="imgfot1">
+    <p class="head"><br><marquee>Together We will win this War against the novel CoronaVirus!</marquee><p>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,262 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Covid 19 API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+.title{
+    background-color: rgb(224, 224, 224);
+    padding:20px;
+}
+/* .centr{
+    align-items: center;
+} */
+
+    .head{
+      color:whitesmoke;
+    }
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+img { max-width: 100%; height: auto; }
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+html { font-size:100%; }
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} } 
+
+</style>
+<body>
+    
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Global Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="current.html">Local Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MILE3.html">Country Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mile 2.html">State data</a>
+          </li>
+        </ul>
+      </nav>
+    
+    <div class="container-fluid mt-5">
+
+
+        <div class="main-heading">
+            <h1 class="title mb-5 text-center"><span class="font-weight-bold">Current </span>Covid 19 Statistics</h1>
+            
+             </div>
+             
+            
+                 
+
+<body>
+    
+   
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Properties</th>
+                    <th>Tracked Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Current Latitude</th>
+                    <td><span id="Latitude"></span>&deg<br></td>
+                </tr>
+                <tr>
+                    <th scope="row">Current Longitude</th>
+                    <td><span id="Longitude"></span>&deg<br></td>
+                </tr>
+                <tr>
+                    <th scope="row">Current Continent</th>
+                    <td>
+                        <div id="continent"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Country Code</th>
+                    <td>
+                        <div id="country_code"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Current Country</th>
+
+                    <td>
+                        <span id="img"> </span>
+                        <span id="country"></span><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Current State</th>
+                    <td> <span id="state"></span><br></td>
+                </tr>
+                <tr>
+                    <th scope="row">State Code</th>
+                    <td>
+                        <div id="state_code"></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Current City</th>
+                    <td><span id="city"></span><br></td>
+                </tr>
+                <tr>
+                    <th scope="row">Specific Address</th>
+                    <td>
+                        <div id="locdescrip"></div>
+                    </td>
+                </tr>
+                <!-- Covid info of the current location -->
+                <tr>
+                    <th scope="row">Active Cases</th>
+                    <td><span id="active"></span><br></td>
+                </tr>
+                <tr>
+                    <th scope="row">Deaths</th>
+                    <td><span id="death"></span><br></td>
+                </tr>
+                <tr>
+                    <th scope="row">Total Recovered Cases</th>
+                    <td><span id="recovered"></span><br></td>
+                </tr>
+                <tr>
+                    <th scope="row">Total Confirmed Cases</th>
+                    <td><span id="confirmed"></span><br></td>
+                </tr>
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script>
+
+    navigator.geolocation.getCurrentPosition(success, error);
+
+    function success(position) {
+        console.log(position.coords.latitude)
+        console.log(position.coords.longitude)
+        var lat = position.coords.latitude
+        var long = position.coords.longitude
+        document.getElementById('Latitude').innerHTML =  lat
+        document.getElementById('Longitude').innerHTML =  long
+
+
+        $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${lat}+${long}&key=9d801a5745534bc38aeaa91a77c661df`).done(function (location) {
+            // console.log(location)
+            console.log(location.results[0].formatted)
+            const loc = location.results[0].formatted
+            const city = location.results[0].components.city
+            const country = location.results[0].components.country
+            const state = location.results[0].components.state
+            const descrip = location.results[0].formatted
+            const continent = location.results[0].components.continent
+            document.getElementById('continent').innerHTML =  continent
+
+            const country_code = location.results[0].components.country_code
+            document.getElementById('country_code').innerHTML =  country_code
+            const stcode = location.results[0].components.state_code
+            document.getElementById('state_code').innerHTML =  stcode
+
+            console.log(city)
+            console.log(country)
+            console.log(state)
+
+
+
+            var url = "https://api.covid19india.org/state_district_wise.json"
+            fetch(url)
+                .then((res) => res.json())
+                .then((res) => {
+                    // console.log(res)
+
+
+                    console.log(res[state].districtData[city].deceased)
+                    console.log(res[state].districtData[city].active)
+                    console.log(res[state].districtData[city].confirmed)
+                    console.log(res[state].districtData[city].recovered)
+
+
+                    let death = res[state].districtData[city].deceased.toLocaleString('en');
+                    let active = res[state].districtData[city].active.toLocaleString('en');
+                    let confirmed = res[state].districtData[city].confirmed.toLocaleString('en');
+                    document.getElementById('confirmed').innerHTML =  confirmed
+                    let recovered = res[state].districtData[city].recovered.toLocaleString('en');
+
+                    document.getElementById('locdescrip').innerHTML =  descrip
+
+                    document.getElementById('country').innerHTML = "  " + country
+
+                    document.getElementById('state').innerHTML = state
+                    document.getElementById('city').innerHTML =  city
+                    document.getElementById('active').innerHTML =  active
+
+                    document.getElementById('recovered').innerHTML = recovered
+                    document.getElementById('death').innerHTML =  death
+                    document.getElementById('img').innerHTML = location.results[0].annotations.flag
+                })
+
+
+        })
+
+    }
+
+    function error(err) {
+        console.log(err)
+    }
+</script>
+<br><br><br><br><br>
+<footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright: 
+      <a class="text-white" href="current.html">Thanks For Visiting!</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</html>
