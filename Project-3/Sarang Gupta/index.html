@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/logo.jpg" sizes="16x16" type="image/jpg">
+    <title>COVID-19 Tracker</title>
+    <style>
+        #countries {
+            background-image: url('./img/covid1.png');
+            height: 100vh;
+            background-repeat: no-repeat;
+        }
+        #india {
+            height: 225vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Covid Tracker</a>
+        <div class="menu-toggle"></div>
+        <nav>
+            <ul>
+                <li> <a href="#home">Home</a> </li>
+                <li> <a href="#countries">Countries</a> </li>
+                <li> <a href="#india">India</a> </li>
+                <li> <a href="#yourlocation" id="getlocation">Your Location</a> </li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+    <section id="home">
+        <div class="maindiv">
+            <div class="container">
+                <div class="card">
+                    <div id="world">
+                        <h1>World</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1 class="worldtext">Total Cases</h1>
+                    <div class="content" id="totalcase"></div>
+                </div>
+                <div class="card">
+                    <h1 class="worldtext">Active Cases</h1>
+                    <div class="content" id="activecase"></div>
+                </div>
+                <div class="card">
+                    <h1 class="worldtext" id="recoveredh1">Total Recovered</h1>
+                    <div class="content" id="totalrecovered"></div>
+                </div>
+                <div class="card">
+                    <h1 class="worldtext">Total Deaths</h1>
+                    <div class="content" id="totaldeath"></div>
+                </div>
+                <div class="card">
+                    <h1 class="worldtext">New Cases</h1>
+                    <div class="content" id="newcase"></div>
+                </div>
+                <div class="card">
+                    <h1 class="worldtext">New Deaths</h1>
+                    <div class="content" id="newdeath"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="countries">
+        <div class="countrydiv">
+            <div class="searchbox">
+                <input type="search" name="" id="countrytext" placeholder="Enter Country Name...">
+                <input type="button" value="Search" id="get">
+            </div>
+            <div id="alertbox">
+                <div class="alertcard" id="cardalert">
+                    <h2 id="alerttext"></h2>
+                </div>
+            </div>
+            <div class="card">
+                <h1 id="countryname">Country Name</h1>
+                <h3 id="countrytotalc">Total Cases: </h3>
+                <h3 id="countryactive">Active Cases: </h3>
+                <h3 id="countrytotalr">Total Recovered: </h3>
+                <h3 id="countrytotald">Total Deaths: </h3>
+                <h3 id="countrynewc">New Cases: </h3>
+                <h3 id="countrynewd">New Deaths: </h3>
+            </div>
+        </div>
+    </section>
+    <section id="india">
+        <div class="indiasearch">
+            <h1>Covid-19 India</h1>
+            <div id="indiatotal">
+                <table id="indiantotaldata">
+                    <tr>
+                        <th>Total</th>
+                        <th>Active</th>
+                        <th>Confirmed</th>
+                        <th>Deaths</th>
+                        <th>New Confirmed</th>
+                        <th>New Deaths</th>
+                        <th>New Recovered</th>
+                        <th>Recovered</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="statedata">
+            <div id="indiandatabox">
+                <table id="indiandata" class="table">
+                    <tr>
+                        <th>State</th>
+                        <th>Active</th>
+                        <th>Confirmed</th>
+                        <th>Deaths</th>
+                        <th>New Confirmed</th>
+                        <th>New Deaths</th>
+                        <th>New Recovered</th>
+                        <th>Recovered</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="yourlocation">
+        <div class="locationdiv">
+            <div class="container">
+                <h1 id="locationh1"></h1>
+                <h1 id="locationcont"></h1>
+                <h1 id="locationstate"></h1>
+                <h1 id="locationdist"></h1>
+            </div>
+            <div id="districtcontainer">
+                <div id="locationcoviddata">
+                    <h1 id="locationcoviddata1"></h1>
+                    <h3 id="locationcoviddata2"></h3>
+                    <h3 id="locationcoviddata3" class="red"></h3>
+                    <h3 id="locationcoviddata4" class="green"></h3>
+                    <h3 id="locationcoviddata5"></h3>
+                    <h3 id="locationcoviddata6"></h3>
+                    <h3 id="locationcoviddata7" class="red"></h3>
+                    <h3 id="locationcoviddata8" class="green"></h3>
+                    <h2 id="districtalert" class="districtalertclass"></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="footerdiv">
+            <h3>&copy; Designed By Sarang Gupta</h3>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
