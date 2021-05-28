@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+  <nav class="navbar navbar-inverse" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        
+      </div>
+      <ul class="nav navbar-nav" >
+        <li class="active" ><a href="index.html">Home</a></li>
+        <li class="active"><a href="worldlive.html">Get world live data</a></li>
+        <li class="active" ><a href="current.html">Get Covid data of your current location</a></li>
+        <li class="active" ><a href="globe.html">Covid-19 Global tracker</a></li>
+        <li class="active" ><a href="local.html">Covid-19 Indian State tracker</a></li>
+        <li class="active" ><a href="district.html">Covid-19 Indian city/district tracker</a></li>
+      </ul>
+    
+    </div>
+  </nav>
+      <body style="background-image: url('city.jpg');background-size: cover;background-repeat: no-repeat;" >
+        <h1 class="text-center" style="color: rgb(0, 0, 0);">Covid-19 Indian City/District Tracker</h1>
+        <form class="text-center" id="myForm">
+        <input type="text" id="state" placeholder="Enter state code" required style="font-size: x-large;">
+        <input type="text" id="city" placeholder="Enter city/district name" required style="font-size: x-large;">
+        <input type="submit" value="Fetch Data" style="font-size: x-large;">
+        </form>
+        <img src="state codes.bmp" height="246px" width="90px" style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;" >
+        <h3 class="text-center" id="confirmed" style="color: rgb(250, 8, 8);"> </h3>
+        <h3 class="text-center" id="deceased" style="color: rgb(62, 243, 7);"> </h3>
+        <h3 class="text-center" id="recovered" style="color: rgb(199, 14, 190);"> </h3>
+        
+        <h3 class="text-center" id="vaccinated" style="color: rgb(73, 163, 236);"> </h3>
+        
+    </body>
+    <script>
+        
+        var myForm=document.getElementById('myForm')
+      myForm.addEventListener('submit',function(e){
+          e.preventDefault()
+          var state=document.getElementById('state').value
+          var city=document.getElementById('city').value
+          
+          var url="https://api.covid19india.org/v4/min/data.min.json"
+          fetch(url)
+          .then((res)=>res.json())
+          .then((res)=> {
+              console.log(res)
+             
+              var confirmed=document.getElementById('confirmed')
+          var deceased=document.getElementById('deceased')
+          var recovered=document.getElementById('recovered')
+          
+          var vaccinated=document.getElementById('vaccinated')
+          
+          
+          confirmed.innerHTML=''
+          deceased.innerHTML=''
+          recovered.innerHTML=''
+          
+          vaccinated.innerHTML=''
+          
+          
+          confirmed.append("Total confirmed: "+(res[state].districts[city].delta7.confirmed))
+          deceased.append("Total deaths: "+(res[state].districts[city].delta7.deceased))
+          recovered.append("Total recovered: "+(res[state].districts[city].delta7.recovered))
+          
+          vaccinated.append("Total vaccinated: "+(res[state].districts[city].delta7.vaccinated))
+          if((res[state].districts[city].delta7.confirmed)>10000)
+          {
+            alert("This district/city comes under high containment zone !")
+          }
+          else 
+          if((res[state].districts[city].delta7.confirmed)>5000)
+          {
+            alert("This district/city comes under containment zone !")
+          }
+          else if((res[state].districts[city].delta7.confirmed)>1000)
+          {
+            alert("This district/city comes moderate containment zone !")
+          }
+          else if((res[state].districts[city].delta7.confirmed)>500)
+          {
+            alert("This district/city comes under less containment zone !")
+          }
+          else{
+            alert("This disctrict/city comes under least containment zone!")
+          }
+              
+          })
+    
+      })
+      </script>   
+      
+
+
+</html>

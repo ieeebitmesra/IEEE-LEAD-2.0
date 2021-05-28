@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background:url('curfinal.jpg');background-repeat: no-repeat;background-size: cover;">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+       
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active" style="color: mintcream;" ><a href="index.html">Home</a></li>
+        <li class="active"><a href="worldlive.html">Get world live data</a></li>
+        <li class="active" ><a href="current.html">Get Covid data of your current location</a></li>
+        <li class="active" ><a href="globe.html">Covid-19 Global tracker</a></li>
+        <li class="active" ><a href="local.html">Covid-19 Indian State tracker</a></li>
+        <li class="active" ><a href="district.html">Covid-19 Indian city/district tracker</a></li>
+      </ul>
+    
+    </div>
+  </nav>
+  <h1 class="text-center" style="color: rgb(0, 0, 0);">Fetching your current location and covid data<img src="location.jpg" height="46px" width="54px"><img src="covid.png" height="46px" width="54px"></h1>
+  <h3 class="text-center" id="Lat" style="color: rgb(243, 33, 33);"> </h3>
+  <h3 class="text-center" id="long" style="color: rgb(247, 19, 19);"> </h3>
+  <h3 class="text-center" id="State" style="color: rgb(34, 34, 221);"> </h3>
+  <h3 class="text-center" id="City" style="color: rgb(19, 165, 50);"> </h3>
+  
+  <h3 class="text-center" id="active" style="color: rgb(196, 25, 159);"> </h3>
+  <h3 class="text-center" id="confirmed" style="color: rgb(248, 125, 24);"> </h3>
+  <h3 class="text-center" id="deceased" style="color: rgb(0, 205, 219);"> </h3>
+  <h3 class="text-center" id="recovered" style="color: rgb(250, 54, 113);"> </h3>
+  
+      
+
+      </body>
+    <script>
+        
+    
+        
+        function getCoordintes() {
+    var options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+    };
+  
+    function success(pos) {
+        var crd = pos.coords;
+        var lat = crd.latitude.toString();
+        var lng = crd.longitude.toString();
+        var coordinates = [lat, lng];
+        console.log(`Latitude: ${lat}, Longitude: ${lng}`);
+        getCity(coordinates);
+        return;
+  
+    }
+  
+    function error(err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+  
+    navigator.geolocation.getCurrentPosition(success, error, options);
+}
+  
+// Step 2: Get city name
+function getCity(coordinates) {
+    var xhr = new XMLHttpRequest();
+    var lat = coordinates[0];
+    var lng = coordinates[1];
+    
+  
+    // Paste your LocationIQ token below.
+    xhr.open('GET', "https://us1.locationiq.com/v1/reverse.php?key=pk.0726277d645e72ab440b7fad10c021e1&lat=" +
+    lat + "&lon=" + lng + "&format=json", true);
+    xhr.send();
+    xhr.onreadystatechange = processRequest;
+    xhr.addEventListener("readystatechange", false);
+  
+    function processRequest(e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            response = JSON.parse(xhr.responseText);
+              state=response.address.state;
+              city = response.address.city;
+              console.log(city);
+              console.log(state);
+              
+              var url="https://api.covid19india.org/state_district_wise.json"
+             fetch(url)
+            .then((res)=>res.json())
+            .then((res)=> {
+              
+              console.log(res[state].districtData[city].deceased)
+              var Lat=document.getElementById('Lat')
+              var long=document.getElementById('long')
+              var State=document.getElementById('State')
+              var City=document.getElementById('City')
+              var active=document.getElementById('active')
+              var confirmed=document.getElementById('confirmed')
+              var recovered=document.getElementById('recovered')
+              var deceased=document.getElementById('deceased')
+              Lat.append("Latitude: "+lat)
+              long.append("Longitude: "+lng)
+              State.append("State: "+state)
+              City.append("City/district: "+city)
+              
+              active.append("Active Cases: "+(res[state].districtData[city].active))
+              confirmed.append("Total confirmed: "+(res[state].districtData[city].confirmed))
+              recovered.append("Total recovered: "+(res[state].districtData[city].recovered))
+              deceased.append("Total deaths: "+(res[state].districtData[city].deceased))
+          })
+            
+            
+            return;
+            
+          
+    
+            
+        }
+    }
+}
+getCoordintes();
+
+
+
+
+
+        
+       
+          
+      
+      </script>   
+      
+
+
+</html>

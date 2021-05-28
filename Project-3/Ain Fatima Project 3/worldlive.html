@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title >Covid-19 global</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background:url('world2.jpg');background-repeat: no-repeat;background-size: cover;width: 1600;height: 850;">
+
+
+  <nav class="navbar navbar-inverse" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="worldlive.html">Get world live data</a></li>
+            <li class="active" ><a href="current.html">Get Covid data of your current location</a></li>
+            <li class="active"><a href="globe.html">Covid-19 Global tracker</a></li>
+            <li class="active"><a href="local.html">Covid-19 Indian State tracker</a></li>
+            <li class="active"><a href="district.html">Covid-19 Indian city/district tracker</a></li>
+          </ul>
+        
+        </div>
+      </nav>
+      <h1 style="color: rgb(0, 0, 0);">World Live Covid-19 Update</h1>
+      <h3 id="NewConfirmed" style="color: rgb(255, 42, 27);"></h3>
+      <h3 id="TotalConfirmed" style="color: rgb(23, 5, 184);"></h3>
+      <h3 id="NewDeaths" style="color: rgb(80, 29, 6);"> </h3>
+      <h3 id="TotalDeaths" style="color: rgb(184, 14, 133);"> </h3>
+      <h3 id="NewRecovered" style="color: rgb(32, 199, 26);"></h3>
+      <h3 id="TotalRecovered" style="color: rgb(255, 153, 19);"></h3>
+
+</body>
+<script>
+    var url="https://api.covid19api.com/summary"
+      fetch(url)
+      .then((res)=>res.json())
+      .then((res)=> {
+        console.log(res)
+        var NewConfirmed=document.getElementById('NewConfirmed')
+        var TotalConfirmed=document.getElementById('TotalConfirmed')
+        var NewDeaths=document.getElementById('NewDeaths')
+        var TotalDeaths=document.getElementById('TotalDeaths')
+        var NewRecovered=document.getElementById('NewRecovered')
+        var TotalRecovered=document.getElementById('TotalRecovered')
+        NewConfirmed.append("New Confirmed Cases: "+res.Global.NewConfirmed)
+        TotalConfirmed.append("Total Confirmed Cases: "+res.Global.TotalConfirmed)
+        NewDeaths.append("New Deaths: "+res.Global.NewDeaths)
+        TotalDeaths.append("Total Deaths: "+res.Global.TotalDeaths)
+        NewRecovered.append("New Recovered: "+res.Global.NewRecovered)
+        TotalRecovered.append("Total Recovered: "+res.Global.TotalRecovered)
+      }
+      )
+
+
+
+
+</script>
+</html>
