@@ -4,6 +4,12 @@
 
 ## Website Link : https://clary09.github.io/covid19-tracker/
 
+## Milestones achieved:
+#### ->Fetching the world data.(Total cases, Deaths ,recovered cases, new cases today ,deaths today).
+#### ->Fetching your current coordinates and getting the country, state and district data. 
+#### ->Fetching data of any country/state entered by user. 
+#### Additional:- Alerts according to the number of cases in the searched  region, etc.
+
 ## Features About the Website :
 ### 1.There is a home page which provides a brief description about the website, making the viewers aware about the different tabs added in the naviagtion bar.
 ![Screenshot 2021-05-27 at 4 10 22 PM](https://user-images.githubusercontent.com/82439481/119833583-d9437b80-bf1c-11eb-8071-050fc2f8c95f.png)
@@ -28,7 +34,7 @@
 ![Screenshot 2021-05-27 at 4 14 09 PM](https://user-images.githubusercontent.com/82439481/119836442-5ff95800-bf1f-11eb-95a5-7804cfbd4453.png)
 
 ## Special Features About this Website:
-### This website is very easy to use and understand. The design of the website is simple and sober. The website provides you with all sorts of covid data(world live data,your location data,any Country ,State or District data. The website also provides the alerts for the region you search(i.e country,state and district). The data is being provided using APIs which is very accurate and gets updated frequently with time. 
+### This website is very easy to use and understand. The design of the website is simple and sober. The website provides you with all sorts of covid data(world live data,your location data,any Country ,State or District data). The website also provides the alerts for the region you search(i.e country,state and district). The data is being provided using APIs which is very accurate and gets updated frequently with time. 
 
 
 
