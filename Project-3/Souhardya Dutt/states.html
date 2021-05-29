@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" theme="theme-light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/favicon/covid.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/CSS/styles.css">
+    <title>Statewise COVID-19 Data</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Covid19 Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./countries.html">Countrywise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./states.html">Statewise</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-success" id="toggle">Toggle</button>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <h2 class="text-center display-2">Statewise COVID-19 Data</h2>
+    </div>
+    <div class="States">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>State Name</p>
+                    <h1 class="Name" id="state"></h1>
+                </div>
+                <div class="col">
+                    <p>Total Cases</p>
+                    <h1 class="cases" id="confirmed"></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Active Cases</p>
+                    <h1 class="active_cases" id="active"></h1>
+                </div>
+                <div class="col">
+                    <p>Recovered</p>
+                    <h1 class="recovered" id="recovered"></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Deaths</p>
+                    <h1 class="deaths" id="deaths"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container-sm">
+            <div class="row">
+                <div class="col">
+                    <select class="form-select" id="selectBox">
+                        <!-- <option selected>Enter your State</option> -->
+                        <option value="1">Andaman and Nicobar Islands</option>
+                        <option value="2">Andhra Pradesh</option>
+                        <option value="3">Arunachal Pradesh</option>
+                        <option value="4">Assam</option>
+                        <option value="5">Bihar</option>
+                        <option value="6">Chandigarh</option>
+                        <option value="7">Chhattisgarh</option>
+                        <option value="8">Dadra and Nagar Haveli and Daman and Diu</option>
+                        <option value="9">Delhi</option>
+                        <option value="10">Goa</option>
+                        <option value="11">Gujarat</option>
+                        <option value="12">Haryana</option>
+                        <option value="13">Himachal Pradesh</option>
+                        <option value="14">Jammu and Kashmir</option>
+                        <option value="15">Jharkhand</option>
+                        <option value="16">Karnataka</option>
+                        <option value="17">Kerala</option>
+                        <option value="18">Ladakh</option>
+                        <option value="19">Lakshadweep</option>
+                        <option value="20">Madhya Pradesh</option>
+                        <option value="21">Maharashtra</option>
+                        <option value="22">Manipur</option>
+                        <option value="23">Meghalaya</option>
+                        <option value="24">Mizoram</option>
+                        <option value="25">Nagaland</option>
+                        <option value="26">Odisha</option>
+                        <option value="27">Puducherry</option>
+                        <option value="28">Punjab</option>
+                        <option value="29">Rajasthan</option>
+                        <option value="30">Sikkim</option>
+                        <option value="31">Tamil Nadu</option>
+                        <option value="32">Telangana</option>
+                        <option value="33">Tripura</option>
+                        <option value="34">Uttar Pradesh</option>
+                        <option value="35">Uttarakhand</option>
+                        <option value="36">West Bengal</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary" id="select">Select</button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary" id="location">Get your location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stateTable">
+        <div class="container">
+            <table class="table table-striped table-hover" id="stateTable">
+                    <tr>
+                        <th scope="col">State Name</th>
+                        <th scope="col">Total Cases</th>
+                        <th scope="col">Active Case</th>
+                        <th scope="col">Deaths</th>
+                        <th scope="col">Recovered</th>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <p>
+                <. /> Made by Souhardya Dutt
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./Assets/JS/states.js"></script>
+</body>
+</html>

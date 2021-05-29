@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website to track COVID infections.">
+    <link rel="shortcut icon" href="./Assets/favicon/covid.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link id="theme" rel="stylesheet" href="./Assets/CSS/styles.css">
+    <title>COVID Tracker</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Covid19 Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./countries.html">Countrywise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./states.html">Statewise</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-success" id="toggle">Toggle</button>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <h1 class="text-center display-2">COVID-19: At a Glance</h1>
+    </div>
+    <div class="World">
+        <h2 class="text-center">COVID-19 Worldwide</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h1 class="cases" id="world_cases"></h1>
+                        <p>Total cases worldwide</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="active_cases" id="active_cases"></h1>
+                        <p>Active cases worldwide</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="new_cases" id="new_cases"></h1>
+                        <p>New cases worldwide</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="deaths" id="total_deaths"></h1>
+                        <p>Total deaths worldwide</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="deaths" id="new_deaths"></h1>
+                        <p>New deaths worldwide</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="recovered" id="total_recovered"></h1>
+                        <p>Total recovered worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="India">
+        <h2 class="text-center">COVID-19 India</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <h1 class="cases" id="india_cases"></h1>
+                        <p>Total cases</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="active_cases" id="india_active_cases"></h1>
+                        <p>Active cases</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="new_cases" id="india_new_cases"></h1>
+                        <p>New cases</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="deaths" id="india_deaths"></h1>
+                        <p>Total deaths</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="deaths" id="india_new_deaths"></h1>
+                        <p>New deaths</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h1 class="recovered" id="india_recovered"></h1>
+                        <p>Total recovered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="about">
+        <div>
+            <div class="container" id="about">
+                <div class="text-center display-4">
+                    <h2>About COVID-19</h2>
+                </div>
+                <div class="about">
+                    <p>
+                        Coronavirus disease 2019 (COVID-19), also known as the coronavirus, or COVID, is a contagious disease
+                        caused by severe
+                        acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The first known case was identified in Wuhan,
+                        China, in December
+                        2019. The disease has since spread worldwide, leading to an ongoing pandemic.
+                    </p>
+                    <p>
+                        Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and
+                        recover without
+                        requiring special treatment. Older people, and those with underlying medical problems like
+                        cardiovascular disease,
+                        diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.
+                    </p>
+                    <p>
+                        The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the
+                        disease it
+                        causes and how it spreads. Protect yourself and others from infection by washing your hands or using an
+                        alcohol based
+                        rub frequently and not touching your face.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="footer">
+            <p>
+                <./> Made by Souhardya Dutt
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="./Assets/JS/script.js"></script>
+</body>
+</html>
