@@ -350,7 +350,10 @@ function stateData(e) {
                 col15.innerHTML = out4;
             }
         })
-        const col21 = document.getElementById("dis");
+
+        document.getElementById("col-21").style.display="none";
+        document.getElementById("row-4").style.display="none";
+       /* const col21 = document.getElementById("dis");
     const col22 = document.getElementById("col-22");
     const col23 = document.getElementById("col-23");
     const col24 = document.getElementById("col-24");
@@ -387,5 +390,5 @@ function stateData(e) {
         col23.innerHTML = out2;
         col24.innerHTML = out3;
         col25.innerHTML = out4;
-    }      }  )
+    }      }  )*/
 }
