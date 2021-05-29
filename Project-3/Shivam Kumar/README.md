@@ -1,12 +1,15 @@
 # Covid Tracker
 
 ### Domain:
+
 API
 
 ### Tech Stack:
+
 HTML, JavaScript, SASS, CSS
 
 ### Milestones achieved:
+
     - Fetched world data (total, recovered, active, death cases along with increments)
     - Fetched coordinates and representing data of the location (currently available only for India)
     - Fetched data of any country
@@ -14,3 +17,5 @@ HTML, JavaScript, SASS, CSS
     - Graphical Representaion
 
 ### Link to the site - https://pseudo-bot.github.io/covid_tracker/
+
+    (if data is not showing refresh the site)
