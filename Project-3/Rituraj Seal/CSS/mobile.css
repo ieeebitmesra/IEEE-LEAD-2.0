@@ -1,0 +1,233 @@
+@media (max-width: 812px){ 
+    
+body{
+    background-color:rgb(48, 54, 64);
+    color:aliceblue;
+    overflow-x:hidden;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+#nav{
+    display:flex;
+    flex-wrap:nowrap;
+    margin-left: 65%;
+}
+#myForm2{
+    margin-top: -3%;
+    margin-left: 30%;
+}
+#country{
+    width: 20%;
+    background: transparent;
+    color:aliceblue;
+}
+#Go{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    border-radius: 7px;
+    border-width: 2px;
+    background-color: rgba(8, 99, 164, 0.7);
+    color:aliceblue;
+    height: 7vh;
+}
+#dispvcc{
+    color:rgb(21, 203, 11);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-left:10%;
+    padding: 10px;
+}
+#dispperc{
+    color:rgb(21, 203, 11);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-left:55%;
+    padding: 10px;
+}
+#wrldCurrentDeaths{
+    color:lightslategray;
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-right:20%;
+    margin-top: 0%;
+    text-align: right;
+    padding: 1%;
+}
+#wrldCurrentDeathsData{
+    margin-right: 4%;
+}
+#wrldCurrentActive{
+    color:rgb(171, 30, 30);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: -5.5%;
+    padding: 10px;
+}
+#wrldCurrentActiveData{
+    margin-left: 5%;
+}
+#percentage{
+    color:rgb(21, 203, 56);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-left:60%;
+    margin-top: -5.25%;
+    padding: 10px;
+}
+#myForm2>input{
+    height: 3vh;
+    border-radius: 7px;
+    border-width: 2px;
+}
+#location{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    padding: 0.67%;
+    float:right;
+    margin-top: -3%;
+    margin-right: 20%;
+    border-radius: 5px;
+    background-color: rgba(8, 99, 164, 0.7);
+    color:rgb(181, 210, 235);
+    text-decoration: none;
+    font-size: 0.5rem;
+}
+#nv1{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    padding: 0.67%;
+    float:right;
+    margin-top: -3%;
+    margin-right: 5%;
+    border-radius: 5px;
+    background-color: rgba(8, 99, 164, 0.7);
+    color:rgb(181, 210, 235);
+    text-decoration: none;
+    font-size: 0.5rem;
+}
+.line{
+    background-color: lightslategrey;
+    color: lightslategrey;
+    height: 2px;
+    border-radius: 2px;
+}
+#location:hover,#Go:hover,#nv1:hover{
+    color: honeydew;
+    background-color: rgb(35, 130, 214);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    transition-timing-function:ease-in-out;
+}
+#head{
+    background-color:rgb(48, 54, 64,0.8);
+    position: fixed;
+    width: 100%;
+    height: 6.5%;
+    margin-left:-0.5%;
+    margin-top: -1%;
+}
+#head1{
+    color:aliceblue;
+    font-size: 0.75rem;
+    margin-left: 8%;
+    margin-top: -5%;
+}
+#img1{
+    align-self: center;
+    margin-left: 23%;
+}
+#wrldsts,#disp{
+    /* font-family:cursive; */
+    border-radius: 10px;
+    background-color:rgb(48, 54, 64);
+    margin-top:5%;
+}
+#wrldhead,#srch{
+    text-align: center;
+    font-size: 1rem;
+    color:rgb(53, 64, 66);
+    padding: 1%;
+}
+#srch{
+    color:aliceblue;
+}
+#wrldrec1 ,#disprec{
+    color:rgb(52, 187, 40);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-left:10%;
+    padding: 1%;
+}
+#wrldrecdat,#disprecdat{
+    margin-left:2%;
+}
+#wrldrec4,#dispded{
+    color:lightgray;
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-right:20%;
+    margin-top: -5.25%;
+    text-align: right;
+    padding: 1%;
+}
+#veryhigh{
+    border-radius:10px;
+    background-color:rgba(231, 35, 35, 0.8);
+    display:flex;
+    flex-wrap: nowrap;
+}
+#wrldactdat,#dispdeddat{
+    margin-right: 1%;
+}
+#dispprec{
+    border-radius: 5px;
+}
+#high{
+    border-radius:10px;
+    background-color:rgba(231, 195, 35,0.8);
+    display:flex;
+    flex-wrap: nowrap;
+}
+#low{
+    border-radius:10px;
+    background-color:rgba(110, 202, 64, 0.8);
+    display:flex;
+    flex-wrap: nowrap;
+}
+#wrldrec3,#dispcnf{
+    color:rgb(35, 104, 241);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-left:10%;
+    margin-top:1%;
+    padding: 10px;
+}
+#wrldcnfdat,#dispcnfdat{
+    margin-left:2.5%;
+}
+#wrldrec2,#dispactive{
+    color:rgb(214, 38, 38);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    margin-right:20%;
+    margin-top: -5.5%;
+    text-align: right;
+    padding: 10px;
+}
+#wrlddeddat,#dispactivedat{
+    margin-right: 2.25%;
+}
+#world{
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color:aliceblue;
+}
+#disp{
+    padding: 2%;
+    border-radius: 10px;
+}
+}

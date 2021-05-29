@@ -1,0 +1,239 @@
+/* For main body */
+body{
+    background-color:rgb(48, 54, 64);
+    color:aliceblue;
+    overflow-x:hidden;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+/*Navigation bar*/
+#nav{
+    display:flex;
+    flex-wrap:nowrap;
+    margin-left: 65%;
+}
+/* Input text box for "Search by location" */
+#myForm2{
+    margin-top: -3%;
+    margin-left: 45%;
+}
+#country{
+    background: transparent;
+    color:aliceblue;
+}
+/* For placeholder text in input text box */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:aliceblue;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:aliceblue;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: aliceblue;
+  }
+/* For submit button of input text box */
+#Go{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    border-radius: 7px;
+    border-width: 2px;
+    background-color: rgba(8, 99, 164, 0.7);
+    color:aliceblue;
+    height: 7vh;
+}
+/* Display of stats of world and location based search */
+#dispvcc{
+    color:rgb(21, 203, 11);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-left:10%;
+    padding: 10px;
+}
+#percentage{
+    color:rgb(21, 203, 56);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-left:60%;
+    margin-top: -5.25%;
+    padding: 10px;
+}
+#myForm2>input{
+    height: 3vh;
+    border-radius: 7px;
+    border-width: 2px;
+    cursor: pointer;
+}
+#location{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    padding: 0.67%;
+    float:right;
+    margin-top: -3%;
+    margin-right: 20%;
+    border-radius: 5px;
+    background-color: rgba(8, 99, 164, 0.7);
+    color:aliceblue;
+    text-decoration: none;
+    font-size: large;
+}
+#nv1{
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    padding: 0.67%;
+    float:right;
+    margin-top: -3%;
+    margin-right: 5%;
+    border-radius: 5px;
+    background-color: rgba(8, 99, 164, 0.7);
+    color:aliceblue;
+    text-decoration: none;
+    font-size: large;
+}
+.line{
+    background-color: lightslategrey;
+    color: lightslategrey;
+    height: 2px;
+    border-radius: 2px;
+}
+#location:hover,#Go:hover,#nv1:hover{
+    color: white;
+    background-color: rgb(35, 130, 214);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    transition-timing-function:ease-in-out;
+}
+#head{
+    background-color:rgb(48, 54, 64,0.8);
+    position: fixed;
+    width: 100%;
+    height: 13%;
+    margin-left:-0.5%;
+    margin-top: -1%;
+}
+#head1{
+    color:aliceblue;
+    font-size: 3rem;
+    margin-left: 8%;
+    margin-top: -5%;
+}
+#img1{
+    align-self: center;
+    margin-left: 23%;
+}
+/* For correct placement and colour allocation of stats */
+#wrldsts,#disp{
+    border-radius: 10px;
+    background-color:rgb(48, 54, 64);
+    margin-top:5%;
+}
+#wrldhead,#srch{
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(53, 64, 66);
+    padding: 1%;
+}
+#srch{
+    color:aliceblue;
+}
+#wrldrec1 ,#disprec{
+    color:rgb(52, 187, 40);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-left:10%;
+    padding: 1%;
+}
+#wrldrecdat,#disprecdat{
+    margin-left:2%;
+}
+#wrldrec4,#dispded{
+    color:lightgray;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-right:20%;
+    margin-top: -5.25%;
+    text-align: right;
+    padding: 1%;
+}
+#wrldCurrentDeaths{
+    color:lightslategray;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-right:20%;
+    margin-top: 0%;
+    text-align: right;
+    padding: 1%;
+}
+#wrldCurrentDeathsData{
+    margin-right: 4%;
+}
+#wrldactdat,#dispdeddat{
+    margin-right: 1%;
+}
+#wrldrec3,#dispcnf{
+    color:rgb(35, 104, 241);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-left:10%;
+    margin-top:1%;
+    padding: 10px;
+}
+#wrldcnfdat,#dispcnfdat{
+    margin-left:2.5%;
+}
+#wrldrec2,#dispactive{
+    color:rgb(214, 38, 38);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-right:20%;
+    margin-top: -5.5%;
+    text-align: right;
+    padding: 10px;
+}
+#wrlddeddat,#dispactivedat{
+    margin-right: 2.25%;
+}
+#wrldCurrentActive{
+    color:rgb(171, 30, 30);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: -5.5%;
+    padding: 10px;
+}
+#wrldCurrentActiveData{
+    margin-left: 5%;
+}
+#world{
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color:aliceblue;
+}
+#disp{
+    padding: 2%;
+    border-radius: 10px;
+}
+/* For alert box based on location */
+#veryhigh{
+    border-radius:10px;
+    background-color:rgba(231, 35, 35, 0.8);
+    display:flex;
+    flex-wrap: nowrap;
+}
+#high{
+    border-radius:10px;
+    background-color:rgba(231, 195, 35,0.8);
+    display:flex;
+    flex-wrap: nowrap;
+}
+#low{
+    border-radius:10px;
+    background-color:rgba(110, 202, 64, 0.8);
+    display:flex;
+    flex-wrap: nowrap;
+}

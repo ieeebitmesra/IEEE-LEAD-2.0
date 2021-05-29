@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a website to get live data on COVID-19 pandemic based on current loaction and searched location">
+    <title>Covid Tracker</title>
+    <link rel="preconnect" href="https://coronavirus-19-api.herokuapp.com/countries">
+    <link rel="preconnect" href="https://www.trackcorona.live/api/countries">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <!-- Javascript to get global data on COVID-19 -->
+    <script >
+        async function getData(){
+            const url3 = 'https://www.trackcorona.live/api/countries'
+            fetch(url3).then( res => {
+                return res.json();
+            }).then( dat => {
+                let cnf = 0,ded = 0,rec = 0;
+                for( i in dat["data"] ){
+                    cnf = cnf+dat["data"][i]["confirmed"];
+                    ded = ded+dat["data"][i]["dead"];
+                    rec = rec+dat["data"][i]["recovered"];
+                }
+                document.getElementById('wrldactdat').innerHTML=''+(cnf-rec-ded)+'';
+                document.getElementById('wrldrecdat').innerHTML=''+rec+'';
+                document.getElementById('wrldcnfdat').innerHTML=''+cnf+'';
+                document.getElementById('wrlddeddat').innerHTML=''+ded+'';
+            })
+            }
+        async function getCurrentData(){
+            const url4 = 'https://coronavirus-19-api.herokuapp.com/countries';
+            fetch(url4).then( response => {
+                return response.json();
+            }).then( data => {
+                let currentActive,currentDead;
+                currentActive = data[0]["todayCases"];
+                currentDead = data[0]["todayDeaths"];
+                document.getElementById('wrldCurrentActiveData').innerHTML = currentActive;
+                document.getElementById('wrldCurrentDeathsData').innerHTML = currentDead;
+            })
+        }
+            getCurrentData();
+            getData();
+    </script>
+    <!-- Javascript to get global data ends -->
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
+    <link rel="stylesheet" href="CSS/tablet.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header id="head" >
+    <img src="Photos/covid.png" width="7%" alt="Covid logo">
+    <div id="head1">COVID-19 Tracker</div>
+        <form id="myForm2">
+            <input type="text" id="country" placeholder="Search by location" >
+            <input type="submit" id="Go" value="Go" >
+        </form>    
+        <a href="#disp" id="location" onclick="getLocation()">Get current location data</a>
+        <a href="#disp" id="nv1">Search results</a>
+    </header>
+    <!-- Navigation bar ends -->
+    <br><br><br><br>
+    <!-- Displaying world data for COVID-19 -->
+    <div data-aos="fade-right">
+        <fieldset id="world">
+            <div id="wrldhead">
+                    World data
+                    <hr class="line">
+                </div>
+            <img src="Photos/map-clipart-vector.png" alt ="World Map" id="img1" width=50%>
+            <hr class="line">
+            <fieldset id="wrldsts">
+                <div id="wrldrec1">
+                    Total recovered
+                    <br>
+                    <div id="wrldrecdat">0</div>
+                </div>
+                <div id="wrldrec2">
+                    Total active
+                    <br>
+                    <div id="wrldactdat">0</div>
+                </div>
+                <div id="wrldrec3">
+                    Total confirmed
+                    <br>
+                    <div id="wrldcnfdat">0</div>
+                </div>
+                <div id="wrldrec4">
+                    Total deaths
+                    <br>
+                    <div id="wrlddeddat">0</div>
+                </div>
+                <div id="wrldCurrentDeaths">
+                    Deaths today
+                    <br>
+                    <div id="wrldCurrentDeathsData">0</div>
+                </div>
+                <div id="wrldCurrentActive">
+                    Active cases today
+                    <br>
+                    <div id="wrldCurrentActiveData">0</div>
+                </div>
+            </fieldset>
+        </fieldset>
+    </div>
+    <!-- End of display for world stats -->
+    <br>
+    <!-- Start of display for stats of searched location -->
+    <div data-aos="fade-right">
+        <fieldset id ="disp" >
+            <div id="srch">
+                Country/State/District
+            </div>
+            <hr class="line">
+            <div id="disprec">
+                Total recovered
+                <br>
+                <div id="disprecdat">
+                    0
+                </div>
+            </div>
+            <div id="dispactive">
+                Total active
+                <br>
+                <div id="dispactivedat">
+                    0
+                </div>
+            </div>
+            <div id="dispcnf" >
+                Total confirmed
+                <br>
+                <div id="dispcnfdat">
+                    0
+                </div>
+            </div>
+            <div id="dispded">
+                Total deaths
+                <br>
+                <div id="dispdeddat">
+                    0
+                </div>
+            </div>
+            <br>
+            <div id="dispvcc">
+            </div>
+            <div id="percentage">
+            </div>
+            <br>
+            <div id="dispalert">
+            </div>
+        </fieldset>
+    </div>
+        <!-- End of display for stats of searched location -->
+    <br><br><br><br>
+</body>
+<script src="JS/location.js"></script>
+<script src="JS/app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({offset: 150,duration: 1500});
+</script>
+</html>
