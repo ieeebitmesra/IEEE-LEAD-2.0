@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+
+body {
+    background-image: url("covidbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button {
+    border-radius: 4px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: honeydew;
+}
+
+
+.liveData {
+    font-size: 50px;
+    text-align: center;
+    color: red;
+}
+
+.mainDiv {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainDiv h3 {
+    margin-bottom: 10px;
+}
+
+.globalNumbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h3 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.myAddress {
+    width: 300px;
+    height: 400px;
+    align-self: center;
+    margin-top: 10px;
+
+}
+
+.gloalStats {
+    background-color: greenyellow;
+    margin: 10px;
+
+    width: 240px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 1s;
+
+}
+
+.gloalStats span {
+    font-size: 20px;
+}
+
+.hcq {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.globalNumbers :hover {
+
+    transform: rotateX(360deg);
+}
+
+.gloalStats :hover {
+    transform: rotateY(0deg);
+
+}
+
+.newer {
+    background-image: url("765.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
