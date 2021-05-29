@@ -1,0 +1,269 @@
+body{
+    /* background: linear-gradient(#e66465, #9198e5); */
+    scroll-behavior: smooth;
+    margin: 0px;
+    font-size: 200%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment:fixed;
+    height: 600vh; */
+}
+
+.sec1{
+    /* background-image: url("https://www.tum.de/fileadmin/_processed_/2/8/csm_201103_TUM_Corona-Icon_mit_Fleisch_5000x3000_b93af88c09.png") ; */
+    /* background-color: rgba(22, 3, 73, 0.972); */
+    /* background: linear-gradient(#e66465, #9198e5); */
+
+    background-blend-mode:darken;
+    /* background-size: cover; */
+    height: 30vh;
+    display:flex;
+    justify-content:flex-end;
+
+    /* background-size: cover;
+    height: 100vh;
+    overflow: hidden; */
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;
+}
+
+.nav1{
+    background-color: rgb(44, 42, 42);
+    /* display: flex; */
+    display: none;
+    /* justify-content: center; */
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    left: 0.5vw;
+    z-index: 3;
+    width: 20%;
+    height: 100%;
+    border-radius: 0px 150px 100px 0px;
+}
+
+li{
+    list-style: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: aliceblue;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+li:hover{
+    color: tomato;
+}
+
+div.div1{
+    background: linear-gradient(#000000, #2800d8);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-size: 130%;
+    color: rgb(248, 11, 11) ;
+    padding: 2vw;
+    position: relative;
+    top: 40%;
+}
+
+.sec2{
+    display: none;
+}
+.sec3{
+    display: none;
+}
+.sec4{
+    display: none;
+}
+.sec5{
+    display: none;
+}
+
+.india{
+
+    display: none;
+    justify-content: center;
+    position: sticky;
+    top: 12%;
+    z-index: 2;
+    
+    /* background-color: rgb(255, 255, 255); */
+
+}
+
+.india > h5{
+    position: sticky;
+    text-align: center;
+    color: rgb(231, 31, 31);
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(202, 202, 202);
+    backface-visibility: visible;
+}
+.testing{
+
+    display: none;
+    justify-content: center;
+    position: sticky;
+    top: 12%;
+    z-index: 2;
+    
+    /* background-color: rgb(255, 255, 255); */
+
+}
+
+.testing > h5{
+    position: sticky;
+    text-align: center;
+    color: rgb(231, 31, 31);
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(202, 202, 202);
+    backface-visibility: visible;
+}
+.states{
+
+    display: none;
+    justify-content: center;
+    position: sticky;
+    top: 12%;
+    z-index: 2;
+    
+    /* background-color: rgb(255, 255, 255); */
+
+}
+
+.states > h5{
+    position: sticky;
+    text-align: center;
+    color: rgb(231, 31, 31);
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(202, 202, 202);
+    backface-visibility: visible;
+}
+.about{
+
+    display: none;
+    justify-content: center;
+    position: sticky;
+    top: 12%;
+    z-index: 2;
+    
+    /* background-color: rgb(255, 255, 255); */
+
+}
+
+.about > h5{
+    position: sticky;
+    text-align: center;
+    color: rgb(231, 31, 31);
+    border: 3px solid red;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(202, 202, 202);
+    backface-visibility: visible;
+}
+
+.indiasec{
+
+        background-size: cover;
+        /* height: 100vh; */
+        display:grid;
+        grid-template-columns: 4fr 9fr ;
+        justify-items: center;
+        align-items: center;
+        grid-auto-rows: minmax(10vh,auto);
+        /* justify-content:flex-end;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        box-sizing: border-box;  */
+}
+.testsec{
+
+    background-size: cover;
+    /* height: 100vh; */
+    display:grid;
+    grid-template-columns: 4fr 9fr ;
+    justify-items: center;
+    align-items: center;
+    grid-auto-rows: minmax(10vh,auto);
+    /* justify-content:flex-end;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;  */
+}
+.statesec{
+
+    background-size: cover;
+    /* height: 100vh; */
+    display:grid;
+    grid-template-columns: 4fr 9fr ;
+    justify-items: center;
+    align-items: center;
+    grid-auto-rows: minmax(10vh,auto);
+    /* justify-content:flex-end;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;  */
+}
+.aboutsec{
+
+    background-size: cover;
+    /* height: 100vh; */
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content:flex-end;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    box-sizing: border-box;  */
+}
+.aboutdiv{
+    
+    border-radius: 15% 15% 15% 15%;
+    background-color: rgb(43, 43, 43);
+}
+
+.indianewcases{
+        position: relative;
+        left:20%;
+        color: yellowgreen;
+}
+
+.chart-container1{
+        /* position:relative; */
+        /* height:100vh; */
+        grid-column: 1/3;
+        /* left: 0%; */
+        width:70vw;
+}
+.indiancummulative{
+    position: relative;
+    left:20%;
+    color: yellowgreen;
+}
+
+.chart-container2{
+    /* position:relative; */
+    /* height:100vh; */
+    grid-column: 1/3;
+    /* left: 0%; */
+    width:70vw;
+}
+
+
