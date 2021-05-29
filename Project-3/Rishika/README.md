@@ -1,6 +1,6 @@
 # Covid19-API-Tracker
 
-**WEBSITE LINK-** https://rishika-05.github.io/CovidTrackerAPI/
+**WEBSITE LINK-** https://rishika-05.github.io/CovidTracker-API/
 
 **NAME:** Rishika Raj
 
