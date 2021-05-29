@@ -1,0 +1,202 @@
+
+body{
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    line-height: 2;
+    background-color: #333c4a;
+  }
+  
+  .hide{
+      display: none;
+  }
+
+  .red{
+      background-color: #e53e3e;
+  }
+
+  .green{
+      background-color: #28a745;
+  }
+
+  .orange{
+      background-color: orangered;
+  }
+
+  .alert{
+      font-size: 1.5rem;
+      padding: 10px;
+      margin: 50px 0 20px;
+      color: #000;
+      
+  }
+
+/* ------------------------------------------section-heading-start------------------------------------ */
+
+#heading{
+    padding: 60px 20px 30px 20px;
+    color: #fff;
+    background-color: #141829;
+}
+
+.head{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.des{
+    padding: 50px 0 20px;
+    font-size: 2rem;
+}
+
+.data-col{
+    padding: 20px 40px;
+}
+
+.links{
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-6px);
+}
+
+.links:active .front {
+    transform: translateY(-2px);
+}
+
+.links:focus:not(:focus-visible){
+    outline: none;
+}
+
+/* ------------------------------------------section-heading-end-------------------------------------- */
+
+
+
+/* ------------------------------------------section-world-start-------------------------------------- */
+
+#world{
+    padding: 30px 80px 40px;
+}
+
+.inside-head{
+    padding: 20px 0 30px;
+    font-family: "Montserrat light";
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.case-full:hover,.recovered-full:hover,.death-full:hover{
+
+    background-color: #141829;
+}
+
+.total-cases-heading,.total-cases{
+    color: #e53e3e;
+}
+
+.recovered-heading,.recovered{
+    color: #28a745;
+}
+
+.deaths-heading,.deaths{
+    color: #6c757d;
+}
+
+.total-cases,.recovered,.deaths{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+.total-cases-heading,.recovered-heading,.deaths-heading{
+    display: block;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+.today{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.remove{
+    color: #333c4a;
+}
+
+
+/* ------------------------------------------section-world-end---------------------------------------- */
+
+
+
+/* ------------------------------------------section-location-start----------------------------------- */
+
+#location{
+    padding: 30px 50px 40px;
+}
+
+.locate{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 20px 0;
+}
+
+.inside-locate{
+    padding: 20px 0 30px;
+    font-family: "Montserrat light";
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ------------------------------------------section-location-end------------------------------------- */
+
+
+
+/* ------------------------------------------section-others-start------------------------------------- */
+
+.fix{
+    padding-bottom:200px;
+}
+
+.other-fix{
+    margin: 20px;
+}
+
+#others{
+    margin-bottom: 50px;
+}
+
+.margin-fix{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* ------------------------------------------section-others-end--------------------------------------- */
+
+
+
+/* ------------------------------------------section-footer-start------------------------------------- */
+
+#ending{
+    padding: 5px 0;
+    background-color: #141829;
+    color: #fff;
+}
+
+/* ------------------------------------------section-footer-end--------------------------------------- */
