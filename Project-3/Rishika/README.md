@@ -9,9 +9,9 @@
 **MILESTONES ACHIEVED**
 
 
-  **1**.Fetching the world data.(date,new confirmed,new deaths,total cases total deaths, total recovered) 
+  **1**.Fetching the world data.(new confirmed, new confirmed,new deaths,total confirmed, total deaths, total recovered) 
   
-  **2**.Fetching current coordinates and getting the country data and district data. 
+  **2**.Fetching current coordinates and getting the state data and district data. 
   
   **3**.Fetching data of any country(GLOBAL) and state(INDIAN) entered by user.
   
