@@ -23,6 +23,5 @@
 <li>Additionals
   <ul>
     <li>Alerts according to the country entered by the user(depending upon position of country affected in the world).
-    <li>Alerts according to user's current location divided in HIGH,MODERATE,LOW Risk zones.
   </ul>
 </ol>
