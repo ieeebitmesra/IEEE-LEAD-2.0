@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box;
+
+  -webkit-touch-callout: none;
+
+  -webkit-text-size-adjust: none;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  /* -webkit-user-select: none; */
+}
+
+/* $head-font: 'Times New Roman', serif;
+$matter-font: 'Impact', fantasy;
+$head-color: rgb(46, 34, 150);
+$matter-color: rgb(228, 30, 162);
+$back-contrast: rgb(114, 99, 244);
+$hover-color: rgb(114, 99, 244); */
+
+.banner {
+  margin-left: 30%;
+  margin-top: 20%;
+  padding-bottom: 200px;
+  font-size: 1.3em;
+}
+
+.img2 {
+  padding-top: 20%;
+  justify-content: center;
+  margin-left: 100px;
+}
+.img2 img{
+  height: 500px;
+  width: 500px;
+}
+
+.flex-container {
+  display: flex;
+  background-color: #000001;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: green;
+}
+
+body {
+  background: rgb(254, 254, 254);
+}
+
+.grad {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  height: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 124, 37, 1) 0%,
+    rgba(254, 254, 254, 1) 33.33%,
+    rgba(62, 232, 28, 1) 66.67%
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(231, 164, 208);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 10px;
+}
+
+nav .navigate ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.navigate ul li {
+  margin: 0px 10px;
+}
+a {
+  padding: 10px 20px;
+  font-family: "Impact", fantasy;
+  font-size: 15px;
+  color: rgb(114, 99, 244);
+  transition: background-color 0.2s;
+  border-radius: 60px;
+}
+a:hover {
+  background-color: rgb(114, 99, 244);
+  transition: background-color 0.3s;
+  color: rgb(46, 34, 150);
+}
+
+nav .wrapup {
+  padding: 20px 40px;
+  display: none;
+}
+
+nav .wrapup .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px;
+  color: rgb(114, 99, 244);
+}
+
+.wrap :hover {
+  background-color: rgb(114, 99, 244);
+  color: rgb(46, 34, 150);
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    justify-content: space-between;
+    padding: 0px;
+  }
+
+  nav .navigate {
+    left: -100vw;
+    position: absolute;
+    width: 65%;
+    background-color: rgb(231, 164, 208);
+    min-height: 100vh;
+    border-right: 3px solid red;
+    transition: left 0.3s;
+  }
+
+  nav .navigate ul {
+    display: block;
+    padding: 100px 25px;
+  }
+
+  .navigate ul li {
+    margin: 30px 15px;
+  }
+
+  a {
+    font-size: 25px;
+    padding: 15px 40px;
+  }
+
+  nav .wrapup {
+    display: block;
+  }
+}
+
+#cover {
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.intro {
+  min-height: 100vh;
+  /* padding: 50px 10px 20px 10px;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 100%) {
+  .intro {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.image2 {
+  top: 80px;
+  padding-top: 20px;
+  margin-left: 10%;
+}
+
+
+
+  .about-me .image2 {
+    top: 40px;
+    padding: 35% 0% 0% 0%;
+    justify-content: bottom;
+  }
+}
+
+
+
+.intro .text {
+  flex: 0.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 50%;
+}
+
+.intro .text .texting {
+  padding: 25% 10%;
+  margin-left: 50%;
+}
+
+.intro .text .texting h2 {
+  font-family: "Audiowide";
+  font-size: 145%;
+  color: #21FF21;
+}
+
+.intro .text .texting p {
+  font-family: "Times", serif;
+  color: rgb(218, 144, 32);
+  font-size: 100%;
+  padding-bottom: 45%;
+}
+
+.skill-store {
+  background-color: #000001;
+  padding: 20% 20% 20% 20%;
+}
+
+.skill-store h2 {
+  font-size: 145%;
+  font-family: "Audiowide";
+  color: #21FF21;
+}
+
+.skill-store p {
+  font-family: "Times", serif;
+  color: rgb(218, 144, 32);
+  font-size: 125%;
+  padding-bottom: 10%;
+}
+
+.skill-store .skills {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  background-color: green;
+  padding-right: 10px;
+}
+
+.skill-sel {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px;
+  text-align: justify;
+  background-color: yellow;
+  font-size: 125%;
+  border-radius: 50px;
+}
+
+.about-me {
+  padding: 10% 20%;
+}
+
+.about-me h2 {
+  font-size: 145%;
+  font-family: "Audiowide";
+  color: #21FF21;
+}
+
+.about-me p {
+  font-family: "Times", serif;
+  color: rgb(218, 144, 32);
+  font-size: 125%;
+  padding-bottom: 5%;
+  text-align: justify;
+}
+
+.contact-store {
+  padding-top: 5px;
+  background-color: #000001;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 2px;
+  margin-top: -40px;
+}
+
+.contact-store h2 {
+  font-size: 145%;
+  font-family: "Audiowide";
+  color: #21FF21;
+  /* padding-left: 55%; */
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.contact-store p {
+  font-family: "Times", serif;
+  color: rgb(218, 144, 32);
+  font-size: 125%;
+  padding-bottom: 50px;
+  text-align: justify;
+  margin-left: 25%;
+  text-align: center;
+  width: 50%;
+  padding-top: 5px;
+}
+
+.footer {
+  height: 100px;
+  background-color: rgb(226, 247, 142);
+  text-align: center;
+}
+
+.footer p {
+  font-family: "Roboto", sans-serif;
+  color: rgb(39, 32, 232);
+  font-size: 125%;
+}
+
+.footer i {
+  color: red;
+}
+
+.footer p span {
+  color: green;
+}
+
+.flex-container .banner h2 {
+  font-size: 145%;
+  font-family: "Audiowide";
+  color: #21FF21;
+  margin-right: 60%;
+  top: 75%;
+}
+
+.flex-container .banner p {
+  font-family: "Times", serif;
+  color: rgb(218, 144, 32);
+  font-size: 125%;
+  padding-bottom: 5%;
+  text-align: justify;
+  margin-right: 40%;
+}
+.contact-store .content p {
+  left: 65%;
+}
+
+.contact-store .content .contact1 a i {
+  text-align:center;
+  left: 65%;
+}
+.contact-store .content .image3 {
+  padding: 10% 0px 10% 0px;
+  width: 50%;
+  padding-left: 30%;
+}
+.content {
+  text-align: center;
+}
+
+.image2 img{
+  height: 500px;
+  width: 500px;
+}

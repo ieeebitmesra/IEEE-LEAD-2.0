@@ -1,0 +1,47 @@
+.App-header {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.664);
+  /* color: #22192C; */
+}
+.big-text {
+	font-size: calc(2vw + 20px);
+	font-weight: bold;
+	transition: 0.5s ease-in-out;
+}
+.big-text:hover {
+	font-size: calc(3vw + 24px);
+	max-width: 100%;
+	transition: 0.5s ease-in-out;
+}
+.small-text {
+	font-weight: lighter;
+	width: 55%;
+}
+#alertimg {
+	height: 5vh;
+}
+.idk {
+	background-color: #410000;
+	min-height: 9vh;
+	width: 100%;
+	display: flex;
+	font-weight: bold;
+	align-items: center;
+	justify-content: center;
+	/* color: rgb(0, 0, 0); */
+}
+#arrow{
+  transform: rotateX(180deg);
+}
+#yooloo{
+	margin-top: 6%;
+}
+.notsobig-text{
+	padding-top: 3%;
+	font-size: calc(2vw + 16px);
+	font-weight: bold;
+}

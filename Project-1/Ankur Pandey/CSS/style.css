@@ -1,0 +1,30 @@
+/* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: aqua;
+    color: white;
+}
+.left{
+    display: flex;
+}
+.left img{
+    top: 7px;
+    width: 75px;
+    height: 75px;
+}
+.mid{
+    padding: 21px;
+    font-size: 40px;
+    display: inline;
+    background-color: black;
+    color: tomato;
+    text-align: center;
+    margin: 171px;
+}
+.right img{
+ float: right;
+ width: 75px;
+ height: 75px;
+ } */

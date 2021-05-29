@@ -1,0 +1,129 @@
+html {
+  background-image: url("abs.jpeg");
+}
+p {
+		display: flex;
+  color: #FFFF38;
+  font-size: 20px;
+}
+h1 {
+	font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 5px green;
+}
+h2 {
+	color:  	#95E0E8;
+	font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 5px green;
+}
+h3 {
+	color:  	#95E0E8;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 2px 2px 5px green;
+}
+li{
+	font-size: 17px;
+	COLOR: WHITE;
+}
+.deco1 {
+	
+	font-family: 'Comic Neue', cursive;
+background-image: url("greenmt.jpeg");
+  width: 1050px;
+  margin: 0 auto;
+  background-color: white;
+  
+  padding: 100px 20px 20px 20px;
+  border: 5px solid black;
+}
+.deco2 {
+background-image: url("greenery.jpeg");
+  width: 1050px;
+  margin: 0 auto;
+  background-color: white;
+  
+  padding: 100px 20px 20px 20px;
+  border: 5px solid black;
+}
+.special {
+  color: orange;
+  font-weight: bold;
+}
+a:link {
+  color:  red;
+    text-decoration: none;
+	cursor: pointer;
+
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+  
+}
+
+body {
+  width: 1200px;
+
+  margin: 0 auto;
+	font-family: 'Comic Neue', cursive;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+  background-color:  #29AB87;
+  background-image: url("colour.png");
+}
+
+*{
+	
+	box-sizing: border-box;
+}
+nav{
+		flex-direction: column;
+	width: 100%;
+	display: flex;
+	padding: 0px;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #5D4954;
+}
+header{
+	width: 84%;
+	display: flex;
+	padding: 0px;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+}
+.nav-links{
+	padding: 0px;
+	display: flex;
+	justify-content: space-around;
+	width: 71%;
+	font-size: 14px;
+}
+.nav-links li{
+	list-style: none;
+}
+.nav-links a{
+	text-decoration: none;
+	color: rgb(226,226,226);
+	letter-spacing: 2px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.burger div{
+	width: 25px;
+	height: 2px;
+	background-color: rgb(226,226,226);
+	margin: 5px;
+}
+.burger{
+	display:none;
+}
