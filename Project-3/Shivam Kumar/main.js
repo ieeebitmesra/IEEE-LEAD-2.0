@@ -347,31 +347,33 @@ const graphRecover = document.querySelectorAll(".graph-recover");
 const graphDeaths = document.querySelectorAll(".graph-deaths");
 const graphActive = document.querySelectorAll(".graph-active");
 
+function plotGraphs(query1, query2) {
+	plotGlobalData(query1);
+	plotCountryData(query2, slugValue);
+	plotStatesData(query2);
+}
+
 graphConfirm.forEach((e) =>
 	e.addEventListener("click", () => {
-		plotGlobalData("TotalConfirmed");
-		plotCountryData("Confirmed", slugValue);
+		plotGraphs("TotalConfirmed", "Confirmed");
 	})
 );
 
 graphRecover.forEach((e) =>
 	e.addEventListener("click", () => {
-		plotGlobalData("TotalRecovered");
-		plotCountryData("Recovered", slugValue);
+		plotGraphs("TotalRecovered", "Recovered");
 	})
 );
 
 graphDeaths.forEach((e) =>
 	e.addEventListener("click", () => {
-		plotGlobalData("TotalDeaths");
-		plotCountryData("Deaths", slugValue);
+		plotGraphs("TotalDeaths", "Deaths");
 	})
 );
 
 graphActive.forEach((e) =>
 	e.addEventListener("click", () => {
-		plotGlobalData("active");
-		plotCountryData("Active", slugValue);
+		plotGraphs("active", "Active");
 	})
 );
 
