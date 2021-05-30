@@ -186,9 +186,7 @@ a {
 section {
 	width: 85vw;
 	padding-inline: 20px;
-	height: 100vh;
 	box-shadow: 0 0 25px #ccc;
-	overflow: auto;
 	position: relative;
 	margin-block-end: 25px;
 	display: flex;
@@ -205,6 +203,7 @@ section {
 }
 
 .heading {
+	flex: 1 1 100%;
 	font-family: "Poppins";
 	font-weight: 600;
 	font-size: 3.5rem;
@@ -232,7 +231,7 @@ section {
 	width: 100%;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 80px;
+	margin-top: 150px;
 	transform: translateY(20%);
 	opacity: 0;
 	padding-inline: 100px;
@@ -335,7 +334,8 @@ section {
 .buttons {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
+	margin-bottom: 20px;
 }
 
 .form-btn {
@@ -526,65 +526,67 @@ section {
 	}
 }
 
-.one, .two, .three {
-    font-size: 1.8rem;
-    line-height: 3rem;
-    padding-block: 1rem;
+.one,
+.two,
+.three {
+	font-size: 1.8rem;
+	line-height: 3rem;
+	padding-block: 1rem;
 }
 
-.one a, .two a{
-    color: #333;
-    padding-inline: 1rem;
+.one a,
+.two a {
+	color: #333;
+	padding-inline: 1rem;
 }
 
 .social {
-    padding-block: 2rem;
-    font-size: 4rem;
+	padding-block: 2rem;
+	font-size: 4rem;
 }
 
-.social > * a{
-    color: #333;
+.social > * a {
+	color: #333;
 }
 
 .social > * {
-    padding-inline-end: 2rem;
+	padding-inline-end: 2rem;
 }
 
-.social > *:hover > * > *{
-    transform: rotateY(360deg);
-    transition: all 0.5s;
-    backface-visibility: hidden;
+.social > *:hover > * > * {
+	transform: rotateY(360deg);
+	transition: all 0.5s;
+	backface-visibility: hidden;
 }
 
 .fb:hover .fa-facebook {
-    color: #4267B2;
+	color: #4267b2;
 }
 
 .insta:hover .fa-instagram {
-    color: #E1306C;
+	color: #e1306c;
 }
 
 .wa:hover .fa-whatsapp {
-    color: #4AC959;
+	color: #4ac959;
 }
 
 .git:hover .fa-github {
-    color: #333;
+	color: #333;
 }
 
 .twt:hover .fa-twitter {
-    color: #1DA1F2;
+	color: #1da1f2;
 }
 
 .lin:hover .fa-linkedin {
-    color: #2867B2;
+	color: #2867b2;
 }
 
 .contactext {
-    font-size: 2rem;
-    padding-bottom: 2rem;
+	font-size: 2rem;
+	padding-bottom: 2rem;
 }
-
 
 .contact-image {
 	max-width: clamp(300px, 50vw, 450px);
@@ -606,7 +608,6 @@ section {
 	background-color: rgba($color: #555, $alpha: 0.5);
 	opacity: 0;
 }
-
 
 .alert-window {
 	position: relative;
@@ -661,7 +662,7 @@ section {
 
 .yellow {
 	background-color: rgb(250, 211, 188);
-	color: rgb(250, 82, 3);
+	color: rgb(248, 110, 46);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -687,7 +688,6 @@ section {
 	z-index: 10000;
 	transition: all 0.5s ease-in;
 }
-
 
 // Responsiveness
 
@@ -751,4 +751,3 @@ section {
 		width: 250px;
 	}
 }
-

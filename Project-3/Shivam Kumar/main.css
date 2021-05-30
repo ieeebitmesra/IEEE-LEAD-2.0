@@ -199,10 +199,8 @@ a {
 section {
   width: 85vw;
   padding-inline: 20px;
-  height: 100vh;
   -webkit-box-shadow: 0 0 25px #ccc;
           box-shadow: 0 0 25px #ccc;
-  overflow: auto;
   position: relative;
   -webkit-margin-after: 25px;
           margin-block-end: 25px;
@@ -226,6 +224,9 @@ section::-webkit-scrollbar {
 }
 
 .heading {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   font-family: "Poppins";
   font-weight: 600;
   font-size: 3.5rem;
@@ -257,7 +258,7 @@ section::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 80px;
+  margin-top: 150px;
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
   opacity: 0;
@@ -378,9 +379,9 @@ section::-webkit-scrollbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .form-btn {
@@ -564,13 +565,16 @@ section::-webkit-scrollbar {
           flex: 1 1 100%;
 }
 
-.one, .two, .three {
+.one,
+.two,
+.three {
   font-size: 1.8rem;
   line-height: 3rem;
   padding-block: 1rem;
 }
 
-.one a, .two a {
+.one a,
+.two a {
   color: #333;
   padding-inline: 1rem;
 }
@@ -599,15 +603,15 @@ section::-webkit-scrollbar {
 }
 
 .fb:hover .fa-facebook {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 .insta:hover .fa-instagram {
-  color: #E1306C;
+  color: #e1306c;
 }
 
 .wa:hover .fa-whatsapp {
-  color: #4AC959;
+  color: #4ac959;
 }
 
 .git:hover .fa-github {
@@ -615,11 +619,11 @@ section::-webkit-scrollbar {
 }
 
 .twt:hover .fa-twitter {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .lin:hover .fa-linkedin {
-  color: #2867B2;
+  color: #2867b2;
 }
 
 .contactext {
@@ -720,7 +724,7 @@ section::-webkit-scrollbar {
 
 .yellow {
   background-color: #fad3bc;
-  color: #fa5203;
+  color: #f86e2e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
