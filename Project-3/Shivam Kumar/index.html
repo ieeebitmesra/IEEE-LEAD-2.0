@@ -58,7 +58,7 @@
 				<script src="particle/particles.js"></script>
 				<script src="particle/app.js"></script>
 			</div> -->
-			<div class="form_section">
+			
 				<div class="form form__country">
 					<input
 						type="text"
@@ -85,7 +85,6 @@
 						<a href="#states"><span class="track-btn">Track Me</span></a>
 					</div>
 				</div>
-			</div>
 		</section>
 
 		<div class="load loading-screen load-start-bg">
@@ -118,18 +117,49 @@
 				<canvas id="country-chart"></canvas>
 			</div>
 
-			<!-- <div class="graph-switch">
-				<div class="graph-confirm"></div>
-				<div class="graph-recover"></div>
-				<div class="graph-active"></div>
-				<div class="graph-deaths"></div>
-			</div> -->
-
 			<div class="data">
 				<div class="info total_cases total_casesC graph-confirm"></div>
 				<div class="info total_recovered total_recoveredC graph-recover"></div>
 				<div class="info total_active total_activeC graph-active"></div>
 				<div class="info total_deaths total_deathsC graph-deaths"></div>
+			</div>
+
+			<div class="state-search no-states">
+				<div class="form form__state">
+					<input
+						type="text"
+						name="state"
+						class="input--state input"
+						autocomplete="off"
+						list="state"
+						required
+					/>
+					<label for="state">
+						<span class="label-content">State</span>
+					</label>
+					<datalist id="state"></datalist>
+				</div>
+				<div class="buttons state-btn">
+					<div class="form-btn">
+						<a href="#gotostate"><span class="state-search-btn">Search</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="gotostate" class="section-link"></div>
+
+		<section class="states-search_section">
+			<div class="states-search-name section-heading">Maharashtra</div>
+			<div class="states-search-chart-container chart-container">
+				<canvas id="states-search-chart"></canvas>
+			</div>
+
+			<div class="data">
+				<div class="info total_cases total_casesSS graph-confirm"></div>
+				<div class="info total_recovered total_recoveredSS graph-recover"></div>
+				<div class="info total_active total_activeSS graph-active"></div>
+				<div class="info total_deaths total_deathsSS graph-deaths"></div>
 			</div>
 		</section>
 
@@ -140,13 +170,6 @@
 			<div class="states-chart-container chart-container">
 				<canvas id="states-chart"></canvas>
 			</div>
-
-			<!-- <div class="graph-switch">
-				<div class="graph-confirm"></div>
-				<div class="graph-recover"></div>
-				<div class="graph-active"></div>
-				<div class="graph-deaths"></div>
-			</div> -->
 
 			<div class="data">
 				<div class="info total_cases total_casesS graph-confirm"></div>
@@ -170,7 +193,6 @@
 					For any queries or bugs feel free to reach out:
 				</div>
 				<div class="one">
-					<span class="fas fa-envelope"></span>
 					<a href="mailto:shivamx6174@gmail.com"
 						><b>shivamx6174@gmail.com</b></a
 					>

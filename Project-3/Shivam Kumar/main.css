@@ -215,6 +215,7 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-radius: 15px;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -223,23 +224,28 @@ section::-webkit-scrollbar {
   display: none;
 }
 
+.home_page {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home_page > * {
+  margin-block: 60px;
+}
+
 .heading {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
   font-family: "Poppins";
   font-weight: 600;
   font-size: 3.5rem;
   position: relative;
-  top: 100px;
+  top: 50px;
   text-align: center;
   background: -webkit-linear-gradient(#9512e0, #0f70df);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 0;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
@@ -344,33 +350,6 @@ section::-webkit-scrollbar {
   transition: all 0.5s ease-out;
 }
 
-.form .label--states::before {
-  content: "Currently available only for India";
-  font-size: 1.5rem;
-  color: #fff;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  height: 40px;
-  min-width: 300px;
-  position: absolute;
-  background-color: #f85454;
-  bottom: -60%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  border-radius: 100vw;
-  opacity: 0;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-}
-
-.form .india-notselected::before {
-  opacity: 1;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-}
-
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,7 +360,7 @@ section::-webkit-scrollbar {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 20px;
+  margin-block: 20px;
 }
 
 .form-btn {
@@ -392,7 +371,8 @@ section::-webkit-scrollbar {
 
 .track-btn,
 .global-btn,
-.search-btn {
+.search-btn,
+.state-search-btn {
   font-size: 1.6rem;
   font-family: "Montserrat";
   font-weight: 500;
@@ -405,6 +385,7 @@ section::-webkit-scrollbar {
   place-items: center;
   text-align: center;
   padding: 10px;
+  margin-block: 10px;
   height: 45px;
   align-self: flex-end;
   background-image: -webkit-gradient(linear, left top, right top, from(#9512e0), to(#0f70df));
@@ -432,25 +413,26 @@ section::-webkit-scrollbar {
   height: 100%;
 }
 
-.chart-container {
-  margin-top: 100px;
-}
-
 .section-heading {
-  height: 100px;
   display: -ms-grid;
   display: grid;
   place-items: center;
-  position: absolute;
+  position: relative;
   top: 0;
   background-color: red;
-  font-size: 4.5rem;
+  font-size: 4rem;
   background: -webkit-linear-gradient(#9512e0, #0f70df);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+  margin-block: 30px;
   text-transform: uppercase;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-align: center;
+  padding-inline: 50px;
 }
 
 .data {
@@ -541,6 +523,25 @@ section::-webkit-scrollbar {
 }
 
 .states_section {
+  display: none;
+}
+
+.state-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-block: 40px;
+}
+
+.state-btn {
+  margin-block: 40px;
+}
+
+.no-states {
   display: none;
 }
 

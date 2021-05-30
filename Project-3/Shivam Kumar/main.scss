@@ -193,6 +193,7 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	border-radius: 15px;
 
 	&::-webkit-scrollbar {
 		display: none;
@@ -202,20 +203,24 @@ section {
 	scrollbar-width: none;
 }
 
+.home_page {
+	flex-direction: column;
+	& > * {
+		margin-block: 60px;
+	}
+}
+
 .heading {
-	flex: 1 1 100%;
 	font-family: "Poppins";
 	font-weight: 600;
 	font-size: 3.5rem;
 	position: relative;
-	top: 100px;
+	top: 50px;
 	text-align: center;
 	background: -webkit-linear-gradient($grad_start, $grad_end);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	transform: translateY(-50%);
-	opacity: 0;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
 }
@@ -306,36 +311,13 @@ section {
 			transition: all 0.5s ease-out;
 		}
 	}
-
-	.label--states::before {
-		content: "Currently available only for India";
-		font-size: 1.5rem;
-		color: #fff;
-		display: grid;
-		place-items: center;
-		height: 40px;
-		min-width: 300px;
-		position: absolute;
-		background-color: rgb(248, 84, 84);
-		bottom: -60%;
-		left: 50%;
-		transform: translate(-50%);
-		border-radius: 100vw;
-		opacity: 0;
-		transition: all 0.8s ease;
-	}
-
-	.india-notselected::before {
-		opacity: 1;
-		transition: all 0.8s ease;
-	}
 }
 
 .buttons {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	margin-bottom: 20px;
+	margin-block: 20px;
 }
 
 .form-btn {
@@ -345,7 +327,8 @@ section {
 
 .track-btn,
 .global-btn,
-.search-btn {
+.search-btn,
+.state-search-btn {
 	font-size: 1.6rem;
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -357,6 +340,7 @@ section {
 	place-items: center;
 	text-align: center;
 	padding: 10px;
+	margin-block: 10px;
 	height: 45px;
 	align-self: flex-end;
 	background-image: linear-gradient(to right, $grad_start, $grad_end);
@@ -384,24 +368,23 @@ section {
 	}
 }
 
-.chart-container {
-	margin-top: 100px;
-}
-
 .section-heading {
-	height: 100px;
 	display: grid;
 	place-items: center;
-	position: absolute;
+	position: relative;
 	top: 0;
 	background-color: red;
-	font-size: 4.5rem;
+	font-size: 4rem;
 	background: -webkit-linear-gradient($grad_start, $grad_end);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-weight: 700;
+	margin-block: 30px;
 	text-transform: uppercase;
+	flex: 1 1 100%;
+	text-align: center;
+	padding-inline: 50px;
 }
 
 .data {
@@ -479,34 +462,21 @@ section {
 	display: none;
 }
 
-// .graph-switch {
-// 	position: relative;
-// 	display: flex;
-// 	margin-top: 40px;
-// 	width: 90%;
-// 	flex-wrap: wrap;
-// 	justify-content: center;
+// States section 
 
-// 	& > * {
-// 		padding-block: 10px;
-// 		width: 50px;
-// 		margin-block: 10px;
-// 		margin-inline: 10px;
-// 		display: flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		font-size: 1.6rem;
-// 		font-weight: 600;
-// 		cursor: pointer;
-// 	}
+.state-search {
+	display: flex;
+	flex-direction: column;
+	margin-block: 40px;
+}
 
-// 	.graph-selection {
-// 		flex: 0 1 100%;
-// 		font-size: 2.5rem;
-// 		text-transform: uppercase;
-// 		color: #555;
-// 	}
-// }
+.state-btn {
+	margin-block: 40px;
+}
+
+.no-states {
+	display: none;
+}
 
 // Class animations
 

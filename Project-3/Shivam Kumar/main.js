@@ -1,12 +1,14 @@
 const country = document.querySelector("#country");
-const states = document.querySelector("#states");
+const statesList = document.querySelector("#state");
 const inputCountry = document.querySelector(".input--country");
-const inputState = document.querySelector(".input--states");
-const labelStates = document.querySelector(".label--states");
+const inputState = document.querySelector(".input--state");
 const loader = document.querySelector(".load");
 
+const num = new Intl.NumberFormat("en-US");
+
 let slugValue = "india";
-let stateName;
+let userState,
+	stateName = "Maharashtra";
 
 function menu() {
 	const menubar = document.querySelector(".menubar");
@@ -37,8 +39,6 @@ async function obtainSlug(country = "India") {
 	let slugIndex = countryArr.findIndex(
 		(element) => element.Country.toLowerCase() === country.toLowerCase()
 	);
-	document.querySelector(".country-name").innerHTML =
-		countryArr[slugIndex].Country;
 	return countryArr[slugIndex].Slug;
 }
 // Search functions
@@ -54,13 +54,52 @@ async function populateCountry() {
 	}
 }
 
+async function populateStateList(slug = "india") {
+	loader.classList.add("loading-screen");
+	const stateSearch = document.querySelector(".state-search");
+	clearElement(statesList);
+
+	const response = await fetch(`https://api.covid19api.com/live/country/${slug}
+	`);
+	const data = await response.json();
+	let states = [];
+	for (let state of data) {
+		if (!states.includes(state.Province)) {
+			states.push(state.Province);
+		}
+	}
+	states.sort();
+
+	if (states.length === 1) {
+		stateSearch.classList.add("no-states");
+	} else if (stateSearch.classList.contains("no-states")) {
+		stateSearch.classList.remove("no-states");
+	}
+
+	for (let state of states) {
+		const stateNode = document.createElement("OPTION");
+		stateNode.setAttribute("value", state);
+		statesList.appendChild(stateNode);
+	}
+
+	loader.classList.remove("loading-screen");
+}
+
 function dataRepresentation(data, mod) {
 	document.querySelector(
 		`.total_cases${mod}`
-	).innerHTML = `<span class="info__title">Confirmed</span><span class="info__data">${data.TotalConfirmed}</span><span class="new_cases info__subtitle"><i class='fa fas fa-angle-double-up'></i> ${data.NewConfirmed}</span>`;
+	).innerHTML = `<span class="info__title">Confirmed</span><span class="info__data">${num.format(
+		data.TotalConfirmed
+	)}</span><span class="new_cases info__subtitle"><i class='fa fas fa-angle-double-up'></i> ${num.format(
+		data.NewConfirmed
+	)}</span>`;
 	document.querySelector(
 		`.total_recovered${mod}`
-	).innerHTML = `<span class="info__title">Recovered</span><span class="info__data">${data.TotalRecovered}</span><span class="new_recovered info__subtitle"><i class='fa fas fa-angle-double-up'></i> ${data.NewRecovered}</span>`;
+	).innerHTML = `<span class="info__title">Recovered</span><span class="info__data">${num.format(
+		data.TotalRecovered
+	)}</span><span class="new_recovered info__subtitle"><i class='fa fas fa-angle-double-up'></i> ${num.format(
+		data.NewRecovered
+	)}</span>`;
 
 	let sign;
 	let av = data.NewConfirmed - data.NewRecovered;
@@ -71,30 +110,44 @@ function dataRepresentation(data, mod) {
 
 	document.querySelector(
 		`.total_active${mod}`
-	).innerHTML = `<span class="info__title">Active</span><span class="info__data">${
+	).innerHTML = `<span class="info__title">Active</span><span class="info__data">${num.format(
 		data.TotalConfirmed - data.TotalRecovered
-	}</span><span class="new_active info__subtitle"><i class='fa fas fa-angle-double-${sign}'></i> ${av}</span>`;
+	)}</span><span class="new_active info__subtitle"><i class='fa fas fa-angle-double-${sign}'></i> ${num.format(
+		av
+	)}</span>`;
 
 	document.querySelector(
 		`.total_deaths${mod}`
-	).innerHTML = `<span class="info__title">Deaths</span><span class="info__data">${data.TotalDeaths}</span><span class="new_deaths info__subtitle"><i class='fa fas fa-angle-double-up'></i> ${data.NewDeaths}</span>`;
+	).innerHTML = `<span class="info__title">Deaths</span><span class="info__data">${num.format(
+		data.TotalDeaths
+	)}</span><span class="new_deaths info__subtitle"><i class='fa fas fa-angle-double-up'></i> ${num.format(
+		data.NewDeaths
+	)}</span>`;
 }
 
 function dataRepresentationStates(data, mod) {
 	document.querySelector(
 		`.total_cases${mod}`
-	).innerHTML = `<span class="info__title">Confirmed</span><span class="info__data">${data.Confirmed}</span>`;
+	).innerHTML = `<span class="info__title">Confirmed</span><span class="info__data">${num.format(
+		data.Confirmed
+	)}</span>`;
 	document.querySelector(
 		`.total_recovered${mod}`
-	).innerHTML = `<span class="info__title">Recovered</span><span class="info__data">${data.Recovered}</span>`;
+	).innerHTML = `<span class="info__title">Recovered</span><span class="info__data">${num.format(
+		data.Recovered
+	)}</span>`;
 
 	document.querySelector(
 		`.total_active${mod}`
-	).innerHTML = `<span class="info__title">Active</span><span class="info__data">${data.Active}</span>`;
+	).innerHTML = `<span class="info__title">Active</span><span class="info__data">${num.format(
+		data.Active
+	)}</span>`;
 
 	document.querySelector(
 		`.total_deaths${mod}`
-	).innerHTML = `<span class="info__title">Deaths</span><span class="info__data">${data.Deaths}</span>`;
+	).innerHTML = `<span class="info__title">Deaths</span><span class="info__data">${num.format(
+		data.Deaths
+	)}</span>`;
 }
 
 function clearElement(element) {
@@ -128,17 +181,24 @@ async function populateCountryData(input = "India") {
 	dataRepresentation(data, "C");
 }
 
-async function populateStatesData() {
-	loader.classList.add("loading-screen");
+async function populateStateSearchData(slug="india", state = "Maharashtra") {
+	const response = await fetch(`https://api.covid19api.com/live/country/${slug}`);
+	const data = await response.json();
+	const stateData = data.filter(
+		(element) => element.Province.toLowerCase() === state.toLowerCase()
+	);
 
+	dataRepresentationStates(stateData[stateData.length - 1], "SS");
+}
+
+async function populateStatesData() {
 	const response = await fetch("https://api.covid19api.com/live/country/india");
 	const data = await response.json();
 	const stateData = data.filter(
-		(element) => element.Province.toLowerCase() === stateName.toLowerCase()
+		(element) => element.Province.toLowerCase() === userState.toLowerCase()
 	);
 
 	dataRepresentationStates(stateData[stateData.length - 1], "S");
-	loader.classList.remove("loading-screen");
 
 	let active = stateData[stateData.length - 1].Active;
 
@@ -163,8 +223,6 @@ async function populateStatesData() {
 // Plotting Graphs
 
 async function plotGlobalData(dataToGraph = "TotalConfirmed") {
-	loader.classList.add("loading-screen");
-
 	let date = [];
 	let ylable = [];
 	let label;
@@ -207,13 +265,9 @@ async function plotGlobalData(dataToGraph = "TotalConfirmed") {
 	}
 
 	plot(date, ylable, label, color, bgcolor, "global-chart");
-
-	loader.classList.remove("loading-screen");
 }
 
 async function plotCountryData(dataToGraph = "Confirmed", slug = "india") {
-	loader.classList.add("loading-screen");
-
 	let date = [];
 	let ylable = [];
 	let label;
@@ -255,13 +309,9 @@ async function plotCountryData(dataToGraph = "Confirmed", slug = "india") {
 	}
 
 	plot(date, ylable, label, color, bgcolor, "country-chart");
-
-	loader.classList.remove("loading-screen");
 }
 
-async function plotStatesData(dataToGraph = "Confirmed") {
-	loader.classList.add("loading-screen");
-
+async function plotStatesData(dataToGraph = "Confirmed", slug, plotin) {
 	let date = [];
 	let ylable = [];
 	let label;
@@ -269,9 +319,7 @@ async function plotStatesData(dataToGraph = "Confirmed") {
 
 	const response = await fetch("https://api.covid19api.com/live/country/india");
 	const data = await response.json();
-	const stateData = data.filter(
-		(element) => element.Province.toLowerCase() === stateName.toLowerCase()
-	);
+	const stateData = data.filter((element) => element.Province === slug);
 
 	for (let values of stateData) {
 		let dateToPush = values.Date.substr(0, 10);
@@ -301,9 +349,7 @@ async function plotStatesData(dataToGraph = "Confirmed") {
 		bgcolor = "#f9fab7";
 	}
 
-	plot(date, ylable, label, color, bgcolor, "states-chart");
-
-	loader.classList.remove("loading-screen");
+	plot(date, ylable, label, color, bgcolor, plotin);
 }
 
 async function check() {
@@ -348,9 +394,14 @@ const graphDeaths = document.querySelectorAll(".graph-deaths");
 const graphActive = document.querySelectorAll(".graph-active");
 
 function plotGraphs(query1, query2) {
+	loader.classList.add("loading-screen");
+
 	plotGlobalData(query1);
 	plotCountryData(query2, slugValue);
-	plotStatesData(query2);
+	plotStatesData(query2, userState, "states-chart");
+	plotStatesData(query2, stateName, "states-search-chart");
+
+	loader.classList.remove("loading-screen");
 }
 
 graphConfirm.forEach((e) =>
@@ -385,11 +436,11 @@ async function reverseGeolocate(lat, long) {
 		`
 	);
 	const data = await response.json();
-	stateName = data.address.state;
-	document.querySelector(".states-name").innerHTML = stateName;
+	userState = data.address.state;
+	document.querySelector(".states-name").innerHTML = userState;
 
-	await populateStatesData(stateName);
-	plotStatesData();
+	await populateStatesData(userState);
+	plotStatesData("Confirmed", userState, "states-chart");
 }
 
 function getlocation() {
@@ -412,16 +463,14 @@ const execute = () => {
 	plotGlobalData();
 	populateCountryData();
 	plotCountryData();
+	populateStateList();
+	populateStateSearchData();
+	plotStatesData("Confirmed", "Maharashtra", "states-search-chart");
 };
 
 execute();
 
 // Event Listeners
-
-this.addEventListener("load", () => {
-	document.querySelector(".heading").classList.add("animateOnLoad");
-	document.querySelector(".form_section").classList.add("animateOnLoad");
-});
 
 this.addEventListener("load", () => {
 	setTimeout(() => {
@@ -431,14 +480,53 @@ this.addEventListener("load", () => {
 });
 
 document.querySelector(".search-btn").addEventListener("click", async () => {
+	let allCountry = [];
+	document.querySelector(".country-name").innerHTML = inputCountry.value;
+
+	document.querySelectorAll("#country option").forEach((ele) => {
+		allCountry.push(ele.getAttribute("value"));
+	});
+
+	if (allCountry.includes(inputCountry.value)) {
+	loader.classList.add("loading-screen");
+
 	populateCountryData(inputCountry.value);
 	slugValue = await obtainSlug(inputCountry.value);
 	plotCountryData("Confirmed", slugValue);
+	
+	populateStateList(slugValue);
+	loader.classList.remove("loading-screen");}
+	else {
+		alert("Enter a valid country name or choose from the dropdown")
+	}
 });
 
 document.querySelector(".track-btn").addEventListener("click", () => {
+	loader.classList.add("loading-screen");
+
 	document.querySelector(".states_section").style.display = "flex";
 	getlocation();
+	loader.classList.remove("loading-screen");
+});
+
+document.querySelector(".state-search-btn").addEventListener("click", () => {
+	const inputStateVal = document.querySelector(".input--state");
+	stateName = inputStateVal.value;
+
+	let allStates = [];
+
+	document.querySelectorAll("#state option").forEach((ele) => {
+		allStates.push(ele.getAttribute("value"));
+	});
+
+	if (allStates.includes(stateName)) {
+		document.querySelector(".states-search-name").innerHTML = stateName;
+
+		populateStateSearchData(slugValue, stateName);
+		plotStatesData("Confirmed", stateName, "states-search-chart");
+	} else {
+		alert("Enter a valid state name or else choose from the dropdown");
+	}
 });
 
 document.querySelectorAll(".close-alert").forEach((element) =>
