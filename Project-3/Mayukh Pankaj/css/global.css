@@ -1,0 +1,100 @@
+body {
+  background-color: #e2e2e2 ;
+}
+
+
+#panel{
+
+    display: none;
+
+}
+
+.bg {
+  background-image: url("../img/world_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  height: 500px; 
+
+
+}
+
+
+.card-c{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    border-radius: 5px;
+    
+    color: #ff073a;
+    background: rgba(255, 7, 58, 0.125);
+   
+    
+  }
+  
+  .card-c:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+     
+        
+  }
+  
+  
+  .card-a{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    border-radius: 5px;
+    
+       color: #007bff;
+       background: rgba(0, 123, 255, 0.125);
+   
+    
+  }
+  
+  .card-a:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+     
+        
+  }
+  
+  
+  .card-d{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    border-radius: 5px;
+    
+          color: #6c757d;
+          background: rgba(204, 204, 204, 0.521);
+   
+    
+  }
+  
+  .card-d:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+        
+  }
+  
+  
+  
+  .card-r{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    border-radius: 5px;
+    
+          color: #3cd86b;
+          background: hsla(140, 73%, 78%, 0.514);
+   
+    
+  }
+  
+  .card-r:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+        
+  }
+  
+  
+  

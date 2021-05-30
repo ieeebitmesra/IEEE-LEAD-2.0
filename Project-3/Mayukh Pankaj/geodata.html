@@ -1,0 +1,503 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>covid app</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+  <style>
+  body,h1 {font-family: "Raleway", sans-serif}
+  body, html {
+    height: 100%;
+    background-color: #E2E2E0 ;
+  }
+ 
+    
+  .card-d{
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 80%;
+    border-radius: 5px;
+    
+          color: #6c757d;
+          background: rgba(204, 204, 204, 0.521);
+   
+    
+  }
+  
+  .card-d:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+        
+  }
+  
+ 
+  
+
+  .loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b3b3b3;
+  }
+  
+  
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  p span{
+      
+      display: block;
+  }
+  
+  </style>
+  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+  <script>
+      clat = parseFloat(sessionStorage.getItem("lat"));
+      clon = parseFloat(sessionStorage.getItem("lon"));
+     
+     console.log(clat);
+     console.log(clon);
+      
+      
+  </script>
+  
+  
+  <script>
+       google.charts.load('current', {
+         'packages': ['geochart'],
+  
+         'mapsApiKey': 'AIzaSyCLA5Lyup9e-wSJ3Ng9sxFgxySMpUNwabA'
+       });
+       google.charts.setOnLoadCallback(drawMarkersMap);
+  
+        function drawMarkersMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['lat',   'lon','color','size'],
+          [clat, clon,1,6],
+        
+        ]);
+        
+         console.log(clat);
+         console.log(clon);
+  
+        var options = {
+          region: 'IN',
+          displayMode: 'markers',
+          backgroundColor: '#00264d',
+          datalessRegionColor: '#e6f2ff',
+          defaultColor: '#0099ff',
+          sizeAxis: {minSize:1,  maxSize: 4}
+        };
+  
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      };
+      
+     //geocoding
+     
+     
+  
+      
+      
+      
+  </script>
+  
+  
+  </head>
+
+  
+  <div class="bgimg w3-display-container w3-animate-opacity">
+    
+ 
+
+   <div><center>
+    <h2><p id="msg1"></p></h2>
+    </center>
+    </div>
+  
+    <br>
+  
+    
+       
+      <div class="container">
+           <div class="">
+              
+    
+  
+           <p class="w3-large"></p><div id='printoutPanel'></div>
+           
+           <div id="chart_div"  style="width: 320px; height: 220px; margin-left: 30%;"></div>
+          
+        </div>
+        
+        
+             
+             <center><div id="distdata"></div></center>
+             <br>
+    <table class="table">
+   <tr>
+     <th><div style="color:#ffa31a;">Confirmed</div></th>
+     <th><div style="color:#ff1a1a;">Active</div></th>
+     <th><div style="color:#99ff33;">Recovered</div></th>
+     <th><div style="color:#b3b3b3;">Death</div></th>
+   </tr>
+   <tr>
+    <td><div id="cd"></div></td>
+    <td><div id="ad"></div></td>
+    <td><div id="rd"></div></td>
+    <td><div id="dd"></div></td>
+   </tr>
+  
+   </table>
+
+  
+       
+   
+           
+           
+  
+        <div class="card-d" style="margin-left: 10%;">
+
+
+        
+      <span style="color:red;">Red zones</span>
+      <p id="rl" style="color:red;"></p>
+       <br>
+    <span style="color:orange;">Orange zones</span>
+    <br>
+      <p id="ol" style="color:orange;"></p>
+      <br>
+  
+   
+    <span style="color:Green;">Green zones</span>
+      <p id="gl" style="color:Green;"></p>
+   
+    </div>
+     
+           
+
+           <p class="card-d" style="margin-left: 10%;" id="guide"></p>
+      
+        
+        
+  
+       
+      
+      
+    </div>
+  </div>
+  </div>
+      
+     
+     
+     </div>
+     
+    <div style="padding-bottom: 0;">
+        <div id='myMap' style='width:1vw; height:1vh;'></div>
+    by <a href="./about.html" target="_blank">Mayukh</a> 🇮🇳
+    
+    </div>
+   
+    <div class="loader-wrapper">
+    
+        <span class="loader"></span>
+        
+        <br>
+         <div class="w3-display-position" style="top: 60vh;left:10wh"><div id="loadtext">Getting geo coordinates.</div></div>
+    </div>
+    
+    <script type='text/javascript'>
+    
+    var zoneAPI = "https://api.covid19india.org/zones.json";
+    var dataAPI = "https://api.covid19india.org/v2/state_district_wise.json";
+    
+  
+    
+              function loadMapScenario() {
+                  var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+                  Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                      var searchManager = new Microsoft.Maps.Search.SearchManager(map);
+                      var reverseGeocodeRequestOptions = {
+                          location: new Microsoft.Maps.Location(clat, clon),
+                          callback: function (answer, userData) {
+                              map.setView({ bounds: answer.bestView });
+                              map.entities.push(new Microsoft.Maps.Pushpin(reverseGeocodeRequestOptions.location));
+                          
+                                
+                  console.log(answer);
+                  console.log(answer.address.adminDistrict);
+                  var state = answer.address.adminDistrict;
+                                  var district = answer.address.district;
+                                      district = district.toLowerCase();
+                                      
+                                      document.getElementById('loadtext').innerHTML ="Reverse geocoding";
+                                      
+                                                  $.getJSON(zoneAPI, function(data) {
+     
+    console.log(data);
+    
+  
+  for(i=0;i<data.zones.length;i++)
+  {
+    var dist = data.zones[i].district;
+        dist = dist.toLowerCase();
+        
+        if((data.zones[i].statecode==state)&&(dist==district))
+     {
+       
+        dist = dist.charAt(0).toUpperCase() + dist.slice(1);
+        
+        var zcolor = data.zones[i].zone;
+            zcolor = zcolor.toLowerCase();
+            
+             
+             
+             
+        if(zcolor=='red')
+        {
+        
+         document.getElementById("msg1").style.color = "#ff1a1a";
+         document.getElementById("msg1").innerHTML= dist+" is "+zcolor+" zone !";
+         document.getElementById("guide").innerHTML= "<center> Guidelines </center><br> <ul><li>four wheelers to have maximum two passengers including driver</li><br><li>pillion rider not allowed for two-wheelers.</li><br><li>All shops selling essential goods to remain open in red zones, except in malls.</li></ul>";
+        
+        }
+        else if(zcolor=='orange')
+        {
+         document.getElementById("msg1").style.color = "#ffa31a";
+         document.getElementById("msg1").innerHTML= dist+" is "+zcolor+" zone !";
+         document.getElementById("guide").innerHTML= "<center> Guidelines </center><br><ul><li>Inter-District and Intra-District plying of buses.</li><br><li>Taxis and 4 wheeler  permitted with one driver and 2 passengers.</li><br><li>pillion allowed with rider.</li></ul>";
+        
+        }
+        else if(zcolor=='green')
+        {
+         document.getElementById("msg1").style.color = "#99ff33";
+         document.getElementById("msg1").innerHTML= dist+" is "+zcolor+" zone !";
+         document.getElementById("guide").innerHTML="<center> Guidelines </center><br> all activities are permitted except the limited number of activities which are prohibited throughout the country, irrespective of the zone.";
+        
+        }
+       
+     break;
+    }
+     else
+        {
+         document.getElementById("msg1").innerHTML="sorry "+district+" was not found in our database!";
+        
+        }
+  
+   }
+   
+   var rlist='<ul>';
+  var olist='<ul>';
+  var glist='<ul>';
+  
+  var rctr=0,octr=0,gctr=0;
+  
+  
+  
+  for(i=0;i<data.zones.length;i++)
+  {
+    var dist = data.zones[i].district;
+        dist = dist.toLowerCase();
+        
+        if((data.zones[i].statecode==state))
+     {
+       
+        dist = dist.charAt(0).toUpperCase() + dist.slice(1);
+        
+        var zcolor = data.zones[i].zone;
+            zcolor = zcolor.toLowerCase();
+            
+       
+             
+             
+        if(zcolor=='red')
+        {
+          rctr++;
+          
+          rlist+=" • "+data.zones[i].district;
+          
+          if(rctr%4==0)
+          {
+            rlist+="<br>";  
+          }
+          
+        
+        }
+        else if(zcolor=='orange')
+        {
+          octr++;
+            
+          
+          olist+=" • "+data.zones[i].district;
+          
+           if(octr%4==0)
+          {
+            olist+="<br>";  
+          }
+          
+      
+        }
+        else if(zcolor=='green')
+        {
+         
+          gctr++;
+         
+          
+          glist+=" • "+data.zones[i].district;
+          
+           if(gctr%4==0)
+          {
+            glist+="<br>";  
+          }
+           
+        }
+       
+     
+      }
+     
+     }
+     
+      
+       
+       document.getElementById("rl").innerHTML=rlist;
+       document.getElementById("ol").innerHTML=olist;
+       document.getElementById("gl").innerHTML=glist;
+       
+       document.getElementById("zonenos").innerHTML="There are "+rctr+" Red zones, "+octr+" Orange zones, "+gctr+" Green zones.";
+   
+   
+   
+  });
+  
+  $.getJSON(dataAPI, function(stat) {
+     
+    console.log(stat);
+    
+    for(i=0;i<stat.length;i++)
+   {
+  
+     if(stat[i].statecode==state)
+     {
+     
+    
+      
+      for(j=0;j<stat[i].districtData.length;j++)
+      {
+         var dist = stat[i].districtData[j].district;
+             dist = dist.toLowerCase();
+        
+        if(dist==district)
+        {
+               
+          
+          
+          document.getElementById("distdata").innerHTML=district+"'s data";
+          document.getElementById("cd").innerHTML=stat[i].districtData[j].confirmed;
+          document.getElementById("ad").innerHTML=stat[i].districtData[j].active;
+          document.getElementById("rd").innerHTML=stat[i].districtData[j].recovered;
+          document.getElementById("dd").innerHTML=stat[i].districtData[j].deceased;
+          
+          i=stat.length+1;
+          break;
+          
+      
+        }
+      }
+      
+     }
+   }
+   
+   document.getElementById('loadtext').innerHTML ="Preparing data.";
+   
+   //now we produce state table.
+   
+   for(i=0;i<stat.length;i++)
+   {
+  
+     if(stat[i].statecode==state)
+     {
+     
+   
+     
+       console.log(stat[i].districtData.length);
+      
+      var tabled = '';
+      
+      for(j=0;j<stat[i].districtData.length;j++)
+      {
+          tabled += '<tr>';
+         
+          tabled +='<td>'+stat[i].districtData[j].district+'</td>';
+         
+          tabled +='<td>'+stat[i].districtData[j].confirmed;
+          tabled +='<td>'+stat[i].districtData[j].active;
+          tabled +='<td>'+stat[i].districtData[j].recovered;
+          tabled +='<td>'+stat[i].districtData[j].deceased; 
+          
+          tabled +='</tr>';
+        
+       }
+       
+       $('#table').append(tabled);
+      
+     }
+   }
+    
+    
+  
+  });
+  
+  
+  
+                                   
+                          }
+                      };
+                      searchManager.reverseGeocode(reverseGeocodeRequestOptions);
+                  });
+              }
+              
+             
+              
+              
+              $(window).on("load",function(){
+       
+                   console.log("Page loaded");
+                   $(".loader-wrapper").fadeOut("slow");
+            
+              }); 
+              
+              
+              
+              
+          </script>
+  <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AhwT4-MdaboX-XaoAc6-ZunQQv0hbUOzw_nu9XUniQ-1844Q7-ZE61nE0cB3vOPC&callback=loadMapScenario' async defer></script>
+  
+  
+  </body>
+  </html>
