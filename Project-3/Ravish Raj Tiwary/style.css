@@ -1,0 +1,98 @@
+/* Background animation starts */
+body {
+    background: linear-gradient(270deg, #ff449f , #fff5b7 , #00ead3 , #005f99);
+    background-size: 400% 400%;
+
+    animation: AnimationName 10s ease infinite;
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+#header-date{
+    height:40px;
+    color:white;
+    background-color: #150e56;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.btn-primary{
+    height : 35px
+}
+
+.worldClass{
+    text-align: center;
+}
+
+.search-option , .current-details {
+    text-align: center;
+}
+
+.input-group{
+    justify-content: center;
+}
+
+#world-results , #searched-country li{
+    list-style:none;
+}
+.current-details{
+    height: 34vh;
+}
+#current-results{
+    list-style:none;
+}
+
+.caseClass{
+    color:black;
+}
+
+.deathClass{
+    color:rgb(253, 69, 69);
+}
+
+.recoveredClass{
+    color:rgb(4, 255, 4)
+}
+
+.copyright{
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: blue;
+    padding-top: 5px;
+    height: 4.2vh;
+    font-size: small;
+}
+
+
+
+body{  
+    background-color :#1597bb;
+    color:white;
+    font-size:120%;
+    font-family:cursive;    
+}
+
+.background-body{
+    /* background-image: url("img/4964635.jpg"); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    /* height : 100vh; */
+    /* width: 100vh; */
+}

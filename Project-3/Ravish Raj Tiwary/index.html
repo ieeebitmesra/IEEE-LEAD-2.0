@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>COVID Tracker</title>
+</head>
+
+<body onload="typingeffect()">
+
+
+  <header>
+    <div id="header-date">
+
+    </div>
+  </header>
+
+  <div class="background-body">
+    <br>
+
+    <div class="search-option">
+
+      <h2 id="typing"></h2>
+
+      <br>
+
+      <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="input_country" class="form-control" />
+          <label class="form-label" for="form1"></label>
+        </div>
+        <button type="button" class="btn btn-primary" value="search" id="country-input">
+          <i class="fas fa-search"></i>
+        </button>&nbsp;&nbsp;
+        <a href="#">
+          <div id="regionData"><button type="button" class="btn btn-info">Your Location</button></div>
+        </a>
+
+      </div>
+
+      <ul id="searched-country">
+
+      </ul>
+
+
+
+    </div>
+
+    <br>
+
+    <div class="worldClass">
+      <h1>World COVID Cases: </h1>
+      <h6 id="updateTime"></h6><br>
+      <ul id="world-results">
+
+      </ul>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="current-details">
+
+
+      <h1 id="current-heading"></h1>
+
+      <p id="current-info"></p>
+
+      <ul id="current-results">
+
+      </ul>
+
+    </div>
+
+
+
+  </div>
+
+  <footer>
+    <div class="copyright">Handcrafted by Ravish Raj<i class="far fa-copyright"></i></span>2021 &nbsp;
+      <a href="https://github.com/ravishraj21"><i class="fab fa-github fa-2x"></i></a> &nbsp;
+      <a href="https://www.linkedin.com/in/ravish-raj-tiwary-9356831ba/"><i class="fab fa-linkedin fa-2x"></i></a>
+      &nbsp;
+      <a href="https://www.instagram.com/ravishraj21/"><i class="fab fa-instagram fa-2x"></i></a>
+
+    </div>
+  </footer>
+
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+</html>
