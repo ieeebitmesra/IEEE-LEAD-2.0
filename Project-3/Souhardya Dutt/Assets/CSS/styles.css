@@ -1,0 +1,76 @@
+html {
+  scroll-behavior: smooth;
+}
+.theme-light {
+  --color-primary: white;
+  --color-secondary: blueviolet;
+  --font-color: black;
+}
+.theme-dark {
+  /* --color-primary: #120136; */
+  --color-primary: #282828;
+  --color-secondary: #292b2c;
+  --font-color: white;
+}
+body {
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+.World,
+.India,
+.States,
+.Location {
+  padding: 8rem;
+}
+.about {
+  padding-bottom: 2em;
+}
+div.header h1 {
+  font-size: 7em;
+}
+.India h2,
+.World h2 {
+  font-size: 2em;
+}
+div h2 {
+  font-size: 1em;
+}
+div.about p {
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.about .container {
+  /* background-color: rgb(42, 118, 218); */
+  background-color: var(--color-secondary);
+  color: white;
+}
+.stateTable {
+  padding: 2rem;
+}
+.cases,
+.active_cases,
+.new_cases {
+  color: blueviolet;
+}
+.deaths {
+  color: red;
+}
+.recovered {
+  color: green;
+}
+footer {
+  background-color: var(--color-primary);
+  color: var(--font-color);
+}
+#selectBox,
+#searchBox {
+  color: var(--font-color);
+}
+#footer {
+  height: 3em;
+  background-color: #292b2c;
+  color: white;
+  text-align: center;
+  padding-top: 0.8em;
+}
