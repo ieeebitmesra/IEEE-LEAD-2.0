@@ -1,0 +1,97 @@
+body {
+    background-color: #E2E2E0 ;
+}
+
+
+
+#covid19-animation {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    width: 540px;
+    height: 200px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+
+  #covid19-animation .back--6 {
+    position: absolute;
+    bottom: 60px;
+    left: 260px;
+ 
+    animation: leftRight 5s ease-in-out infinite;
+  }
+  
+  #covid19-animation .back--6 img {
+
+    animation: floating 7s ease-in-out infinite;
+  }
+  
+
+
+
+
+
+
+  #covid19-animation .back--7 {
+    position: absolute;
+    bottom: -24px;
+    left: 262px;
+  
+    animation: leftRight 6s ease-in-out infinite;
+    
+  }
+  
+  #covid19-animation .back--7 img {
+
+    animation: floating 6s ease-in-out infinite;
+    animation: rot  30s ease-in-out  infinite ;
+  }
+
+
+
+  @keyframes floating {
+    0% {
+     
+      transform: translateY(0);
+    }
+  
+    50% {
+      
+      transform: translateY(20px);
+    }
+  
+    100% {
+     
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes leftRight {
+    0% {
+   
+      transform: translateX(0px);
+    }
+  
+    50% {
+   
+      transform: translateX(15px);
+    }
+  
+    100% {
+    
+      transform: translateX(0px);
+    }
+  }
+  
+  @keyframes rot {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
