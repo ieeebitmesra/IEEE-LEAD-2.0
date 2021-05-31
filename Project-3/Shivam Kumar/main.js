@@ -181,6 +181,8 @@ async function populateCountryData(input = "India") {
 	dataRepresentation(data, "C");
 }
 
+let counter = 0;
+
 async function populateStateSearchData(slug = "india", state = "Maharashtra") {
 	const response = await fetch(
 		`https://api.covid19api.com/live/country/${slug}`
@@ -191,6 +193,26 @@ async function populateStateSearchData(slug = "india", state = "Maharashtra") {
 	);
 
 	dataRepresentationStates(stateData[stateData.length - 1], "SS");
+	if (counter) {
+		let active = stateData[stateData.length - 1].Active;
+
+		if (active > 15000) {
+			document
+				.querySelector(".alert-window-container")
+				.classList.add("alert-window--activate");
+			document.querySelector(".high").classList.add("red");
+		} else if (active <= 15000 && active > 1000) {
+			document
+				.querySelector(".alert-window-container")
+				.classList.add("alert-window--activate");
+			document.querySelector(".mod").classList.add("yellow");
+		} else if (active <= 1000) {
+			document
+				.querySelector(".alert-window-container")
+				.classList.add("alert-window--activate");
+			document.querySelector(".low").classList.add("green");
+		}
+	} else counter = 1;
 }
 
 async function populateStatesData() {
@@ -396,12 +418,12 @@ const graphDeaths = document.querySelectorAll(".graph-deaths");
 const graphActive = document.querySelectorAll(".graph-active");
 
 async function plotGraphs(query1, query2) {
-	loader.classList.add("loading-screen")
+	loader.classList.add("loading-screen");
 	await plotGlobalData(query1);
 	await plotCountryData(query2, slugValue);
 	await plotStatesData(query2, userState, "states-chart");
 	await plotStatesData(query2, stateName, "states-search-chart");
-	loader.classList.remove("loading-screen")
+	loader.classList.remove("loading-screen");
 }
 
 graphConfirm.forEach((e) =>
@@ -509,27 +531,29 @@ document.querySelector(".track-btn").addEventListener("click", async () => {
 	loader.classList.remove("loading-screen");
 });
 
-document.querySelector(".state-search-btn").addEventListener("click", async () => {
-	const inputStateVal = document.querySelector(".input--state");
-	stateName = inputStateVal.value;
+document
+	.querySelector(".state-search-btn")
+	.addEventListener("click", async () => {
+		const inputStateVal = document.querySelector(".input--state");
+		stateName = inputStateVal.value;
 
-	let allStates = [];
+		let allStates = [];
 
-	document.querySelectorAll("#state option").forEach((ele) => {
-		allStates.push(ele.getAttribute("value"));
+		document.querySelectorAll("#state option").forEach((ele) => {
+			allStates.push(ele.getAttribute("value"));
+		});
+
+		if (allStates.includes(stateName)) {
+			loader.classList.add("loading-screen");
+			document.querySelector(".states-search-name").innerHTML = stateName;
+
+			await populateStateSearchData(slugValue, stateName);
+			await plotStatesData("Confirmed", stateName, "states-search-chart");
+			loader.classList.remove("loading-screen");
+		} else {
+			alert("Enter a valid state name or else choose from the dropdown");
+		}
 	});
-
-	if (allStates.includes(stateName)) {
-		loader.classList.add("loading-screen");
-		document.querySelector(".states-search-name").innerHTML = stateName;
-
-		await populateStateSearchData(slugValue, stateName);
-		await plotStatesData("Confirmed", stateName, "states-search-chart");
-		loader.classList.remove("loading-screen");
-	} else {
-		alert("Enter a valid state name or else choose from the dropdown");
-	}
-});
 
 document.querySelectorAll(".close-alert").forEach((element) =>
 	element.addEventListener("click", () => {

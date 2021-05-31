@@ -15,7 +15,7 @@ HTML, JavaScript, SASS, CSS
     - Fetched data of any country
     - Data of all Provinces/States of country (this search may give unfavourable outcomes for countries other than India)
     - Alert according to the number of active cases (>15000 high, >1000 moderate <1000 low)
-    - Graphical Representaion
+    - Graphical Representaion of confirmed, recovered, active and deaths
 
 ### Link to the site - https://pseudo-bot.github.io/covid_tracker/
 
