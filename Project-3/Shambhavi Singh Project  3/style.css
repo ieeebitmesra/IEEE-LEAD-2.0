@@ -1,0 +1,140 @@
+body{
+    background: linear-gradient(270deg,#fdf6f0, #fff1ee);
+    background-size: 400% 400%;
+
+    animation: AnimationName 6s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+ .milestone2 {
+    width: 90%;
+    height: 950px;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    margin: -7% auto 20px auto;
+    bottom: -200px;
+    position: relative;
+    justify-content: space-evenly;
+    align: center;
+
+}
+
+/* milestone 2 */
+html{
+    height:100%;
+    width:100%;
+}
+h1{
+    font-family: serif;
+    
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size:180%
+}
+#code,#date,#demo{
+    font-family: sans-serif;
+    color:rgb(100, 32, 32);
+    font-size: medium;
+    text-align: center;
+}
+
+.title{
+    
+    opacity: initial;
+    padding:20px;
+}
+.subtitle{
+    padding:20px;
+    font-size:150%;
+}
+div{
+    padding:20px;
+}
+.stats-container{
+    text-align: center;
+    float:right;
+    display: inline-block;
+}
+.location-container{
+    display: inline-block;
+}
+.data-container{
+    border:2px solid rgb(1, 6, 7);
+    margin-right:20%;
+    margin-left:20%;
+    align-items: center;
+}
+.alert1,.alert2{
+    color:purple;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h4{
+    font-size: 85%;
+    font-family:'Roboto',sans-serif;
+    color:rgb(138, 46, 46);
+    font-weight: 300;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+ #demo{
+    font-family: sans-serif;
+    color:rgb(10, 9, 9);
+    font-size: medium;
+    text-align:center;
+
+}
+.containe{
+    background-color: rgb(184, 133, 133);
+    
+    /* height:100px; */
+}
+
+.sham{
+    text-align: center;
+    color: white;
+    padding: 1px;
+    height:50px;
+    background-color: rgb(0, 0, 0);
+}
+#copy{
+    color:white
+}
+
+
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
+img { max-width: 100%; height: auto; }
+@media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
+html { font-size:100%; }
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} } 

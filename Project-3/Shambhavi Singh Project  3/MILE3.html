@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Covid 19 API</title>
+    <link rel="icon" href="./images/logo.webp" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type=text/css href="style1.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Global Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="current.html">Local Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MILE3.html">Country Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mile 2.html">State Data</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="title">Covid Searched Location Tracker</h1>
+   <div class="milestone">
+    
+    <form id="myform">
+   <input type="text" id="country" placeholder="Enter Country Name" required>
+   <input onclick="getcovidstats3()" type="submit" value="Search">
+</form>
+
+     <div class="data-container">
+      <p id="code"></p>
+      <p id="date"></p>
+      <p id="dea"></p>
+        
+        <div class="stats-container">
+            <h4>CONFIRMED CASES:-</h4>
+            <h1 id="cases"></h1>
+            <h4>TOTAL DEATHS:-</h4>
+            <h1 id="deaths"></h1>
+            <h4>RECOVERED:-</h4> 
+            <h1 id="recover"></h1>
+        </div>
+        <div class="location-container">
+            <h4>TOTAL TESTS:-</h4>
+            <h1 id="totc"></h1>
+            <h4>CRITICAL CASES:-</h4>
+            <h1 id="critical"></h1>
+            <h4>ACTIVE CASES:-</h4> 
+            <h1 id="totr"></h1> 
+
+        </div>
+    </div> </div>
+    <br><br>
+    
+
+</body>
+
+
+
+<!-- the api working using jquery -->
+<script>
+    function getcovidstats3(){
+    var myfor=document.getElementById('myform')
+    myfor.addEventListener('submit',function(e){
+        e.preventDefault()
+        var country=document.getElementById('country').value
+        
+    var url="https://coronavirus-19-api.herokuapp.com/countries/" + country
+    fetch(url)
+    .then((res) => res.json())
+    .then((res) => {
+        console.log(res)
+        code.innerHTML=''
+        date.innerHTML=''
+        dea.innerHTML=''
+        cases.innerHTML=''
+        recover.innerHTML=''
+        deaths.innerHTML=''
+        critical.innerHTML=''
+        totr.innerHTML=''
+        totc.innerHTML=''
+
+
+
+        code.append("Country: " + res.country)
+        date.append('New Cases+ ' + res.todayCases)
+        dea.append('New Deaths+ '+ res.todayDeaths)
+        cases.append(res.cases.toLocaleString('en'))
+        deaths.append(res.deaths.toLocaleString('en'))
+        recover.append(res.recovered.toLocaleString('en'))
+        totc.append(res.totalTests.toLocaleString('en'))
+        critical.append(res.critical.toLocaleString('en'))
+        totr.append(res.active.toLocaleString('en'))
+        
+    }).catch(function(){
+       
+       alert("Please Check the country name and try again!")})
+    }) 
+    
+    
+    }
+</script>
+<br><br><br><br>
+<footer>
+  <div class="imgfot">
+      
+  </div>
+</footer>
+
+</html>
