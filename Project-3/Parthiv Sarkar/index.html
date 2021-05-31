@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="heading">
+           <h1 style="color: white; text-decoration: underline;">COVID-19 TRACKER</h1>
+     
+    </div>
+    <div class="card">
+        <div class="search">
+            <form id="entry">
+            <input type="text" id="inp" class="search-bar" placeholder="Enter the location.."></input>
+            <br>
+            <br>
+            <input type="submit"></input>
+        </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="location">
+        
+        <h3 style="text-decoration: underline;">Current Location:</h3>
+        <h4 id="cur">-</h4>
+    </div>
+    <div class="Total" style="color: red;">
+        <h3 style="text-decoration: underline;">Total Cases:</h3>
+        <h4 id="tot">-</h4>
+        
+    </div>
+    <div class="zone" style="color: green; font-size: larger;">
+        <h3 style="text-decoration: underline;">Zone:</h3>
+        <h4 id="zon">-</h4>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="active" style="color: blue;">
+        <h3 style="text-decoration: underline;">Active Cases:</h3>
+        <h4 id="ac">-</h4>
+    </div>
+    <div class="death" style="color: gray;">
+        <h3 style="text-decoration: underline;">Deaths:</h3>
+        <h4 id="dead">-</h4>
+    </div>
+    <div class="recovered" style="color: yellow;">
+        <h3 style="text-decoration: underline;">Recovered:</h3>
+        <h4 id="rec">-</h4>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

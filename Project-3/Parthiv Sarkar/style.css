@@ -1,0 +1,116 @@
+body{
+    text-align: center;
+}
+
+.location{
+    float: left;
+    width: 30%;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0px;
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    margin-top: 6px;
+}
+.Total{
+    float: right;
+    width: 30%;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0px;
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    margin-top: 6px;
+}
+.zone{
+    float: right;
+    width: 30%;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0px;
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    margin-top: 6px;
+    
+}
+.active{
+    float: left;
+    width: 30%;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0px;
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    margin-top: 6px;
+}
+.death{
+    float: left;
+    width: 30%;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0px;
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    margin-top: 6px;
+
+}
+.recovered{
+    float: right;
+    width: 30%;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0px;
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    margin-top: 6px;
+
+}
+body{
+    background-image:url(image/mati-flo-nasacf3w97o-unsplash.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: cursive;
+    
+}
+.card{
+    background: #000d00;
+    opacity: 80%;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 420px;
+    margin: 5em;
+    
+}
+
+
+
+input{
+    border: none;
+    outline: none;
+    padding: 0.5em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-size: 120%;
+    font-family: inherit;
+   
+
+}
+.heading{
+    font-family: cursive;
+    font-size: 120%;
+    background: #000d00;
+    opacity: 80%;
+  
+    
+}
+
