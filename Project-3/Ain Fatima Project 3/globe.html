@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title >Covid-19 global</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background:url('globeimg.jpg');background-repeat: no-repeat;background-size: cover;width: 1600;height: 850;">
+
+
+    <nav class="navbar navbar-inverse"  >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="worldlive.html">Get world live data</a></li>
+            <li class="active" ><a href="current.html">Get Covid data of your current location</a></li>
+            <li class="active"><a href="globe.html">Covid-19 Global tracker</a></li>
+            <li class="active"><a href="local.html">Covid-19 Indian State tracker</a></li>
+            <li class="active"><a href="district.html">Covid-19 Indian city/district tracker</a></li>
+          </ul>
+        
+        </div>
+      </nav>
+      <h1 class="text-center">Covid-19 Global Tracker</h1>
+      <form class="text-center" id="myForm">
+      <input class="text-center" type="text" id="country" placeholder="Enter a country" required style="font-size: x-large;">
+      <input class="text-center" type="submit" value="Fetch Data" style="font-size: x-large;background-color: rgb(2, 1, 75);color: silver;">
+      </form>
+      <h3 class="text-center" id="coun" style="color: crimson;"></h3>
+      <h3 class="text-center" id="active" style="color: rgb(77, 66, 238);"></h3>
+      <h3 class="text-center" id="confirmed" style="color: rgb(86, 8, 122);"> </h3>
+      <h3 class="text-center" id="recovered" style="color: rgb(211, 7, 160);"> </h3>
+      <h3 class="text-center" id="deaths" style="color: rgb(28, 145, 255);"></h3>
+
+</body>
+<script>
+  var myForm=document.getElementById('myForm')
+  myForm.addEventListener('submit',function(e){
+      e.preventDefault()
+      var country=document.getElementById('country').value
+      
+      var url="https://api.covid19api.com/total/dayone/country/"+country
+      fetch(url)
+      .then((res)=>res.json())
+      .then((res)=> {
+          var length=res.length
+          var index=length-1
+          
+          var confirmed=document.getElementById('confirmed')
+          var recovered=document.getElementById('recovered')
+          var deaths=document.getElementById('deaths')
+          coun.innerHTML=''
+          active.innerHTML=''
+          confirmed.innerHTML=''
+          recovered.innerHTML=''
+          deaths.innerHTML=''
+          coun.append("Country: "+country)
+          active.append("Active Cases: "+res[index].Active)
+          confirmed.append("Total confirmed: "+res[index].Confirmed)
+          recovered.append("Total recovered:"+res[index].Recovered)
+          deaths.append("Total deaths:"+res[index].Deaths)
+          if((res[index].Confirmed)>10000000)
+          {alert("This Country comes under high containment zone")}
+          else if((res[index].Confirmed)>5000000){
+            alert("This Country comes under containment zone") }
+          else if((res[index].Confirmed)>100000){
+            alert("This Country comes under moderate containment zone") }
+            else if((res[index].Confirmed)>50000){
+            alert("This Country comes under less containment zone") }
+            else {
+            alert("This Country comes under least containment zone") }
+      })
+
+  })
+  </script>
+</html>

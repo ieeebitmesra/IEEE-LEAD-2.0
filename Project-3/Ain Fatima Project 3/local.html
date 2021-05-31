@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title >Covid-19 global</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body style="background:url('Indiabg.jpg');background-repeat: no-repeat;background-size: cover;width: 780;height: 470;">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="worldlive.html">Get world live data</a></li>
+            <li class="active" ><a href="current.html">Get Covid data of your current location</a></li>
+            <li class="active"><a href="globe.html">Covid-19 Global tracker</a></li>
+            <li class="active"><a href="local.html">Covid-19 Indian State tracker</a></li>
+            <li class="active"><a href="district.html">Covid-19 Indian city/district tracker</a></li>
+           
+            
+          </ul>
+        
+        </div>
+      </nav>
+      
+        <h1 class="text-center" style="color: rgb(0, 0, 0);">Covid-19 Indian State Tracker</h1>
+        <form class="text-center" id="myForm">
+        <input type="text" id="state" placeholder="Enter state code" required style="font-size: x-large;">
+        <input type="submit" value="Fetch Data" style="font-size: x-large;">
+        </form>
+        <img src="state codes.bmp" height="246px" width="90px" style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;" >
+        <h3 class="text-center" id="confirmed" style="color: rgb(252, 52, 52);"> </h3>
+        <h3 class="text-center" id="deceased" style="color: rgb(29, 212, 13);"> </h3>
+        <h3 class="text-center" id="recovered" style="color: rgb(226, 23, 209);"> </h3>
+        <h3 class="text-center" id="tested" style="color: rgb(59, 63, 252);"> </h3>
+        <h3 class="text-center" id="vaccinated" style="color: rgb(219, 7, 202);"> </h3>
+        
+    </body>
+    <script>
+        
+        var myForm=document.getElementById('myForm')
+      myForm.addEventListener('submit',function(e){
+          e.preventDefault()
+          var state=document.getElementById('state').value
+          
+          var url="https://api.covid19india.org/v4/min/data.min.json"
+          fetch(url)
+          .then((res)=>res.json())
+          .then((res)=> {
+              console.log(res)
+             
+              var confirmed=document.getElementById('confirmed')
+              var deceased=document.getElementById('deceased')
+              var recovered=document.getElementById('recovered')
+              var tested=document.getElementById('tested')
+              var vaccinated=document.getElementById('vaccinated')
+              
+              
+              confirmed.innerHTML=''
+              deceased.innerHTML=''
+              recovered.innerHTML=''
+              tested.innerHTML=''
+              vaccinated.innerHTML=''
+              
+              
+              confirmed.append("Total confirmed: "+(res[state].delta7.confirmed))
+              deceased.append("Total deaths: "+(res[state].delta7.deceased))
+              recovered.append("Total recovered: "+(res[state].delta7.recovered))
+              tested.append("Total tested: "+(res[state].delta7.tested))
+              vaccinated.append("Total vaccinated: "+(res[state].delta7.vaccinated))
+              if((res[state].delta7.confirmed)>100000)
+              {
+               alert("This State Comes under high containment zone!")
+              }
+              else if((res[state].delta7.confirmed)>50000)
+              {
+               alert("This State Comes under containment zone!")
+              }
+              else if((res[state].delta7.confirmed)>10000)
+              {
+               alert("This State Comes under moderate containment zone!")
+              }
+              else if((res[state].delta7.confirmed)>5000)
+              {
+               alert("This State Comes under less containment zone!")
+              }
+              else{
+                alert("This State Comes under least containment zone! ")
+              }
+              
+          })
+    
+      })
+      </script>
+    </html>
