@@ -181,8 +181,10 @@ async function populateCountryData(input = "India") {
 	dataRepresentation(data, "C");
 }
 
-async function populateStateSearchData(slug="india", state = "Maharashtra") {
-	const response = await fetch(`https://api.covid19api.com/live/country/${slug}`);
+async function populateStateSearchData(slug = "india", state = "Maharashtra") {
+	const response = await fetch(
+		`https://api.covid19api.com/live/country/${slug}`
+	);
 	const data = await response.json();
 	const stateData = data.filter(
 		(element) => element.Province.toLowerCase() === state.toLowerCase()
@@ -393,15 +395,13 @@ const graphRecover = document.querySelectorAll(".graph-recover");
 const graphDeaths = document.querySelectorAll(".graph-deaths");
 const graphActive = document.querySelectorAll(".graph-active");
 
-function plotGraphs(query1, query2) {
-	loader.classList.add("loading-screen");
-
-	plotGlobalData(query1);
-	plotCountryData(query2, slugValue);
-	plotStatesData(query2, userState, "states-chart");
-	plotStatesData(query2, stateName, "states-search-chart");
-
-	loader.classList.remove("loading-screen");
+async function plotGraphs(query1, query2) {
+	loader.classList.add("loading-screen")
+	await plotGlobalData(query1);
+	await plotCountryData(query2, slugValue);
+	await plotStatesData(query2, userState, "states-chart");
+	await plotStatesData(query2, stateName, "states-search-chart");
+	loader.classList.remove("loading-screen")
 }
 
 graphConfirm.forEach((e) =>
@@ -457,15 +457,15 @@ function getlocation() {
 
 //  Execute at Startup
 
-const execute = () => {
-	populateCountry();
-	populateGlobalData();
-	plotGlobalData();
-	populateCountryData();
-	plotCountryData();
-	populateStateList();
-	populateStateSearchData();
-	plotStatesData("Confirmed", "Maharashtra", "states-search-chart");
+const execute = async () => {
+	await populateCountry();
+	await populateGlobalData();
+	await plotGlobalData();
+	await populateCountryData();
+	await plotCountryData();
+	await populateStateList();
+	await populateStateSearchData();
+	await plotStatesData("Confirmed", "Maharashtra", "states-search-chart");
 };
 
 execute();
@@ -488,28 +488,28 @@ document.querySelector(".search-btn").addEventListener("click", async () => {
 	});
 
 	if (allCountry.includes(inputCountry.value)) {
-	loader.classList.add("loading-screen");
+		loader.classList.add("loading-screen");
 
-	populateCountryData(inputCountry.value);
-	slugValue = await obtainSlug(inputCountry.value);
-	plotCountryData("Confirmed", slugValue);
-	
-	populateStateList(slugValue);
-	loader.classList.remove("loading-screen");}
-	else {
-		alert("Enter a valid country name or choose from the dropdown")
+		populateCountryData(inputCountry.value);
+		slugValue = await obtainSlug(inputCountry.value);
+		plotCountryData("Confirmed", slugValue);
+
+		populateStateList(slugValue);
+		loader.classList.remove("loading-screen");
+	} else {
+		alert("Enter a valid country name or choose from the dropdown");
 	}
 });
 
-document.querySelector(".track-btn").addEventListener("click", () => {
+document.querySelector(".track-btn").addEventListener("click", async () => {
 	loader.classList.add("loading-screen");
 
 	document.querySelector(".states_section").style.display = "flex";
-	getlocation();
+	await getlocation();
 	loader.classList.remove("loading-screen");
 });
 
-document.querySelector(".state-search-btn").addEventListener("click", () => {
+document.querySelector(".state-search-btn").addEventListener("click", async () => {
 	const inputStateVal = document.querySelector(".input--state");
 	stateName = inputStateVal.value;
 
@@ -520,10 +520,12 @@ document.querySelector(".state-search-btn").addEventListener("click", () => {
 	});
 
 	if (allStates.includes(stateName)) {
+		loader.classList.add("loading-screen");
 		document.querySelector(".states-search-name").innerHTML = stateName;
 
-		populateStateSearchData(slugValue, stateName);
-		plotStatesData("Confirmed", stateName, "states-search-chart");
+		await populateStateSearchData(slugValue, stateName);
+		await plotStatesData("Confirmed", stateName, "states-search-chart");
+		loader.classList.remove("loading-screen");
 	} else {
 		alert("Enter a valid state name or else choose from the dropdown");
 	}
