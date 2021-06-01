@@ -162,6 +162,7 @@ async function populateGlobalData() {
 	const global_today_response = await dataSummary();
 	const global_today = global_today_response.Global;
 
+
 	dataRepresentation(global_today, "G");
 	// loader.classList.remove('loading-screen')
 }
@@ -581,3 +582,12 @@ document.querySelectorAll(".close-alert").forEach((element) =>
 		}
 	})
 );
+
+document.querySelector('.socialbar-btn').addEventListener('click', () => {
+	document.querySelector('.socialbar').classList.toggle('socialbar--activate')	
+})
+
+document.querySelector('.contactnav').addEventListener('click', () => {
+	document.querySelector('.socialbar').classList.toggle('socialbar--activate')	
+})
+

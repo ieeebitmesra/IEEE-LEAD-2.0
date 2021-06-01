@@ -144,8 +144,8 @@ a {
 }
 
 .menubar > * {
-  border: 2px solid #777;
-  height: 0;
+  background-color: #777;
+  height: 4px;
   margin-block: 3px;
   border-radius: 100vw;
   -webkit-transition: all 0.4s ease;
@@ -553,48 +553,36 @@ section::-webkit-scrollbar {
   transition: all 0.8s ease-out;
 }
 
-.contactsection {
+.socialbar {
+  height: 350px;
+  width: 55px;
+  position: fixed;
+  top: 50%;
+  left: -55px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px;
-}
-
-.contactsection > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-}
-
-.one,
-.two,
-.three {
-  font-size: 1.8rem;
-  line-height: 3rem;
-  padding-block: 1rem;
-}
-
-.one a,
-.two a {
-  color: #333;
-  padding-inline: 1rem;
-}
-
-.social {
-  padding-block: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 4rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3b78fc), to(#8f028f));
+  background-image: linear-gradient(to bottom, #3b78fc, #8f028f);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
 }
 
-.social > * a {
-  color: #333;
-}
-
-.social > * {
-  -webkit-padding-end: 2rem;
-          padding-inline-end: 2rem;
-}
-
-.social > *:hover > * > * {
+.socialbar .social-icons a:hover span {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
   -webkit-transition: all 0.5s;
@@ -603,50 +591,42 @@ section::-webkit-scrollbar {
           backface-visibility: hidden;
 }
 
-.fb:hover .fa-facebook {
-  color: #4267b2;
+.socialbar a {
+  color: white;
 }
 
-.insta:hover .fa-instagram {
-  color: #e1306c;
+.socialbar .socialbar-btn {
+  width: 40px;
+  height: 50px;
+  background: #7a35fa;
+  position: absolute;
+  right: -40px;
+  border-radius: 0 100% 100% 0;
+  font-size: 2.8rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: white;
 }
 
-.wa:hover .fa-whatsapp {
-  color: #4ac959;
+.socialbar .fa-chevron-circle-left {
+  display: none;
 }
 
-.git:hover .fa-github {
-  color: #333;
+.socialbar .fa-chevron-circle-right {
+  display: block;
 }
 
-.twt:hover .fa-twitter {
-  color: #1da1f2;
+.socialbar--activate {
+  left: 0px;
 }
 
-.lin:hover .fa-linkedin {
-  color: #2867b2;
+.socialbar--activate .fa-chevron-circle-left {
+  display: block;
 }
 
-.contactext {
-  font-size: 2rem;
-  padding-bottom: 2rem;
-}
-
-.contact-image {
-  max-width: clamp(300px, 50vw, 450px);
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.socialbar--activate .fa-chevron-circle-right {
+  display: none;
 }
 
 .alert-window-container {
