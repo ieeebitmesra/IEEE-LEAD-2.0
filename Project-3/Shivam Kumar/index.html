@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Covid Tracker</title>
+
+		<!-- Links -->
+
+		<link rel="stylesheet" href="main.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css?family=KoHo:200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="graphics/coronavirus.png" type="image/icon type" />
+
+		<!-- Scripts -->
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.0/dist/chart.min.js"></script>
+
+		<script
+			src="https://kit.fontawesome.com/5d3c8eea54.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+
+	<body>
+		<nav class="navbar">
+			<div class="logo">Covid19</div>
+
+			<ul class="navbar__items">
+				<li><a href="#">Home</a></li>
+				<li><a href="#global">Global</a></li>
+				<li><a href="#gotocountry">Country</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+
+			<div class="menubar">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+
+		<section class="home_page">
+			<div class="heading">Search Live <i class="fas fa-search"></i></div>
+			<!-- <div class="particle_animation">
+				<div id="particles-js"></div>
+				<script src="particle/particles.js"></script>
+				<script src="particle/app.js"></script>
+			</div> -->
+			
+				<div class="form form__country">
+					<input
+						type="text"
+						name="country"
+						class="input--country input"
+						autocomplete="off"
+						list="country"
+						required
+					/>
+					<label for="country">
+						<span class="label-content">Country</span>
+					</label>
+					<datalist id="country"></datalist>
+				</div>
+
+				<div class="buttons">
+					<div class="form-btn">
+						<a href="#gotocountry"><span class="search-btn">Search</span></a>
+					</div>
+					<div class="form-btn">
+						<a href="#global"><span class="global-btn">Global Data</span></a>
+					</div>
+					<div class="form-btn">
+						<a href="#states"><span class="track-btn">Track Me</span></a>
+					</div>
+				</div>
+		</section>
+
+		<div class="load loading-screen load-start-bg">
+			<span>
+				<i class="loading-icon fab fa-instalod fa-spin fa-7x"></i>
+			</span>
+		</div>
+
+		<div id="global" class="section-link"></div>
+
+		<section class="global_section">
+			<div class="global-name section-heading">GLOBAL</div>
+			<div class="global-chart-container chart-container">
+				<canvas id="global-chart"></canvas>
+			</div>
+			<div class="data">
+				<!-- Dyanamic Data Insertion -->
+				<div class="info total_cases total_casesG graph-confirm"></div>
+				<div class="info total_recovered total_recoveredG graph-recover"></div>
+				<div class="info total_active total_activeG graph-active"></div>
+				<div class="info total_deaths total_deathsG graph-deaths"></div>
+			</div>
+		</section>
+
+		<div id="gotocountry" class="section-link"></div>
+
+		<section class="country_section">
+			<div class="country-name section-heading">India</div>
+			<div class="country-chart-container chart-container">
+				<canvas id="country-chart"></canvas>
+			</div>
+
+			<div class="data">
+				<div class="info total_cases total_casesC graph-confirm"></div>
+				<div class="info total_recovered total_recoveredC graph-recover"></div>
+				<div class="info total_active total_activeC graph-active"></div>
+				<div class="info total_deaths total_deathsC graph-deaths"></div>
+			</div>
+
+			<div class="state-search no-states">
+				<div class="form form__state">
+					<input
+						type="text"
+						name="state"
+						class="input--state input"
+						autocomplete="off"
+						list="state"
+						required
+					/>
+					<label for="state">
+						<span class="label-content">State</span>
+					</label>
+					<datalist id="state"></datalist>
+				</div>
+				<div class="buttons state-btn">
+					<div class="form-btn">
+						<a href="#gotostate"><span class="state-search-btn">Search</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="gotostate" class="section-link"></div>
+
+		<section class="states-search_section">
+			<div class="states-search-name section-heading">Maharashtra</div>
+			<div class="states-search-chart-container chart-container">
+				<canvas id="states-search-chart"></canvas>
+			</div>
+
+			<div class="data">
+				<div class="info total_cases total_casesSS graph-confirm"></div>
+				<div class="info total_recovered total_recoveredSS graph-recover"></div>
+				<div class="info total_active total_activeSS graph-active"></div>
+				<div class="info total_deaths total_deathsSS graph-deaths"></div>
+			</div>
+		</section>
+
+		<div id="states" class="section-link"></div>
+
+		<section class="states_section">
+			<div class="states-name section-heading">India</div>
+			<div class="states-chart-container chart-container">
+				<canvas id="states-chart"></canvas>
+			</div>
+
+			<div class="data">
+				<div class="info total_cases total_casesS graph-confirm"></div>
+				<div class="info total_recovered total_recoveredS graph-recover"></div>
+				<div class="info total_active total_activeS graph-active"></div>
+				<div class="info total_deaths total_deathsS graph-deaths"></div>
+			</div>
+		</section>
+
+		<div id="contact" class="section-link"></div>
+
+		<section class="contactsection">
+			<div class="contact-name section-heading">Contact Me</div>
+			<img
+				src="graphics/Mail-rafiki.png"
+				alt="Contact"
+				class="contact-image"
+			/>
+			<div class="container">
+				<div class="contactext">
+					For any queries or bugs feel free to reach out:
+				</div>
+				<div class="one">
+					<a href="mailto:shivamx6174@gmail.com"
+						><b>shivamx6174@gmail.com</b></a
+					>
+				</div>
+				<div class="three">Connect with me via:</div>
+				<div class="social">
+					<span class="insta"
+						><a href="https://www.instagram.com/_seevum/"
+							><span class="fab fa-instagram"></span></a
+					></span>
+					<span class="fb"
+						><a href="https://www.facebook.com/shivamkr6174"
+							><span class="fab fa-facebook"></span></a
+					></span>
+					<span class="git"
+						><a href="https://github.com/pseudo-bot"
+							><span class="fab fa-github"></span></a
+					></span>
+					<span class="lin"
+						><a href="https://www.linkedin.com/in/pseudobot/"
+							><span class="fab fa-linkedin"></span></a
+					></span>
+					<span class="twt"
+						><a href="https://twitter.com/shivamkr__"
+							><span class="fab fa-twitter"></span></a
+					></span>
+				</div>
+			</div>
+		</section>
+
+		<div class="alert-window-container">
+			<div class="alert-window high">
+				<div class="alert-head">
+					Red Alert
+					<i class="fas fa-times-circle close-alert"></i>
+				</div>
+				<div class="alert-content">This location has a high concentration of active covid cases.
+					If under lockdown, follow lockdown guidelines strictly. Do not leave home until extremely necessary. Together only we can fight covid. Stay home, stay safe. 
+				</div>
+			</div>
+
+			<div class="alert-window mod">
+				<div class="alert-head">
+					Moderate
+					<i class="fas fa-times-circle close-alert"></i>
+				</div>
+				<div class="alert-content">This location has a moderate concentration of active covid cases.
+					If under lockdown, follow lockdown guidelines. Leave home only if needed. Together only we can fight covid. Stay home, stay safe. 
+				</div>
+			</div>
+
+			<div class="alert-window low">
+				<div class="alert-head">
+					 Safe Zone
+					<i class="fas fa-times-circle close-alert"></i>
+				</div>
+				<div class="alert-content">This location has a low concentration of active covid cases.
+					If under lockdown, follow lockdown guidelines. Leave home only wearing mask. India is still under a huge covid crisis, if possible avoid going outside. Together only we can fight covid. Stay home, stay safe. 
+				</div>
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
