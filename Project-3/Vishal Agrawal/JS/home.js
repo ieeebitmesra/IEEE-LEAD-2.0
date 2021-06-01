@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
     let debug = config.correctnessFactor;
-    debug = 0;
     if (config.usingWorldStatsAPI) {
         console.log("Retrieving World Data");
         // getting current date for api call
         let today = new Date();
-        let day = Number(String(today.getDate()).padStart(2, '0')) - debug;
+        today.setDate(today.getDate() - debug);
+        let day = String(Number(String(today.getDate()))).padStart(2, '0');
         let month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         let year = today.getFullYear();
         let api_date = `${year}-${month}-${day}`;
@@ -25,7 +25,7 @@ $(document).ready(function() {
             }
         };
 
-        $.ajax(settings).done(function(response) {
+        $.ajax(settings).done(function (response) {
             console.log("API Response Received");
             console.log(response.response);
             let data_outer_array = response.response;

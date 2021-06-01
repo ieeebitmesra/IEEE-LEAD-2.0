@@ -30,7 +30,8 @@ $(document).ready(function() {
         if (config.usingCovidAPIForSearchedLocation) {
             let debug = config.correctnessFactor;
             let today = new Date();
-            let day = Number(String(today.getDate()).padStart(2, '0')) - debug;
+            today.setDate(today.getDate() - debug);
+            let day = String(Number(String(today.getDate()))).padStart(2, '0');
             let month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             let year = today.getFullYear();
             let api_date = `${year}-${month}-${day}`;
