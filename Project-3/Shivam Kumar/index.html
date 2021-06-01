@@ -41,7 +41,7 @@
 				<li><a href="#">Home</a></li>
 				<li><a href="#global">Global</a></li>
 				<li><a href="#gotocountry">Country</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<li class="contactnav"><a>Contact</a></li>
 			</ul>
 
 			<div class="menubar">
@@ -58,33 +58,33 @@
 				<script src="particle/particles.js"></script>
 				<script src="particle/app.js"></script>
 			</div> -->
-			
-				<div class="form form__country">
-					<input
-						type="text"
-						name="country"
-						class="input--country input"
-						autocomplete="off"
-						list="country"
-						required
-					/>
-					<label for="country">
-						<span class="label-content">Country</span>
-					</label>
-					<datalist id="country"></datalist>
-				</div>
 
-				<div class="buttons">
-					<div class="form-btn">
-						<a href="#gotocountry"><span class="search-btn">Search</span></a>
-					</div>
-					<div class="form-btn">
-						<a href="#global"><span class="global-btn">Global Data</span></a>
-					</div>
-					<div class="form-btn">
-						<a href="#states"><span class="track-btn">Track Me</span></a>
-					</div>
+			<div class="form form__country">
+				<input
+					type="text"
+					name="country"
+					class="input--country input"
+					autocomplete="off"
+					list="country"
+					required
+				/>
+				<label for="country">
+					<span class="label-content">Country</span>
+				</label>
+				<datalist id="country"></datalist>
+			</div>
+
+			<div class="buttons">
+				<div class="form-btn">
+					<a href="#gotocountry"><span class="search-btn">Search</span></a>
 				</div>
+				<div class="form-btn">
+					<a href="#global"><span class="global-btn">Global Data</span></a>
+				</div>
+				<div class="form-btn">
+					<a href="#states"><span class="track-btn">Track Me</span></a>
+				</div>
+			</div>
 		</section>
 
 		<div class="load loading-screen load-start-bg">
@@ -141,7 +141,9 @@
 				</div>
 				<div class="buttons state-btn">
 					<div class="form-btn">
-						<a href="#gotostate"><span class="state-search-btn">Search</span></a>
+						<a href="#gotostate"
+							><span class="state-search-btn">Search</span></a
+						>
 					</div>
 				</div>
 			</div>
@@ -179,49 +181,37 @@
 			</div>
 		</section>
 
-		<div id="contact" class="section-link"></div>
-
-		<section class="contactsection">
-			<div class="contact-name section-heading">Contact Me</div>
-			<img
-				src="graphics/Mail-rafiki.png"
-				alt="Contact"
-				class="contact-image"
-			/>
-			<div class="container">
-				<div class="contactext">
-					For any queries or bugs feel free to reach out:
-				</div>
-				<div class="one">
-					<a href="mailto:shivamx6174@gmail.com"
-						><b>shivamx6174@gmail.com</b></a
-					>
-				</div>
-				<div class="three">Connect with me via:</div>
-				<div class="social">
-					<span class="insta"
-						><a href="https://www.instagram.com/_seevum/"
-							><span class="fab fa-instagram"></span></a
-					></span>
-					<span class="fb"
-						><a href="https://www.facebook.com/shivamkr6174"
-							><span class="fab fa-facebook"></span></a
-					></span>
-					<span class="git"
-						><a href="https://github.com/pseudo-bot"
-							><span class="fab fa-github"></span></a
-					></span>
-					<span class="lin"
-						><a href="https://www.linkedin.com/in/pseudobot/"
-							><span class="fab fa-linkedin"></span></a
-					></span>
-					<span class="twt"
-						><a href="https://twitter.com/shivamkr__"
-							><span class="fab fa-twitter"></span></a
-					></span>
-				</div>
+		<nav class="socialbar">
+			<div class="socialbar-btn">
+				<span class="fas fa-chevron-circle-right"></span>
+				<span class="fas fa-chevron-circle-left"></span>
 			</div>
-		</section>
+			<div class="insta social-icons">
+				<a href="https://www.instagram.com/_seevum/"
+					><span class="fab fa-instagram"></span
+				></a>
+			</div>
+			<div class="fb social-icons">
+				<a href="https://www.facebook.com/shivamkr6174"
+					><span class="fab fa-facebook"></span
+				></a>
+			</div>
+			<div class="git social-icons">
+				<a href="https://github.com/pseudo-bot"
+					><span class="fab fa-github"></span
+				></a>
+			</div>
+			<div class="lin social-icons">
+				<a href="https://www.linkedin.com/in/pseudobot/"
+					><span class="fab fa-linkedin"></span
+				></a>
+			</div>
+			<div class="twt social-icons">
+				<a href="https://twitter.com/shivamkr__"
+					><span class="fab fa-twitter"></span
+				></a>
+			</div>
+		</nav>
 
 		<div class="alert-window-container">
 			<div class="alert-window high">
@@ -229,8 +219,11 @@
 					Red Alert
 					<i class="fas fa-times-circle close-alert"></i>
 				</div>
-				<div class="alert-content">This location has a high concentration of active covid cases.
-					If under lockdown, follow lockdown guidelines strictly. Do not leave home until extremely necessary. Together only we can fight covid. Stay home, stay safe. 
+				<div class="alert-content">
+					This location has a high concentration of active covid cases. If under
+					lockdown, follow lockdown guidelines strictly. Do not leave home until
+					extremely necessary. Together only we can fight covid. Stay home, stay
+					safe.
 				</div>
 			</div>
 
@@ -239,18 +232,22 @@
 					Moderate
 					<i class="fas fa-times-circle close-alert"></i>
 				</div>
-				<div class="alert-content">This location has a moderate concentration of active covid cases.
-					If under lockdown, follow lockdown guidelines. Leave home only if needed. Together only we can fight covid. Stay home, stay safe. 
+				<div class="alert-content">
+					This location has a moderate concentration of active covid cases. If
+					under lockdown, follow lockdown guidelines. Leave home only if needed.
+					Together only we can fight covid. Stay home, stay safe.
 				</div>
 			</div>
 
 			<div class="alert-window low">
 				<div class="alert-head">
-					 Safe Zone
+					Safe Zone
 					<i class="fas fa-times-circle close-alert"></i>
 				</div>
-				<div class="alert-content">This location has a low concentration of active covid cases.
-					If under lockdown, follow lockdown guidelines. Leave home only wearing mask. India is still under a huge covid crisis, if possible avoid going outside. Together only we can fight covid. Stay home, stay safe. 
+				<div class="alert-content">
+					This location has a low concentration of active covid cases. If under
+					lockdown, follow lockdown guidelines. Leave home only wearing mask.
+					Together only we can fight covid. Stay home, stay safe.
 				</div>
 			</div>
 		</div>
