@@ -335,13 +335,20 @@ async function plotCountryData(dataToGraph = "Confirmed", slug = "india") {
 	plot(date, ylable, label, color, bgcolor, "country-chart");
 }
 
-async function plotStatesData(dataToGraph = "Confirmed", slug, plotin) {
+async function plotStatesData(
+	dataToGraph = "Confirmed",
+	slug,
+	slugCountry,
+	plotin
+) {
 	let date = [];
 	let ylable = [];
 	let label;
 	let color, bgcolor;
 
-	const response = await fetch("https://api.covid19api.com/live/country/india");
+	const response = await fetch(
+		`https://api.covid19api.com/live/country/${slugCountry}`
+	);
 	const data = await response.json();
 	const stateData = data.filter((element) => element.Province === slug);
 
@@ -377,10 +384,19 @@ async function plotStatesData(dataToGraph = "Confirmed", slug, plotin) {
 }
 
 async function check() {
-	const res = await fetch("https://api.covid19api.com/live/country/india");
+	const res = await fetch(
+		`https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true`
+	);
+	const resi = await fetch(
+		"https://api.apify.com/v2/datasets/58a4VXwBBF0HtxuQa/items?format=json&clean=1"
+	);
 	const data = await res.json();
+	const resiD = await resi.json();
 	console.log(data);
+	console.log(resiD);
 }
+
+check();
 
 function plot(xdata, ydata, label, color, bgcolor, chartContainer) {
 	document.querySelector(
@@ -421,8 +437,8 @@ async function plotGraphs(query1, query2) {
 	loader.classList.add("loading-screen");
 	await plotGlobalData(query1);
 	await plotCountryData(query2, slugValue);
-	await plotStatesData(query2, userState, "states-chart");
-	await plotStatesData(query2, stateName, "states-search-chart");
+	await plotStatesData(query2, userState, slugValue, "states-chart");
+	await plotStatesData(query2, stateName, slugValue, "states-search-chart");
 	loader.classList.remove("loading-screen");
 }
 
@@ -462,7 +478,7 @@ async function reverseGeolocate(lat, long) {
 	document.querySelector(".states-name").innerHTML = userState;
 
 	await populateStatesData(userState);
-	plotStatesData("Confirmed", userState, "states-chart");
+	plotStatesData("Confirmed", userState, "india", "states-chart");
 }
 
 function getlocation() {
@@ -480,14 +496,14 @@ function getlocation() {
 //  Execute at Startup
 
 const execute = async () => {
-	await populateCountry();
-	await populateGlobalData();
-	await plotGlobalData();
-	await populateCountryData();
-	await plotCountryData();
-	await populateStateList();
-	await populateStateSearchData();
-	await plotStatesData("Confirmed", "Maharashtra", "states-search-chart");
+	populateCountry();
+	populateGlobalData();
+	plotGlobalData();
+	populateCountryData();
+	plotCountryData();
+	populateStateList();
+	populateStateSearchData();
+	plotStatesData("Confirmed", "Maharashtra", slugValue, "states-search-chart");
 };
 
 execute();
@@ -503,7 +519,6 @@ this.addEventListener("load", () => {
 
 document.querySelector(".search-btn").addEventListener("click", async () => {
 	let allCountry = [];
-	document.querySelector(".country-name").innerHTML = inputCountry.value;
 
 	document.querySelectorAll("#country option").forEach((ele) => {
 		allCountry.push(ele.getAttribute("value"));
@@ -512,6 +527,7 @@ document.querySelector(".search-btn").addEventListener("click", async () => {
 	if (allCountry.includes(inputCountry.value)) {
 		loader.classList.add("loading-screen");
 
+		document.querySelector(".country-name").innerHTML = inputCountry.value;
 		populateCountryData(inputCountry.value);
 		slugValue = await obtainSlug(inputCountry.value);
 		plotCountryData("Confirmed", slugValue);
@@ -548,7 +564,12 @@ document
 			document.querySelector(".states-search-name").innerHTML = stateName;
 
 			await populateStateSearchData(slugValue, stateName);
-			await plotStatesData("Confirmed", stateName, "states-search-chart");
+			await plotStatesData(
+				"Confirmed",
+				stateName,
+				slugValue,
+				"states-search-chart"
+			);
 			loader.classList.remove("loading-screen");
 		} else {
 			alert("Enter a valid state name or else choose from the dropdown");
