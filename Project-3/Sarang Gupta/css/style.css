@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+.maindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: linear-gradient(60deg,#E1F1DD,#867AE9);
+}
+.container{
+    position: relative;
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+    width: 230px;
+    border-radius: 15px;
+    height: 150px;
+    background-color: #fff;
+    margin: 20px;
+    background: linear-gradient(180deg,#F5ABC9,#FFE5E2);
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+    
+}
+#world h1{
+    font-size: 45px;
+    text-align: center;
+    padding-top: 45px;
+    padding-right: 5px;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input{
+    position: relative;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+header{
+    position: relative;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0,0,0.2);
+}
+.logo{
+    color: #185ABD;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    background-color: #E1F1DD;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+}
+nav{
+    float: right;
+
+}
+.clearfix{
+    clear: both;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+nav ul li a:hover{
+    background: #867AE9;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.container .card .worldtext{
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+.container .card .content{
+    text-align: center;
+    font-size: 35px;
+    padding-top: 20px;
+    font-weight: 500;
+    color: #185ABD;
+    transition: 0.5s;
+}
+#totalrecovered{
+    padding-top: 20px;
+    color: rgb(38, 185, 38)
+}
+#recoveredh1{
+    padding: 10 5px 0 5px;
+    line-height: 30px;
+
+}
+#newdeath{
+    color: red;
+
+}
+#totaldeath{
+    color: red;
+}
+
+.countrydiv .card{
+    position: relative;
+    width: 500px;
+    float: right;
+    border-radius: 15px;
+    height: 500px;
+    margin: 20px 50px 30px 0;
+    background: linear-gradient(45deg,#FFE5E2,#FFC93C);
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+    
+}
+#countryname{
+    font-size: 35px;
+    text-align: center;
+    padding-top: 10px;
+    color: #04009A ;
+}
+.countrydiv .card h3{
+    font-size: 30px;
+    line-height: 70px;
+    padding-left: 15px;
+    color: #185ABD;
+    font-family: sans-serif;
+}
+#countrytotald , #countrynewd{
+    color: red;
+}
+#countrytotalr{
+    color: rgb(13, 204, 13);
+}
+.countrydiv .searchbox{
+    margin: 20px 0 0 50px;
+    display: inline-block;
+
+}
+#countrytext{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    background: #fff;
+    width: 350px;
+    height: 40px;
+    border: none;
+    outline: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    padding-left: 10px;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+#get{
+    position: relative;
+    border-radius: 10px;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #185ABD;
+    cursor: pointer;
+}
+.indiasearch h1{ 
+    font-size: 50px;
+    text-align: center;
+    color: #185ABD;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    line-height: 50px;
+
+}
+#state{
+    font-size: 20px;
+    width: 350px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    padding: 0 0 0 5px;
+}
+#indiaget{
+    position: relative;
+    border-radius: 10px;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #185ABD;
+    cursor: pointer;
+}
+.indiasearch .selectbox{
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+#indiandatabox{
+    font-family: sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #fff;
+
+}
+#indiandatabox table{
+    border-collapse: collapse;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+    text-align: left;
+    overflow: hidden;
+    margin: 0 30px 30px 30px;
+    padding: 0 0 0 20px;
+}
+#indiandatabox table th{
+    padding: 10px 20px;
+    font-weight: 600 ;
+    background-color: #185ABD;
+    color: #fff;
+    font-family: sans-serif;
+}
+#indiandatabox table td{
+    padding-left: 20px;
+    padding-top: 15px;
+    border-bottom: 1px solid #dddddd;
+    font-weight: 550;
+    font-family: sans-serif;
+}
+#indiandatabox table tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    color: #185ABD;
+    
+}
+#indiandatabox table tr:nth-of-type(odd){
+    color: #596C68;
+    
+}
+#indiandatabox table tr:last-of-type{
+    border-bottom: 4px solid #185ABD;
+}
+#indiatotal{
+    font-family: sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color:#596C68;
+    font-size: 20px;
+    background-color: #fff;
+    padding: 20px 0 20px 0;
+}
+#indiatotal table{
+    border-collapse: collapse;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+    text-align: left;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    background: linear-gradient(180deg,#185ABD,#867AE9);
+}
+
+#indiatotal table th{
+    padding: 10px 20px;
+    font-weight: 600 ;
+    color: #fff;
+    font-family: sans-serif;
+}
+#indiatotal table td{
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+#yourlocation{
+    background: linear-gradient(180deg,#F5ABC9,#FFE5E2); 
+    opacity: 0;
+}
+#yourlocation .container h1{
+    color:white;
+    background: #867AE9;
+    font-family: sans-serif;
+    padding: 10px 10px 10px 30px;
+    opacity: 1;
+}
+
+
+#locationcoviddata{
+   position: relative;
+   display: inline-block;
+   box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
+   background: linear-gradient(90deg,#FFC93C,#FFC947);
+   width: 300px;
+   height: 310px;
+   border-radius: 10px;
+   opacity: 0;
+}
+#districtcontainer{
+    text-align: center;
+    padding-bottom: 20px;
+}
+#locationcoviddata h1{
+    text-align: center;
+    padding: 5px 0 5px 0;
+    font-family: sans-serif;
+    color: #04009A;
+
+}
+#locationcoviddata h3{
+    font-family: sans-serif;
+    padding: 0 0 0 10px;
+    line-height: 30px;
+    color: #0061a8;
+    font-size: 20px;
+
+}
+#locationcoviddata .red{
+    color: red;
+}
+#locationcoviddata .green{
+    color: rgb(19, 201, 19);
+}
+#alertbox{
+    width: 500px;
+    position: relative;
+    box-sizing: border-box;
+}
+#alertbox .alertcard{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 350px;
+    border-radius: 15px;
+    height: 170px;
+    margin: 70px 50px 0 70px;
+    background:orange;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+    opacity: 0.8;
+
+}
+#alertbox .alertcard h2{
+    padding: 10px;
+    text-align: justify;
+    color: white;
+    font-family: sans-serif;
+}
+
+.locationdiv .container{
+    position: relative;
+    box-sizing: border-box;
+    width: 1500px;
+
+}
+#districtalert{
+    color: white;
+    height: 65px;
+    box-sizing: border-box;
+    padding: 10px 5px 0 5px;
+    border-radius: 0 0 10px 10px;
+    font-family: sans-serif;
+}
+
+#footerdiv{
+    height: 50px;
+    text-align: center;
+    background-color: #262626;
+    color: #dddddd;
+    padding-top: 10px;
+}
