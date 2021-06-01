@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+     /* Stop Highlighting */
+     user-select: none; /* supported by Chrome and Opera */
+     -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/*----Landing Page Style---- */
+
+.invis{
+    visibility: hidden;
+}
+.vis{
+    visibility: visible !important;
+}
+body{
+    background-color: #121212;
+}
+
+.main-content{
+    position:relative;
+    min-height: 84vh;
+    background-color: #121212;
+}
+nav{
+    display:flex;
+    width:100%;
+    font-size: clamp(20px,1vw,40px);
+    background-color: #2D2D32;
+    color: white;
+    padding-left: 1ch;
+    line-height:8vh;
+    height: 8vh;
+}
+.up::after{
+    content:'▲';
+    color:#b2151c;
+}
+.down::after{
+    content:'▼';
+    color: #62DA56;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 84vh;
+}
+
+.upcard{
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+.lowcard{
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid #121212;
+    background-color: #1A1B1E;
+    width: 30%;
+    align-items: center;
+    color: white;
+    transition: 0.5s ease-in-out;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+}
+
+.card:hover{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.world-img{
+    background-image: url(./images/world.png);
+    background-size: cover;
+}
+.flag-img{
+    background-image: url(./images/Flag.png);
+    background-size: cover;
+}
+.India-img{
+    background-image: url(./images/India.png);
+    background-size: cover;
+}
+.location-img{
+    background-image: url(./images/location.png);
+    background-size: cover;
+}
+
+.img-container{
+    width:2.5em;
+    height:2.5em;
+}
+
+@media (max-width: 740px) {
+    .upcard{
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .lowcard{
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .card{
+        width: 100%;
+        flex-direction: row;
+        height: 60%;
+    }
+}
+
+@media (max-width:550px) {
+    .card-container{
+        font-size: 1rem;
+    }
+}
+
+/*----Style ends----*/
+
+/* -----world-data-card Style------ */
+.world-data-card{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    margin-left: -25vw;
+    margin-top: -16ch;
+    background-color: #1A1B1E;
+    width:50vw;
+    color: white;
+    transition: 0.5s ease-in-out;
+    padding-bottom: 2%;
+}
+.title{
+    color: #0092FA;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2ch;
+    margin-top: 2ch;
+    text-align: center;
+}
+.data{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 4ch;
+    margin-right: 4ch;
+    font-size: 1.4rem;
+}
+.deaths{
+    color:  #b2151c;
+}
+.recovered{
+    color: rgb(98, 218, 94);
+}
+@media (max-width: 850px){
+    .title{
+        font-size: clamp(1.2rem, 1.5vw, 2rem)
+    }
+    .data{
+        font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+}
+
+/* ------Style ends------- */
+
+
+/* ----Countrywise Covid Stats page style----
+--- & State wise Covid Stats page style------*/
+
+/* ----head style---- */
+.head{
+    text-align: center;
+}
+.content-title{
+    font-size: 1.9rem;
+    margin-top: 2%;
+    color: white;
+}
+
+#searchbox{
+    width:40vw;
+    margin-top: 2%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border-radius:0.25rem;
+    background-color: #1A1B1E;
+    color: white;
+}
+
+
+/* ----country-data-container style---- 
+---- & state-data-container style------*/
+.state-card-container, .country-card-container{
+    padding-bottom: 10vh;
+}
+.country-data-card, .state-data-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1B1E;
+    color: white;
+    transition: 0.5s ease-in-out;
+    width: 80vw;
+    padding: 1%;
+    margin-top: 3%;
+    margin-left:8%;
+    margin-right:5%;
+    overflow: hidden;
+}
+.country-name, .state-name{
+    font-size: calc(1.5vw + .3rem + 2px);
+    color:#0092FA;
+    font-weight:600;
+}
+
+.country-data, .state-data, .zone-card{
+    font-size: calc(1vw + .1rem + 2px);
+}
+
+@media (max-width:390px) {
+    .world-data-card{
+        width:100vw;
+        margin-top: 20vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .title{
+        font-size:1rem;
+    }
+    .data{
+        font-size:0.8rem;
+    }
+}
+@media (max-width:740px) {
+    .head{
+        text-align: center;
+    }
+    .world-data-card{
+        width: 78vw;
+        margin-left:-39vw;
+        margin-top:-30vh;
+    }
+    .content-title{
+        font-size: clamp(18px,1vw,40px);
+        margin-left: 0;
+    }
+    #searchbox{
+        width: clamp(250px,1.5vw,500px);
+        height: calc(1em + .75rem + 2px);
+    }
+
+    .country-name, .state-name{
+        font-size: calc(1.8vw + .6rem + 2px);
+    }
+    
+    .country-data, .state-data,.zone-card{
+        font-size: calc(1.3vw + .4rem + 2px);
+        margin-top: 5%;
+    }
+}
+
+/* -----Style ends----- */
+
+/* ----zone-card Style---- */
+.zone-card{
+    position: relative;
+    overflow: hidden;
+    max-height:4px;
+    padding-left: 1ch;
+}
+.links a{
+    font-weight:600;
+}
+.state-data-card:hover > .zone-card{
+    max-height:1000px;
+    animation: move 1s;
+}
+.orange-zone-card{
+    color: black;
+}
+.orange-zone-links a,.orange-zone-links a:visited{
+    color: black;
+}
+.green-zone-card{
+    color: black;
+}
+.green-zone-links a,.green-zone-links a:visited{
+    color: black;
+}
+.red-zone-links a,.red-zone-links a:visited{
+    color: rgb(252, 252, 252);
+}
+
+
+
+/* -----Style ends----- */
+
+/* --- User Location Covid Stats page Style--- */
+.location-head{
+    text-align: center;
+    font-size: 1.9rem;
+    /* margin-top: -3%; */
+    color: white;
+}
+.location-data-card{
+    height: 120vh;
+}
+
+/* -----Style ends----- */
+
+
+/* ----Footer Style---- */
+
+.card-options{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    background-color: rgb(0, 156, 247);
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    bottom:0;
+    z-index: 1;
+}
+.options{
+    margin: 1% 3%;
+    font-size: clamp(14px,1.2vw,80px);
+    color: white;
+    cursor: pointer;
+}
+
+/* -----Style ends----- */
+
+@keyframes move {
+    from{max-height:4px;}
+    to{max-height:1000px;}
+}
+@keyframes moveback{
+    from {max-height:1000px;}
+    to{max-height:4px;}
+}

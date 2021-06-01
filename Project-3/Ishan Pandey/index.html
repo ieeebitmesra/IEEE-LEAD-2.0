@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+        <nav>
+            <p>COVID Stats Tracker</p>
+        </nav>
+    <div class="main-content">
+        <div class="card-container">
+            <div class="upcard">
+                <div class="world-card card">
+                    <div class="world-img img-container">
+                        <!-- <img src="./worldpng.png"> -->
+                    </div>
+                    <p>
+                        World COVID Stats
+                    </p>
+                </div>
+                <div class="country-card card">
+                    <div class="flag-img img-container">
+                        <!-- <img src="./flag.jpg"> -->
+                    </div>
+                    <p>
+                        Country-wise COVID Stats
+                    </p>
+                </div>
+            </div>
+            <div class="lowcard">
+                <div class="India-card card">
+                    <div class="India-img img-container">
+                        <!-- <img src="./india.jpg"> -->
+                    </div>
+                    <p>
+                        India COVID Stats
+                    </p>
+                </div>
+                <div class="user-location-card card">
+                    <div class="location-img img-container">
+                        <!-- <img src="./location.jpg"> -->
+                    </div>
+                    <p>
+                        COVID Stats at your Location
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="invis">
+        <div class="card-options">
+            <div class="options" onclick="worlddata()">
+                World
+            </div>
+            <div class="options" onclick="countryWiseData()">
+                Country
+            </div>
+            <div class="options" onclick="indiaStateData()">
+                India
+            </div>
+            <div class="options" onclick="getUserLocation()">
+                Your Location
+            </div>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
+
+<!-- <div class="world-data-card">
+    <div class="title">
+        World COVID Stats
+    </div>
+    <div class="data">
+        Total Cases: ${data[0].cases} | Today Cases: ${data[0].todayCases}<br>
+        Total Deaths: ${data[0].deaths} | Today Deaths: ${data[0].todayDeaths}<br>
+        Recovered Cases: ${data[0].recovered}<br>
+        Active Cases: ${data[0].active}<br>
+        Critical Cases: ${data[0].critical}
+    </div>
+</div> -->
+
+<!-- <div class="head">
+    <div class="title">
+        Counrty-wise COVID Stats
+    </div>
+    <div class="searchbar">
+        <input type="text",name="seacrhbox",id="searchbox",placeholder="Counrty name">
+    </div>
+</div> -->
+
+<!-- <div class="zone-card" style="background-color: orange;">
+    <div class="zone-color">
+        GREEN Zone
+    </div>
+    <div class="advisory">
+        Follow them and protect yourself and others from infection:
+            <li>Stay inside your home and do not travel.</li>
+            <li>Wear mask, use sanitizer and practice social distancing.</li>
+            <li>Register yourself for VACCINATION.</li>
+        </ul>
+        <div class="links">
+            Informative links: <a href="https://www.youtube.com/watch?v=BtN-goy9VOY">What CORONAVIRUS is?</a>
+            <a href="https://www.youtube.com/watch?v=zBkVCpbNnkU">How VACCINES work?</a><br>
+            <a href="https://www.google.com/intl/en_in/covid19/#safety-tips">Join the fight against COVID-19</a>
+        </div>
+    </div>
+</div> -->
