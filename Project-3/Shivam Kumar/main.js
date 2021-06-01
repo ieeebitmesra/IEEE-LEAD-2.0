@@ -102,7 +102,7 @@ function dataRepresentation(data, mod) {
 	)}</span>`;
 
 	let sign;
-	let av = data.NewConfirmed - data.NewRecovered;
+	let av = data.NewConfirmed - data.NewRecovered - data.NewDeaths;
 	if (av < 0) {
 		sign = "down";
 		av = -av;
@@ -111,7 +111,7 @@ function dataRepresentation(data, mod) {
 	document.querySelector(
 		`.total_active${mod}`
 	).innerHTML = `<span class="info__title">Active</span><span class="info__data">${num.format(
-		data.TotalConfirmed - data.TotalRecovered
+		data.TotalConfirmed - data.TotalRecovered - data.TotalDeaths
 	)}</span><span class="new_active info__subtitle"><i class='fa fas fa-angle-double-${sign}'></i> ${num.format(
 		av
 	)}</span>`;
@@ -382,21 +382,6 @@ async function plotStatesData(
 
 	plot(date, ylable, label, color, bgcolor, plotin);
 }
-
-async function check() {
-	const res = await fetch(
-		`https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true`
-	);
-	const resi = await fetch(
-		"https://api.apify.com/v2/datasets/58a4VXwBBF0HtxuQa/items?format=json&clean=1"
-	);
-	const data = await res.json();
-	const resiD = await resi.json();
-	console.log(data);
-	console.log(resiD);
-}
-
-check();
 
 function plot(xdata, ydata, label, color, bgcolor, chartContainer) {
 	document.querySelector(
