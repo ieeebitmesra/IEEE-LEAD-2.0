@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles-css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <section class="sec1">
+        <div class="im" style="position: fixed;top: 0px;left: 0px;z-index: 4;display: block;background-color: rgb(44, 42, 42);width: 100%;height: 10%;">
+            <i class="fas fa-bars" style="position: fixed;top: 3%;left: 3%;z-index: 4;display: block;color: chocolate;"></i>
+        </div>
+        <nav class="nav1">
+            <ul class="list1">
+                <li class="li11">india's covid statistics</li>
+                <li class="li12">india's testing statistics</li>
+                <li class="li13">states at a glance</li>
+                <li class="li14">about</li>    
+            </ul>
+        </nav>
+        <div class="div1">
+            <h2 style="text-align: center; padding: 0px; margin: 0px;">Covid-19 Dashboard</h2>
+        </div>
+    </section>
+    <div class="india">
+        <h5 class="indiagraph">covid situation in india</h5>
+    </div>
+    <section class="sec2">
+        <div class="indiasec">
+            <div class="indianewcases">
+                <h4 class="chatname">data on daily basis</h2>
+            </div>
+            <div class="chart-container1">
+                <canvas id="ichart1"></canvas>
+            </div>
+
+            <div class="indiancummulative">
+                <h4 class="chatname">cummulative data</h2>
+            </div>
+            <div class="chart-container2">
+                <canvas id="ichart2"></canvas>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="testing">
+        <h5 class="indiagraph">covid testing in india</h5>
+    </div>
+    <section class="sec3">
+        <div class="testsec">
+            <div class="indianewcases">
+                <h4 class="chatname">samples tested per day</h2>
+            </div>
+            <div class="chart-container1">
+                <canvas id="tchart1"></canvas>
+            </div>
+        </div>
+    </section>
+    
+    <div class="states">
+        <h5 class="indiagraph">states at a glance</h5>
+    </div>
+    <section class="sec4">
+        <div class="statesec">
+            <div class="indianewcases">
+                <h4 class="chatname">latest statistics </h2>
+            </div>
+            <div class="chart-container1">
+                <canvas id="schart1"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <div class="about">
+        <h5 class="indiagraph">ABOUT</h5>
+    </div>
+    <section class="sec5">
+        <div class="aboutsec">
+            <div class="aboutdiv">
+                <p style="font-family: monospace;color: chocolate;">This is a Covid data website.
+                    <br>
+                    Here you can find all important covid stats of INDIA in a very illustrative graphucal manner.Along with providing with the data, it also awares public about different safety measures that one should follow and what should one do in case he/she contracts covid.
+                    <br>
+                    This website is designed by ANIKET PANDEY.
+                    <br>
+                    All the data displayed on this website is public and available for general use.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.0/dist/chart.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/brain.js"></script>
+
+</html>
